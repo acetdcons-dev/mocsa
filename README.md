@@ -36,23 +36,44 @@ Mở trực tiếp file `index.html` bằng trình duyệt, hoặc để mượt
 
 ## 2. Thay ảnh thật (QUAN TRỌNG)
 
-Hiện tại các vị trí ảnh sản phẩm/thương hiệu đang hiển thị **khung placeholder** (nền màu kem + icon) vì mình chưa có file ảnh gốc của bạn ở dạng tệp. Bạn chỉ cần lưu các ảnh đã gửi (banner, chai sản phẩm, túi vải...) vào đúng tên file bên dưới trong thư mục `assets/images/` — ảnh sẽ tự động hiển thị ngay, không cần sửa code:
+**Vì sao chưa tự lên hình:** mình có thể **xem** được ảnh bạn dán/đính kèm trong chat (mô tả được chi tiết từng ảnh), nhưng công cụ mình đang dùng **không có chức năng tải/lưu ảnh đính kèm thành file** trên máy. Đây là giới hạn kỹ thuật của môi trường chat, không phải do bỏ sót. Cách duy nhất để đưa đúng ảnh thật vào web là **bạn tự lưu từng ảnh** (chuột phải vào ảnh → "Lưu hình ảnh thành..." / "Save image as...") vào đúng đường dẫn `assets/images/` với đúng tên file bên dưới — code đã được chuẩn bị sẵn để ảnh tự hiển thị ngay khi file xuất hiện đúng tên, không cần sửa gì thêm.
+
+### Bảng ánh xạ 14 ảnh bạn vừa gửi → tên file cần lưu
+
+| # ảnh bạn gửi | Nội dung ảnh | Lưu thành tên file |
+|---|---|---|
+| 1 | Ảnh chai cận cảnh với gừng/xương rồng/hibiscus, có banner "15 THẢO DƯỢC VIỆT" | `product-1.jpg` |
+| 2 | Infographic 4 bước "HƯỚNG DẪN SỬ DỤNG" | `product-usage.jpg` |
+| 3 | Ảnh chai trên bàn spa cùng xà phòng, mút tắm | `product-2.jpg` |
+| 4 | Ảnh ghép Before/After (đã có sẵn cả 2 nửa trong 1 ảnh) | `before-after.jpg` |
+| 5 | Ảnh mockup bài đăng Instagram + đánh giá "Trang Trang" | `social-proof.jpg` *(tuỳ chọn, chưa có vị trí gắn sẵn trên web – dùng để đăng mạng xã hội hoặc báo mình nếu muốn gắn thêm)* |
+| 6–9 | 4 banner nền gỗ "Dầu gội thảo dược từ thiên nhiên Việt" (1 vuông + 3 ngang gần giống nhau) | Chọn **1 ảnh đẹp nhất** lưu thành `about.jpg` |
+| 10 | Ảnh hộp giấy + chai (nền trong suốt) | `product-box.png` |
+| 11 | Ảnh chai riêng, nền trong suốt | `product-bottle.png` |
+| 12, 13 | Logo (2 bản, chọn bản nét rõ/độ phân giải cao hơn) | `logo.png` |
+| 14 | Ảnh chụp túi vải Mộc Sa thật | `tote-bag.jpg` |
+
+> Ảnh #4 (Before/After) là 1 ảnh ghép sẵn 2 nửa nên mình đã đổi khối "So sánh trước/sau" ở trang chi tiết sản phẩm từ dạng **slider kéo tương tác** sang hiển thị **1 ảnh tĩnh** cho khớp với ảnh bạn có. Nếu sau này bạn chụp được 2 ảnh riêng biệt (cùng góc, 1 ảnh trước – 1 ảnh sau), báo mình để đổi lại thành slider kéo mượt hơn.
+
+### Bảng đầy đủ các vị trí ảnh trên web
 
 | Tên file cần lưu | Dùng ở đâu | Gợi ý ảnh |
 |---|---|---|
-| `product-1.jpg` | Ảnh chính sản phẩm (trang chủ, danh sách, chi tiết, giỏ hàng, popup) | Ảnh chai dầu gội chụp riêng, nền trắng/kem |
-| `product-2.jpg` | Ảnh phụ trong gallery chi tiết sản phẩm | Ảnh chai + nguyên liệu (gừng, xương rồng...) |
-| `product-box.png` | Ảnh hộp + chai | Ảnh hộp giấy đặt cạnh chai |
-| `product-usage.jpg` | Ảnh phụ gallery | Ảnh hướng dẫn sử dụng 4 bước |
-| `product-bottle.png` | Ảnh lớn ở Hero trang chủ | Ảnh chai dầu gội nền trong suốt (PNG) |
-| `about.jpg` | Ảnh mục "Về chúng tôi" | Ảnh nguyên liệu/thảo dược hoặc hình ảnh thương hiệu |
-| `before.jpg` / `after.jpg` | Ảnh so sánh trước/sau | 2 ảnh tóc trước và sau khi dùng |
-| `certificate.jpg` | Ảnh phiếu công bố mỹ phẩm | Ảnh phiếu công bố (đã có khung vàng) |
+| `logo.png` | Logo ở header (mọi trang) | Ảnh #12/#13 – nếu chưa lưu, web tự dùng logo vector dự phòng |
+| `tote-bag.jpg` | Ảnh túi vải quà tặng (trang chủ, chi tiết sản phẩm) | Ảnh #14 – nếu chưa lưu, web tự dùng icon vector dự phòng |
+| `product-1.jpg` | Ảnh chính sản phẩm (trang chủ, danh sách, chi tiết, giỏ hàng, popup) | Ảnh #1 |
+| `product-2.jpg` | Ảnh phụ trong gallery chi tiết sản phẩm | Ảnh #3 |
+| `product-box.png` | Ảnh hộp + chai | Ảnh #10 |
+| `product-usage.jpg` | Ảnh phụ gallery | Ảnh #2 |
+| `product-bottle.png` | Ảnh lớn ở Hero trang chủ | Ảnh #11 |
+| `about.jpg` | Ảnh mục "Về chúng tôi" | 1 trong 4 ảnh banner #6–9 |
+| `before-after.jpg` | Ảnh so sánh trước/sau (chi tiết sản phẩm) | Ảnh #4 |
+| `certificate.jpg` | Ảnh phiếu công bố mỹ phẩm | Ảnh phiếu công bố (chưa có trong lần gửi này) |
 | `avatar-1.jpg`, `avatar-2.jpg`, `avatar-3.jpg` | Ảnh đại diện khách hàng đánh giá | Ảnh khách hàng hoặc để trống dùng placeholder |
 | `blog-1.jpg` → `blog-6.jpg` | Ảnh bài viết Tin tức | Ảnh minh họa mỗi bài viết |
 | `product-conditioner.jpg`, `product-serum.jpg` | Ảnh sản phẩm "Sắp ra mắt" | Có thể để placeholder nếu chưa có |
 
-**Logo, túi vải, hoa trang trí** (`logo.svg`, `logo-white.svg`, `logo-mark.svg`, `logo-mark-white.svg`, `logo-icon.svg`, `tote-bag.svg`, `flower.svg`) mình đã **vẽ lại bằng vector (SVG)** bám sát bộ nhận diện Mộc Sa bạn gửi (icon lúa vàng + wordmark "Mộc Sa"), nên đã lên hình đẹp sẵn — nếu bạn có file logo gốc (AI/PNG nền trong suốt) muốn dùng chính xác 100%, chỉ cần thay đè các file cùng tên trong `assets/images/`.
+**Logo, túi vải (dự phòng), hoa trang trí** (`logo.svg`, `logo-white.svg`, `logo-mark.svg`, `logo-mark-white.svg`, `logo-icon.svg`, `tote-bag.svg`, `flower.svg`) vẫn giữ làm **bản vector dự phòng** – web sẽ tự động dùng ảnh thật (`logo.png`, `tote-bag.jpg`) ngay khi bạn lưu vào, và tự quay lại dùng bản vector nếu ảnh thật chưa có, nên không bao giờ bị vỡ hình.
 
 > Mẹo: đặt tên file/định dạng đúng như bảng trên (jpg/png) — nếu muốn dùng đuôi khác (webp, jpeg...) thì sửa lại phần đuôi file trong thẻ `<img src="...">` tương ứng trong các file `.html`.
 

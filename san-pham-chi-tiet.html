@@ -17,7 +17,7 @@
 
 <header class="header" id="header">
   <div class="container header__inner">
-    <a href="index.html" class="brand"><img src="assets/images/logo.svg" alt="Mộc Sa" class="brand__logo"></a>
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt="Mộc Sa" class="brand__logo" onerror="this.onerror=null;this.src='assets/images/logo.svg'"></a>
     <nav class="nav" id="nav">
       <a href="index.html" class="nav__link">Trang chủ</a>
       <a href="ve-chung-toi.html" class="nav__link">Về chúng tôi</a>
@@ -76,7 +76,7 @@
           <span class="badge badge--sale">Tiết kiệm 49.000₫</span>
         </div>
         <div class="gift-box">
-          <img src="assets/images/tote-bag.svg" alt="Túi vải Mộc Sa" class="gift-box__img">
+          <img src="assets/images/tote-bag.jpg" alt="Túi vải Mộc Sa" class="gift-box__img" onerror="this.onerror=null;this.src='assets/images/tote-bag.svg'">
           <div><strong>Quà tặng kèm: Túi vải Mộc Sa</strong><p>Áp dụng cho mọi đơn hàng, số lượng quà tặng có hạn.</p></div>
         </div>
         <ul class="product__bullets">
@@ -193,13 +193,7 @@
   <section class="section compare">
     <div class="container compare__grid">
       <div class="compare__media" data-reveal>
-        <div class="ba-slider" id="baSlider">
-          <img src="assets/images/after.jpg" alt="Sau khi dùng Mộc Sa" class="ba-slider__after" onerror="this.parentElement.classList.add('img-fallback--hair-after')">
-          <div class="ba-slider__before-wrap" id="baBeforeWrap"><img src="assets/images/before.jpg" alt="Trước khi dùng Mộc Sa" class="ba-slider__before" onerror="this.parentElement.parentElement.classList.add('img-fallback--hair-before')"></div>
-          <div class="ba-slider__handle" id="baHandle"><span>↔</span></div>
-          <span class="ba-slider__tag ba-slider__tag--left">Trước</span>
-          <span class="ba-slider__tag ba-slider__tag--right">Sau</span>
-        </div>
+        <img src="assets/images/before-after.jpg" alt="So sánh tóc trước và sau khi dùng Mộc Sa" class="compare__static-img" data-label="Ảnh so sánh trước/sau" onerror="this.parentElement.classList.add('img-fallback--hair-after')">
       </div>
       <div class="compare__content" data-reveal>
         <span class="eyebrow">Hiệu quả thấy rõ</span>
