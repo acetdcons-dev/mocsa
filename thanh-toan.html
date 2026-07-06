@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanh Toán – Mộc Sa</title>
+<link rel="icon" href="assets/images/logo-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .pay-method{display:flex;flex-direction:column;gap:12px;margin-bottom:26px;}
+  .pay-method label{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 16px;font-weight:600;font-size:14.5px;cursor:pointer;}
+  .pay-method label.is-disabled{opacity:.5;cursor:not-allowed;}
+  .pay-method small{display:block;font-weight:400;color:var(--ink-soft);}
+</style>
+</head>
+<body data-page="checkout">
+
+<div class="top-bar"><div class="container top-bar__inner"><p class="top-bar__msg"><span>🚚</span> Freeship toàn quốc – Thanh toán khi nhận hàng (COD) – Tặng kèm túi vải Mộc Sa</p></div></div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand"><img src="assets/images/logo.svg" alt="Mộc Sa" class="brand__logo"></a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__link">Trang chủ</a>
+      <a href="ve-chung-toi.html" class="nav__link">Về chúng tôi</a>
+      <a href="san-pham.html" class="nav__link">Sản phẩm</a>
+      <a href="tin-tuc.html" class="nav__link">Tin tức</a>
+      <a href="lien-he.html" class="nav__link">Liên hệ</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:1900000000" class="hotline"><span class="hotline__icon">📞</span><span class="hotline__text"><small>Hotline đặt hàng</small>1900.000.000</span></a>
+      <button class="icon-btn" id="cartBtn" aria-label="Giỏ hàng">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13L5.4 5M7 13l-1.5 6h13M9 21a1 1 0 100-2 1 1 0 000 2zm9 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="icon-btn__badge" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mini-cart" id="miniCart">
+  <div class="mini-cart__head"><strong>Giỏ hàng của bạn</strong><button class="mini-cart__close" id="miniCartClose">&times;</button></div>
+  <div class="mini-cart__body" id="miniCartBody"><p class="mini-cart__empty">Chưa có sản phẩm nào trong giỏ.</p></div>
+  <div class="mini-cart__foot" id="miniCartFoot" hidden><div class="mini-cart__total"><span>Tạm tính</span><strong id="miniCartTotal">0₫</strong></div><button class="btn btn--primary btn--block" id="miniCartCheckout">Đến trang giỏ hàng</button></div>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <h1>Thanh Toán</h1>
+    <p class="breadcrumb"><a href="index.html">Trang chủ</a><span>/</span><a href="gio-hang.html">Giỏ hàng</a><span>/</span>Thanh toán</p>
+  </div>
+</section>
+
+<main>
+  <section class="section">
+    <div class="container cart-layout">
+      <div data-reveal>
+        <h3 style="margin-bottom:20px;">Thông tin giao hàng</h3>
+        <form class="form-card" id="orderForm">
+          <div class="form-grid-2">
+            <div class="form-row"><label>Họ và tên *</label><input type="text" name="name" required placeholder="Nguyễn Văn A"></div>
+            <div class="form-row"><label>Số điện thoại *</label><input type="tel" name="phone" required placeholder="09xxxxxxxx" pattern="[0-9]{9,11}"></div>
+          </div>
+          <div class="form-row"><label>Địa chỉ nhận hàng *</label><input type="text" name="address" required placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành"></div>
+          <div class="form-row"><label>Ghi chú đơn hàng</label><textarea name="note" rows="3" placeholder="Ví dụ: giao giờ hành chính, gọi trước khi giao..."></textarea></div>
+
+          <h3 style="margin:26px 0 16px;">Phương thức thanh toán</h3>
+          <div class="pay-method">
+            <label><input type="radio" name="payment" checked><div>Thanh toán khi nhận hàng (COD)<small>Kiểm tra hàng trước khi thanh toán</small></div></label>
+            <label class="is-disabled"><input type="radio" name="payment" disabled><div>Chuyển khoản ngân hàng<small>Sắp hỗ trợ</small></div></label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg btn--block">Hoàn tất đặt hàng</button>
+        </form>
+      </div>
+
+      <div class="cart-summary" data-reveal>
+        <h3 style="margin-bottom:20px;">Đơn hàng của bạn</h3>
+        <div class="mini-cart__item" style="border:none;padding:0 0 18px;">
+          <img src="assets/images/product-1.jpg" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm')">
+          <div class="mini-cart__item-info">
+            <strong>Dầu Gội Thảo Dược Mộc Sa 250ml</strong>
+            <span style="font-size:12px;color:var(--gold-600);">🎁 Tặng kèm túi vải Mộc Sa</span>
+            <div style="font-size:13px;margin-top:4px;">Số lượng: <strong id="orderQty">1</strong></div>
+          </div>
+          <strong id="orderLineTotal">196.000₫</strong>
+        </div>
+        <div class="cart-summary__row"><span>Tạm tính</span><strong id="orderSubTotal">196.000₫</strong></div>
+        <div class="cart-summary__row"><span>Phí vận chuyển</span><strong>Miễn phí</strong></div>
+        <div class="cart-summary__row is-total"><span>Tổng thanh toán</span><strong id="orderTotal">196.000₫</strong></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer__grid">
+    <div class="footer__col"><img src="assets/images/logo-white.svg" alt="Mộc Sa" class="footer__logo"><p>Dầu gội thảo dược từ thiên nhiên Việt – chăm sóc mái tóc Việt bằng tinh hoa 15 thảo dược quý.</p><div class="footer__social"><a href="#">f</a><a href="#">ig</a><a href="#">Zalo</a><a href="#">tk</a></div></div>
+    <div class="footer__col"><h4>Liên kết</h4><a href="index.html">Trang chủ</a><a href="ve-chung-toi.html">Về chúng tôi</a><a href="san-pham.html">Sản phẩm</a><a href="tin-tuc.html">Tin tức</a><a href="lien-he.html">Liên hệ</a></div>
+    <div class="footer__col"><h4>Chính sách</h4><a href="chinh-sach-doi-tra.html">Chính sách đổi trả</a><a href="chinh-sach-van-chuyen.html">Chính sách vận chuyển</a><a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a><a href="dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a></div>
+    <div class="footer__col"><h4>Liên hệ</h4><p>📍 123 Đường ABC, Quận 1, TP.HCM</p><p>📞 1900.000.000</p><p>✉️ hello@mocsa.vn</p><p>🕐 8:00 – 21:00 (Cả tuần)</p></div>
+  </div>
+  <div class="footer__bottom"><div class="container footer__bottom-inner"><span>© 2026 Mộc Sa. Đã đăng ký bảo hộ thương hiệu.</span><span>Số CB: 000435/26/CBMP-HCM – Sở Y Tế TP.HCM</span></div></div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mộc Sa – Dầu Gội Thảo Dược Từ Thiên Nhiên Việt | Trang chủ</title>
+<meta name="description" content="Mộc Sa – Dầu gội thảo dược từ 15 thảo dược Việt. Ngăn rụng tóc, giảm gàu, tóc suôn mượt bồng bềnh. Giá 245.000₫ chỉ còn 196.000₫, tặng kèm túi vải Mộc Sa.">
+<link rel="icon" href="assets/images/logo-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<!-- ============ TOP BAR ============ -->
+<div class="top-bar">
+  <div class="container top-bar__inner">
+    <p class="top-bar__msg"><span>🚚</span> Freeship toàn quốc – Thanh toán khi nhận hàng (COD) – Tặng kèm túi vải Mộc Sa</p>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand"><img src="assets/images/logo.svg" alt="Mộc Sa" class="brand__logo"></a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__link">Trang chủ</a>
+      <a href="ve-chung-toi.html" class="nav__link">Về chúng tôi</a>
+      <a href="san-pham.html" class="nav__link">Sản phẩm</a>
+      <a href="tin-tuc.html" class="nav__link">Tin tức</a>
+      <a href="lien-he.html" class="nav__link">Liên hệ</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:1900000000" class="hotline"><span class="hotline__icon">📞</span><span class="hotline__text"><small>Hotline đặt hàng</small>1900.000.000</span></a>
+      <button class="icon-btn" id="cartBtn" aria-label="Giỏ hàng">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13L5.4 5M7 13l-1.5 6h13M9 21a1 1 0 100-2 1 1 0 000 2zm9 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="icon-btn__badge" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MINI CART ============ -->
+<div class="mini-cart" id="miniCart">
+  <div class="mini-cart__head"><strong>Giỏ hàng của bạn</strong><button class="mini-cart__close" id="miniCartClose">&times;</button></div>
+  <div class="mini-cart__body" id="miniCartBody"><p class="mini-cart__empty">Chưa có sản phẩm nào trong giỏ.</p></div>
+  <div class="mini-cart__foot" id="miniCartFoot" hidden>
+    <div class="mini-cart__total"><span>Tạm tính</span><strong id="miniCartTotal">0₫</strong></div>
+    <button class="btn btn--primary btn--block" id="miniCartCheckout">Đến trang giỏ hàng</button>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__wood"></div>
+    <div class="container hero__inner">
+      <div class="hero__content" data-reveal>
+        <img src="assets/images/logo-mark.svg" alt="" class="hero__mark">
+        <span class="badge badge--pill">15 Thảo Dược Việt • Không Silicone • Không Sulfate • Không Paraben</span>
+        <h1 class="hero__title">Dầu Gội Thảo Dược<br><em>từ thiên nhiên Việt</em></h1>
+        <p class="hero__desc">Kết hợp Caffeine, Hibiscus, Xương rồng, Gừng &amp; Bồ kết – làm sạch dịu nhẹ, hỗ trợ giảm gàu, giúp tóc chắc khỏe và ngăn ngừa gãy rụng.</p>
+        <div class="hero__price">
+          <span class="price price--old">245.000₫</span>
+          <span class="price price--new">196.000₫</span>
+          <span class="badge badge--sale">-20%</span>
+        </div>
+        <div class="hero__cta">
+          <button class="btn btn--primary btn--lg" data-add-to-cart data-open-checkout>Mua ngay – Giao COD</button>
+          <a href="san-pham-chi-tiet.html" class="btn btn--ghost btn--lg">Xem chi tiết sản phẩm</a>
+        </div>
+        <div class="hero__timer">
+          <span>Ưu đãi kết thúc sau</span>
+          <div class="countdown" id="countdown">
+            <div class="countdown__box"><span id="cd-h">00</span><small>Giờ</small></div>
+            <div class="countdown__box"><span id="cd-m">00</span><small>Phút</small></div>
+            <div class="countdown__box"><span id="cd-s">00</span><small>Giây</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__media" data-reveal>
+        <div class="hero__gift-tag">🎁 Tặng kèm túi vải Mộc Sa</div>
+        <img src="assets/images/product-bottle.png" alt="Dầu gội thảo dược Mộc Sa 250ml" class="hero__product" data-label="Ảnh sản phẩm Mộc Sa" onerror="this.parentElement.classList.add('img-fallback--bottle')">
+        <img src="assets/images/flower.svg" alt="" class="hero__flower hero__flower--1">
+        <img src="assets/images/flower.svg" alt="" class="hero__flower hero__flower--2">
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="trust-strip">
+    <div class="container trust-strip__grid">
+      <div class="trust-item"><span class="trust-item__icon">🚚</span><div><strong>Ship COD</strong><small>Nhận hàng thanh toán</small></div></div>
+      <div class="trust-item"><span class="trust-item__icon">🔄</span><div><strong>Miễn phí đổi trả</strong><small>Trong vòng 7 ngày</small></div></div>
+      <div class="trust-item"><span class="trust-item__icon">🎁</span><div><strong>Ưu đãi hấp dẫn</strong><small>Tặng túi vải Mộc Sa</small></div></div>
+      <div class="trust-item"><span class="trust-item__icon">🛡️</span><div><strong>Đã kiểm định Sở Y Tế</strong><small>An toàn, chính hãng 100%</small></div></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT TEASER ============ -->
+  <section class="section about">
+    <div class="container about__grid">
+      <div class="about__media" data-reveal>
+        <img src="assets/images/about.jpg" alt="Về thương hiệu Mộc Sa" data-label="Ảnh câu chuyện thương hiệu" onerror="this.parentElement.classList.add('img-fallback--leaf')">
+        <div class="about__badge"><strong>100%</strong><span>Thảo dược Việt Nam</span></div>
+      </div>
+      <div class="about__content" data-reveal>
+        <span class="eyebrow">Về chúng tôi</span>
+        <h2 class="section__title">Mộc Sa – Mộc mạc từ cây cỏ,<br>chăm sóc trọn vẹn mái tóc Việt</h2>
+        <p>Mộc Sa ra đời từ mong muốn đưa những dược liệu quý của núi rừng Việt Nam vào một công thức gội đầu dịu nhẹ, an toàn cho mọi loại da đầu. Mỗi chai dầu gội là sự kết hợp giữa <strong>15 loại thảo dược Việt</strong> và công nghệ lên men sinh học hiện đại.</p>
+        <ul class="about__list">
+          <li><span>✔</span> Không Silicone – Không Sulfate – Không Paraben</li>
+          <li><span>✔</span> Đã công bố mỹ phẩm tại Sở Y Tế TP.HCM</li>
+        </ul>
+        <a href="ve-chung-toi.html" class="btn btn--dark">Tìm hiểu thêm về Mộc Sa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INGREDIENTS ============ -->
+  <section class="section ingredients">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow eyebrow--light">Tinh túy thảo dược</span>
+        <h2 class="section__title section__title--light">15 Thảo Dược Việt, nuôi dưỡng tóc khỏe từ gốc</h2>
+      </div>
+      <div class="ing-grid">
+        <div class="ing-card" data-reveal><span class="ing-card__icon">☕</span><h3>Caffeine</h3><p>Kích thích vi tuần hoàn da đầu, nuôi dưỡng chân tóc khỏe mạnh, giảm rụng do da đầu yếu.</p></div>
+        <div class="ing-card" data-reveal><span class="ing-card__icon">🌺</span><h3>Hibiscus</h3><p>Giàu chất chống oxy hóa, phục hồi tóc khô xơ hư tổn, giúp tóc bóng mượt hơn.</p></div>
+        <div class="ing-card" data-reveal><span class="ing-card__icon">🌵</span><h3>Xương Rồng</h3><p>Giữ ẩm tự nhiên, làm dịu da đầu khô căng rát, cho tóc mềm mượt.</p></div>
+      </div>
+      <div style="text-align:center;margin-top:36px;" data-reveal>
+        <a href="san-pham-chi-tiet.html" class="btn btn--outline">Xem đầy đủ thành phần</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED PRODUCT ============ -->
+  <section class="section product">
+    <div class="container product__grid">
+      <div class="product__gallery" data-reveal>
+        <div class="product__main">
+          <span class="badge badge--sale product__badge">-20%</span>
+          <img src="assets/images/product-1.jpg" alt="Dầu gội thảo dược Mộc Sa" data-label="Ảnh chính sản phẩm" onerror="this.parentElement.classList.add('img-fallback--bottle')">
+        </div>
+      </div>
+      <div class="product__info" data-reveal>
+        <span class="eyebrow">Sản phẩm duy nhất – Mộc Sa</span>
+        <h2 class="product__title">Dầu Gội Thảo Dược Mộc Sa 250ml</h2>
+        <div class="product__rating"><span class="stars">★★★★★</span><span>4.9/5 (1.284 đánh giá)</span><span class="dot">•</span><span>Đã bán 8.500+</span></div>
+        <div class="product__price">
+          <span class="price price--old">245.000₫</span>
+          <span class="price price--new">196.000₫</span>
+          <span class="badge badge--sale">Tiết kiệm 49.000₫</span>
+        </div>
+        <div class="gift-box">
+          <img src="assets/images/tote-bag.svg" alt="Túi vải Mộc Sa" class="gift-box__img">
+          <div><strong>Quà tặng kèm: Túi vải Mộc Sa</strong><p>Áp dụng cho mọi đơn hàng, số lượng quà tặng có hạn.</p></div>
+        </div>
+        <ul class="product__bullets">
+          <li>✔ Giúp ngăn ngừa gãy rụng tóc</li>
+          <li>✔ Hỗ trợ giảm gàu trên da đầu</li>
+          <li>✔ Giúp tóc suôn mượt, bồng bềnh</li>
+        </ul>
+        <div class="product__actions">
+          <button class="btn btn--primary btn--lg btn--block" data-add-to-cart data-open-checkout>🛒 Mua ngay – Nhận COD tận nơi</button>
+          <a href="san-pham-chi-tiet.html" class="btn btn--outline btn--lg btn--block">Xem chi tiết sản phẩm</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS TEASER ============ -->
+  <section class="section reviews">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow">Khách hàng nói gì</span>
+        <h2 class="section__title">Được hàng ngàn mái tóc Việt tin dùng</h2>
+      </div>
+      <div class="review-grid">
+        <div class="review-card" data-reveal>
+          <div class="review-card__head"><img src="assets/images/avatar-1.jpg" alt="" class="review-card__avatar" onerror="this.parentElement.classList.add('img-fallback--avatar')"><div><strong>Trang Trang</strong><span class="stars">★★★★★</span></div></div>
+          <p>“Trước đây tóc tôi khá khô, dễ gãy rụng. Sau 2 tuần dùng Mộc Sa, tóc mềm mượt hơn hẳn, da đầu không còn ngứa nữa.”</p>
+        </div>
+        <div class="review-card" data-reveal>
+          <div class="review-card__head"><img src="assets/images/avatar-2.jpg" alt="" class="review-card__avatar" onerror="this.parentElement.classList.add('img-fallback--avatar')"><div><strong>Minh Anh</strong><span class="stars">★★★★★</span></div></div>
+          <p>“Mùi hương thảo mộc dễ chịu, da đầu sạch thoáng mà không khô căng. Yên tâm vì không có silicone.”</p>
+        </div>
+        <div class="review-card" data-reveal>
+          <div class="review-card__head"><img src="assets/images/avatar-3.jpg" alt="" class="review-card__avatar" onerror="this.parentElement.classList.add('img-fallback--avatar')"><div><strong>Thu Hà</strong><span class="stars">★★★★★</span></div></div>
+          <p>“Giao hàng nhanh, tặng kèm túi vải xinh xắn. Sản phẩm dùng rất ưng, tóc bồng bềnh hẳn ra.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG TEASER ============ -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow">Góc chia sẻ</span>
+        <h2 class="section__title">Tin tức &amp; kiến thức chăm sóc tóc</h2>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card" data-reveal>
+          <div class="blog-card__img"><img src="assets/images/blog-1.jpg" alt="" onerror="this.parentElement.classList.add('img-fallback--leaf')"></div>
+          <div class="blog-card__body">
+            <span class="blog-card__meta">CHĂM SÓC TÓC</span>
+            <h3>5 nguyên nhân khiến tóc gãy rụng bạn chưa biết</h3>
+            <p>Tìm hiểu những nguyên nhân phổ biến gây rụng tóc và cách khắc phục hiệu quả tại nhà.</p>
+            <a href="tin-tuc-chi-tiet.html" class="blog-card__link">Đọc tiếp →</a>
+          </div>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card__img"><img src="assets/images/blog-2.jpg" alt="" onerror="this.parentElement.classList.add('img-fallback--leaf')"></div>
+          <div class="blog-card__body">
+            <span class="blog-card__meta">THẢO DƯỢC</span>
+            <h3>Vì sao nên chọn dầu gội thảo dược thay vì hóa chất?</h3>
+            <p>So sánh lợi ích của thảo dược thiên nhiên so với các loại dầu gội chứa hóa chất tẩy mạnh.</p>
+            <a href="tin-tuc-chi-tiet.html" class="blog-card__link">Đọc tiếp →</a>
+          </div>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card__img"><img src="assets/images/blog-3.jpg" alt="" onerror="this.parentElement.classList.add('img-fallback--leaf')"></div>
+          <div class="blog-card__body">
+            <span class="blog-card__meta">HƯỚNG DẪN</span>
+            <h3>Hướng dẫn gội đầu đúng cách để giảm rụng tóc</h3>
+            <p>Các bước gội đầu chuẩn khoa học giúp tối ưu hiệu quả dưỡng tóc mỗi ngày.</p>
+            <a href="tin-tuc-chi-tiet.html" class="blog-card__link">Đọc tiếp →</a>
+          </div>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:40px;" data-reveal>
+        <a href="tin-tuc.html" class="btn btn--ghost">Xem tất cả bài viết</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="cta-banner">
+    <div class="container cta-banner__inner" data-reveal>
+      <img src="assets/images/logo-mark-white.svg" alt="" class="cta-banner__mark">
+      <h2>Sở hữu mái tóc chắc khỏe, suôn mượt<br>ngay hôm nay cùng Mộc Sa</h2>
+      <div class="hero__price hero__price--center">
+        <span class="price price--old price--onDark">245.000₫</span>
+        <span class="price price--new price--onDark">196.000₫</span>
+      </div>
+      <button class="btn btn--primary btn--lg" data-add-to-cart data-open-checkout>Đặt mua ngay – Tặng túi vải Mộc Sa</button>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <img src="assets/images/logo-white.svg" alt="Mộc Sa" class="footer__logo">
+      <p>Dầu gội thảo dược từ thiên nhiên Việt – chăm sóc mái tóc Việt bằng tinh hoa 15 thảo dược quý.</p>
+      <div class="footer__social"><a href="#">f</a><a href="#">ig</a><a href="#">Zalo</a><a href="#">tk</a></div>
+    </div>
+    <div class="footer__col">
+      <h4>Liên kết</h4>
+      <a href="index.html">Trang chủ</a>
+      <a href="ve-chung-toi.html">Về chúng tôi</a>
+      <a href="san-pham.html">Sản phẩm</a>
+      <a href="tin-tuc.html">Tin tức</a>
+      <a href="lien-he.html">Liên hệ</a>
+    </div>
+    <div class="footer__col">
+      <h4>Chính sách</h4>
+      <a href="chinh-sach-doi-tra.html">Chính sách đổi trả</a>
+      <a href="chinh-sach-van-chuyen.html">Chính sách vận chuyển</a>
+      <a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a>
+      <a href="dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a>
+    </div>
+    <div class="footer__col">
+      <h4>Liên hệ</h4>
+      <p>📍 123 Đường ABC, Quận 1, TP.HCM</p>
+      <p>📞 1900.000.000</p>
+      <p>✉️ hello@mocsa.vn</p>
+      <p>🕐 8:00 – 21:00 (Cả tuần)</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span>© 2026 Mộc Sa. Đã đăng ký bảo hộ thương hiệu.</span>
+      <span>Số CB: 000435/26/CBMP-HCM – Sở Y Tế TP.HCM</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-buy" id="stickyBuy">
+  <div class="sticky-buy__price"><span class="price price--old">245.000₫</span><span class="price price--new">196.000₫</span></div>
+  <button class="btn btn--primary" data-add-to-cart data-open-checkout>Mua ngay</button>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">↑</button>
+
+<div class="floating-contact">
+  <a href="tel:1900000000" class="floating-contact__btn floating-contact__btn--phone" aria-label="Gọi điện">📞</a>
+  <a href="#" class="floating-contact__btn floating-contact__btn--zalo" aria-label="Chat Zalo">Zalo</a>
+</div>
+
+<!-- ============ CHECKOUT MODAL ============ -->
+<div class="modal" id="checkoutModal">
+  <div class="modal__panel">
+    <button class="modal__close" id="checkoutClose">&times;</button>
+    <div class="modal__body" id="checkoutBody">
+      <h3>Đặt hàng Dầu gội thảo dược Mộc Sa</h3>
+      <p class="modal__sub">Điền thông tin để hoàn tất đơn hàng – Thanh toán khi nhận hàng (COD)</p>
+      <div class="modal__order-summary">
+        <img src="assets/images/product-1.jpg" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm')">
+        <div><strong>Dầu Gội Thảo Dược Mộc Sa 250ml</strong><span>Tặng kèm: Túi vải Mộc Sa</span></div>
+        <div class="modal__order-price">196.000₫</div>
+      </div>
+      <form id="checkoutForm">
+        <label>Họ và tên<input type="text" name="name" required placeholder="Nguyễn Văn A"></label>
+        <label>Số điện thoại<input type="tel" name="phone" required placeholder="09xxxxxxxx" pattern="[0-9]{9,11}"></label>
+        <label>Địa chỉ nhận hàng<input type="text" name="address" required placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành"></label>
+        <label>Số lượng<input type="number" name="quantity" id="checkoutQty" value="1" min="1" max="20"></label>
+        <div class="modal__total"><span>Tổng thanh toán (COD)</span><strong id="checkoutTotal">196.000₫</strong></div>
+        <button type="submit" class="btn btn--primary btn--lg btn--block">Xác nhận đặt hàng</button>
+        <p class="modal__note">Bằng việc đặt hàng, bạn đồng ý với Điều khoản dịch vụ &amp; Chính sách bảo mật của Mộc Sa.</p>
+      </form>
+    </div>
+    <div class="modal__success" id="checkoutSuccess" hidden>
+      <span class="modal__success-icon">✔</span>
+      <h3>Đặt hàng thành công!</h3>
+      <p>Cảm ơn bạn đã tin chọn Mộc Sa. Chúng tôi sẽ liên hệ xác nhận đơn hàng trong ít phút. Đừng quên bạn sẽ nhận kèm 1 túi vải Mộc Sa xinh xắn nhé!</p>
+      <button class="btn btn--dark" id="checkoutSuccessClose">Đóng</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="lightbox" id="lightbox"><button class="lightbox__close" id="lightboxClose">&times;</button><img src="" alt="" id="lightboxImg"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

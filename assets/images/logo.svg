@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 90">
+  <defs>
+    <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D8B15C"/>
+      <stop offset="1" stop-color="#B8862F"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4,2) scale(0.62)">
+    <path d="M50 38 C39 33 31 21 35 6 C48 11 54 24 50 38 Z" fill="url(#lg1)"/>
+    <path d="M50 38 C61 33 69 21 65 6 C52 11 46 24 50 38 Z" fill="url(#lg1)"/>
+    <rect x="40" y="44" width="20" height="7" rx="3.5" fill="url(#lg1)"/>
+    <rect x="32" y="55" width="36" height="7" rx="3.5" fill="url(#lg1)"/>
+    <rect x="24" y="66" width="52" height="7" rx="3.5" fill="url(#lg1)"/>
+    <rect x="16" y="79" width="68" height="8" rx="4" fill="url(#lg1)"/>
+  </g>
+  <text x="102" y="62" font-family="'Playfair Display', Georgia, serif" font-size="46" font-weight="600" fill="#3B2517">Mộc</text>
+  <text x="200" y="62" font-family="'Playfair Display', Georgia, serif" font-size="46" font-weight="600" fill="#3B2517">Sa</text>
+  <circle cx="252" cy="70" r="4" fill="url(#lg1)"/>
+  <path d="M258 66 C268 60 278 64 276 74 C268 76 260 74 258 66 Z" fill="url(#lg1)"/>
+</svg>

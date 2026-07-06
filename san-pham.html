@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sản Phẩm – Mộc Sa</title>
+<meta name="description" content="Danh mục sản phẩm Mộc Sa – Dầu gội thảo dược 250ml, giá 245.000₫ chỉ còn 196.000₫, tặng kèm túi vải Mộc Sa.">
+<link rel="icon" href="assets/images/logo-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .shop-layout{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start;}
+  .shop-side{background:var(--white);border-radius:var(--radius-md);padding:26px;box-shadow:var(--shadow-sm);position:sticky;top:110px;}
+  .shop-side h4{font-size:14.5px;margin-bottom:16px;color:var(--brown-900);}
+  .shop-side ul{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
+  .shop-side ul li a{display:flex;justify-content:space-between;font-size:14px;color:var(--ink-soft);}
+  .shop-side ul li a.is-active{color:var(--gold-600);font-weight:700;}
+  .shop-side ul li a span{color:var(--brown-500);font-size:12px;}
+  .price-range{display:flex;flex-direction:column;gap:10px;}
+  .price-range label{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink-soft);}
+  .shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .shop-card{background:var(--white);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .3s ease;}
+  .shop-card:hover{transform:translateY(-6px);}
+  .shop-card__img{position:relative;aspect-ratio:1/1;background:var(--cream-2);}
+  .shop-card__img img{width:100%;height:100%;object-fit:contain;padding:14px;}
+  .shop-card__body{padding:18px 20px 22px;}
+  .shop-card__body h3{font-size:15.5px;margin-bottom:8px;}
+  .shop-card__price{display:flex;gap:8px;align-items:center;margin-bottom:14px;}
+  .shop-card--soon{opacity:.7;}
+  .shop-card--soon .shop-card__img::after{content:"Sắp ra mắt";position:absolute;top:12px;left:12px;background:var(--brown-800);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:var(--radius-pill);}
+  .toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px;flex-wrap:wrap;gap:12px;}
+  .toolbar span{color:var(--ink-soft);font-size:14px;}
+  @media(max-width:880px){.shop-layout{grid-template-columns:1fr;}.shop-grid{grid-template-columns:1fr 1fr;}.shop-side{position:static;}}
+  @media(max-width:560px){.shop-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body data-page="products">
+
+<div class="top-bar"><div class="container top-bar__inner"><p class="top-bar__msg"><span>🚚</span> Freeship toàn quốc – Thanh toán khi nhận hàng (COD) – Tặng kèm túi vải Mộc Sa</p></div></div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand"><img src="assets/images/logo.svg" alt="Mộc Sa" class="brand__logo"></a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__link">Trang chủ</a>
+      <a href="ve-chung-toi.html" class="nav__link">Về chúng tôi</a>
+      <a href="san-pham.html" class="nav__link">Sản phẩm</a>
+      <a href="tin-tuc.html" class="nav__link">Tin tức</a>
+      <a href="lien-he.html" class="nav__link">Liên hệ</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:1900000000" class="hotline"><span class="hotline__icon">📞</span><span class="hotline__text"><small>Hotline đặt hàng</small>1900.000.000</span></a>
+      <button class="icon-btn" id="cartBtn" aria-label="Giỏ hàng">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13L5.4 5M7 13l-1.5 6h13M9 21a1 1 0 100-2 1 1 0 000 2zm9 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="icon-btn__badge" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mini-cart" id="miniCart">
+  <div class="mini-cart__head"><strong>Giỏ hàng của bạn</strong><button class="mini-cart__close" id="miniCartClose">&times;</button></div>
+  <div class="mini-cart__body" id="miniCartBody"><p class="mini-cart__empty">Chưa có sản phẩm nào trong giỏ.</p></div>
+  <div class="mini-cart__foot" id="miniCartFoot" hidden><div class="mini-cart__total"><span>Tạm tính</span><strong id="miniCartTotal">0₫</strong></div><button class="btn btn--primary btn--block" id="miniCartCheckout">Đến trang giỏ hàng</button></div>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <h1>Sản Phẩm</h1>
+    <p class="breadcrumb"><a href="index.html">Trang chủ</a><span>/</span>Sản phẩm</p>
+  </div>
+</section>
+
+<main>
+  <section class="section">
+    <div class="container shop-layout">
+      <aside class="shop-side" data-reveal>
+        <h4>DANH MỤC</h4>
+        <ul>
+          <li><a href="san-pham.html" class="is-active">Dầu gội thảo dược <span>(1)</span></a></li>
+          <li><a href="#">Dầu xả thảo dược <span>Sắp ra mắt</span></a></li>
+          <li><a href="#">Serum dưỡng tóc <span>Sắp ra mắt</span></a></li>
+          <li><a href="#">Combo quà tặng <span>Sắp ra mắt</span></a></li>
+        </ul>
+        <h4>KHOẢNG GIÁ</h4>
+        <div class="price-range">
+          <label><input type="radio" name="price" checked> Dưới 200.000₫</label>
+          <label><input type="radio" name="price"> 200.000₫ – 400.000₫</label>
+          <label><input type="radio" name="price"> Trên 400.000₫</label>
+        </div>
+      </aside>
+
+      <div>
+        <div class="toolbar" data-reveal>
+          <span>Hiển thị 1 sản phẩm</span>
+        </div>
+        <div class="shop-grid">
+          <div class="shop-card" data-reveal>
+            <a href="san-pham-chi-tiet.html" class="shop-card__img">
+              <span class="badge badge--sale" style="position:absolute;top:12px;left:12px;z-index:2;">-20%</span>
+              <img src="assets/images/product-1.jpg" alt="Dầu gội thảo dược Mộc Sa" onerror="this.parentElement.parentElement.classList.add('img-fallback--bottle')">
+            </a>
+            <div class="shop-card__body">
+              <h3><a href="san-pham-chi-tiet.html">Dầu Gội Thảo Dược Mộc Sa 250ml</a></h3>
+              <span class="stars" style="font-size:13px;">★★★★★</span>
+              <div class="shop-card__price">
+                <span class="price price--old" style="font-size:13px;">245.000₫</span>
+                <span class="price price--new" style="font-size:19px;">196.000₫</span>
+              </div>
+              <a href="san-pham-chi-tiet.html" class="btn btn--primary btn--block btn--sm">Xem sản phẩm</a>
+            </div>
+          </div>
+
+          <div class="shop-card shop-card--soon" data-reveal>
+            <div class="shop-card__img"><img src="assets/images/product-conditioner.jpg" alt="Dầu xả thảo dược Mộc Sa" onerror="this.parentElement.classList.add('img-fallback--bottle')"></div>
+            <div class="shop-card__body"><h3>Dầu Xả Thảo Dược Mộc Sa</h3><p style="font-size:13px;">Đang hoàn thiện công thức, sắp ra mắt.</p><button class="btn btn--ghost btn--block btn--sm" disabled>Sắp ra mắt</button></div>
+          </div>
+
+          <div class="shop-card shop-card--soon" data-reveal>
+            <div class="shop-card__img"><img src="assets/images/product-serum.jpg" alt="Serum dưỡng tóc Mộc Sa" onerror="this.parentElement.classList.add('img-fallback--bottle')"></div>
+            <div class="shop-card__body"><h3>Serum Dưỡng Tóc Mộc Sa</h3><p style="font-size:13px;">Đang hoàn thiện công thức, sắp ra mắt.</p><button class="btn btn--ghost btn--block btn--sm" disabled>Sắp ra mắt</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container cta-banner__inner" data-reveal>
+      <img src="assets/images/logo-mark-white.svg" alt="" class="cta-banner__mark">
+      <h2>Đừng bỏ lỡ ưu đãi giảm 20%<br>cho Dầu Gội Thảo Dược Mộc Sa</h2>
+      <a href="san-pham-chi-tiet.html" class="btn btn--primary btn--lg">Mua ngay – 196.000₫</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <img src="assets/images/logo-white.svg" alt="Mộc Sa" class="footer__logo">
+      <p>Dầu gội thảo dược từ thiên nhiên Việt – chăm sóc mái tóc Việt bằng tinh hoa 15 thảo dược quý.</p>
+      <div class="footer__social"><a href="#">f</a><a href="#">ig</a><a href="#">Zalo</a><a href="#">tk</a></div>
+    </div>
+    <div class="footer__col"><h4>Liên kết</h4><a href="index.html">Trang chủ</a><a href="ve-chung-toi.html">Về chúng tôi</a><a href="san-pham.html">Sản phẩm</a><a href="tin-tuc.html">Tin tức</a><a href="lien-he.html">Liên hệ</a></div>
+    <div class="footer__col"><h4>Chính sách</h4><a href="chinh-sach-doi-tra.html">Chính sách đổi trả</a><a href="chinh-sach-van-chuyen.html">Chính sách vận chuyển</a><a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a><a href="dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a></div>
+    <div class="footer__col"><h4>Liên hệ</h4><p>📍 123 Đường ABC, Quận 1, TP.HCM</p><p>📞 1900.000.000</p><p>✉️ hello@mocsa.vn</p><p>🕐 8:00 – 21:00 (Cả tuần)</p></div>
+  </div>
+  <div class="footer__bottom"><div class="container footer__bottom-inner"><span>© 2026 Mộc Sa. Đã đăng ký bảo hộ thương hiệu.</span><span>Số CB: 000435/26/CBMP-HCM – Sở Y Tế TP.HCM</span></div></div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">↑</button>
+<div class="floating-contact"><a href="tel:1900000000" class="floating-contact__btn floating-contact__btn--phone">📞</a><a href="#" class="floating-contact__btn floating-contact__btn--zalo">Zalo</a></div>
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

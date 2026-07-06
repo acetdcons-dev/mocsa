@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /gio-hang.html
+Disallow: /thanh-toan.html
+Disallow: /dat-hang-thanh-cong.html
+
+Sitemap: https://mocsa.vn/sitemap.xml

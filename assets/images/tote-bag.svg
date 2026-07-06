@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140">
+  <path d="M30 46 C30 24 42 12 60 12 C78 12 90 24 90 46" fill="none" stroke="#4E3220" stroke-width="6" stroke-linecap="round"/>
+  <path d="M14 46 H106 L98 132 H22 Z" fill="#FBF6EC" stroke="#4E3220" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M14 46 H106 L102 66 H18 Z" fill="#4E3220"/>
+  <g transform="translate(45,80) scale(0.28)">
+    <path d="M50 38 C39 33 31 21 35 6 C48 11 54 24 50 38 Z" fill="#C89B3C"/>
+    <path d="M50 38 C61 33 69 21 65 6 C52 11 46 24 50 38 Z" fill="#C89B3C"/>
+    <rect x="40" y="44" width="20" height="7" rx="3.5" fill="#C89B3C"/>
+    <rect x="32" y="55" width="36" height="7" rx="3.5" fill="#C89B3C"/>
+    <rect x="24" y="66" width="52" height="7" rx="3.5" fill="#C89B3C"/>
+  </g>
+  <text x="60" y="118" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="15" fill="#4E3220">Mộc Sa</text>
+</svg>
