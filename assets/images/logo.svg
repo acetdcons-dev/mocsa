@@ -13,8 +13,8 @@
     <rect x="24" y="66" width="52" height="7" rx="3.5" fill="url(#lg1)"/>
     <rect x="16" y="79" width="68" height="8" rx="4" fill="url(#lg1)"/>
   </g>
-  <text x="102" y="62" font-family="'Playfair Display', Georgia, serif" font-size="46" font-weight="600" fill="#3B2517">Mộc</text>
-  <text x="200" y="62" font-family="'Playfair Display', Georgia, serif" font-size="46" font-weight="600" fill="#3B2517">Sa</text>
+  <text x="102" y="62" font-family="'Playfair Display', Georgia, serif" font-size="46" font-weight="600" fill="#46301C">Mộc</text>
+  <text x="200" y="62" font-family="'Playfair Display', Georgia, serif" font-size="46" font-weight="600" fill="#46301C">Sa</text>
   <circle cx="252" cy="70" r="4" fill="url(#lg1)"/>
   <path d="M258 66 C268 60 278 64 276 74 C268 76 260 74 258 66 Z" fill="url(#lg1)"/>
 </svg>
