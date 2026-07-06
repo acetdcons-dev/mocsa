@@ -79,7 +79,7 @@ Mở trực tiếp file `index.html` bằng trình duyệt, hoặc để mượt
 
 ## 3. Cập nhật thông tin liên hệ / chính sách
 
-Tìm và sửa trực tiếp trong phần `<footer>` của mỗi trang: địa chỉ, hotline, email, mạng xã hội. Số hotline `1900.000.000` xuất hiện ở nhiều trang — nên tìm & thay toàn bộ (Find & Replace) khi có số thật.
+Hotline/Zalo hiện tại: `0325.343.663` (đã cập nhật khắp 14 trang). Fanpage: [Mộc Sa Việt Nam](https://www.facebook.com/mocsavietnam) (đã gắn ở footer). Địa chỉ và email hiện vẫn là dữ liệu mẫu (`123 Đường ABC, Quận 1, TP.HCM`, `hello@mocsa.vn`) — tìm trực tiếp trong phần `<footer>` của mỗi trang để thay khi có thông tin thật.
 
 ## 4. Giỏ hàng & đặt hàng hoạt động thế nào
 
