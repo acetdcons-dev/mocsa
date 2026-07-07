@@ -64,7 +64,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="product-detail">
@@ -83,7 +83,7 @@
       <a href="lien-he.html" class="nav__link">Liên hệ</a>
     </nav>
     <div class="header__actions">
-      <a href="tel:0325343663" class="hotline"><span class="hotline__icon">📞</span><span class="hotline__text"><small>Hotline đặt hàng</small>0325.343.663</span></a>
+      <a href="tel:0325343663" class="hotline"><span class="hotline__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l3-4.2-6-3-2 2.1c-2-1-4.1-3.1-5.1-5.1l2.1-2L9 4 4.8 5Z"/></svg></span><span class="hotline__text"><small>Hotline đặt hàng</small>0325.343.663</span></a>
       <button class="icon-btn" id="cartBtn" aria-label="Giỏ hàng">
         <svg viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13L5.4 5M7 13l-1.5 6h13M9 21a1 1 0 100-2 1 1 0 000 2zm9 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="icon-btn__badge" id="cartCount">0</span>
@@ -113,13 +113,13 @@
       <div class="product__gallery" data-reveal>
         <div class="product__main">
           <span class="badge badge--sale product__badge">-20%</span>
-          <img src="assets/images/product-1.png" alt="Dầu gội thảo dược Mộc Sa" id="galleryMain" data-label="Ảnh chính sản phẩm" onerror="this.parentElement.classList.add('img-fallback--bottle')">
+          <img src="assets/images/product-1.png" alt="Dầu gội thảo dược Mộc Sa" id="galleryMain" data-label="Ảnh chính sản phẩm" onerror="this.parentElement.classList.add('img-fallback--bottle');this.parentElement.setAttribute('data-size','1000 × 1000px')">
         </div>
         <div class="product__thumbs" id="galleryThumbs">
-          <button class="thumb is-active" data-img="assets/images/product-1.png"><img src="assets/images/product-1.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm')"></button>
-          <button class="thumb" data-img="assets/images/product-2.png"><img src="assets/images/product-2.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm')"></button>
-          <button class="thumb" data-img="assets/images/product-box.png"><img src="assets/images/product-box.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm')"></button>
-          <button class="thumb" data-img="assets/images/product-usage.png"><img src="assets/images/product-usage.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm')"></button>
+          <button class="thumb is-active" data-img="assets/images/product-1.png"><img src="assets/images/product-1.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm');this.parentElement.setAttribute('data-size','1000 × 1000px')"></button>
+          <button class="thumb" data-img="assets/images/product-2.png"><img src="assets/images/product-2.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm');this.parentElement.setAttribute('data-size','1000 × 1000px')"></button>
+          <button class="thumb" data-img="assets/images/product-box.png"><img src="assets/images/product-box.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm');this.parentElement.setAttribute('data-size','1000 × 1000px')"></button>
+          <button class="thumb" data-img="assets/images/product-usage.png"><img src="assets/images/product-usage.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm');this.parentElement.setAttribute('data-size','1000 × 1000px')"></button>
         </div>
       </div>
 
@@ -163,7 +163,7 @@
   </section>
 
   <!-- ============ TABS ============ -->
-  <section class="section" style="padding-top:0;">
+  <section class="section section--alt" style="padding-top:0;">
     <div class="container">
       <div class="tabs__nav">
         <button class="tabs__btn is-active" data-tab="tabMota">Mô tả sản phẩm</button>
@@ -250,7 +250,7 @@
   <section class="section compare">
     <div class="container compare__grid">
       <div class="compare__media" data-reveal>
-        <img src="assets/images/before-after.png" alt="So sánh tóc trước và sau khi dùng Mộc Sa" class="compare__static-img" data-label="Ảnh so sánh trước/sau" onerror="this.parentElement.classList.add('img-fallback--hair-after')">
+        <img src="assets/images/before-after.png" alt="So sánh tóc trước và sau khi dùng Mộc Sa" class="compare__static-img" data-label="Ảnh so sánh trước/sau" onerror="this.parentElement.classList.add('img-fallback--hair-after');this.parentElement.setAttribute('data-size','1600 × 1000px')">
       </div>
       <div class="compare__content" data-reveal>
         <span class="eyebrow">Hiệu quả thấy rõ</span>
@@ -267,9 +267,9 @@
     <div class="container">
       <div class="section__head" data-reveal><span class="eyebrow">Đánh giá sản phẩm</span><h2 class="section__title">4.9/5 từ 1.284 khách hàng</h2></div>
       <div class="review-grid">
-        <div class="review-card" data-reveal><div class="review-card__head"><img src="assets/images/avatar-1.jpg" alt="" class="review-card__avatar" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--avatar')"><div><strong>Trang Trang</strong><span class="stars">★★★★★</span></div></div><p>“Trước đây tóc tôi khá khô, dễ gãy rụng và thường xuyên bị ngứa da đầu. Sau khi dùng Mộc Sa khoảng 2 tuần, tôi thấy sự thay đổi rõ rệt.”</p></div>
-        <div class="review-card" data-reveal><div class="review-card__head"><img src="assets/images/avatar-2.jpg" alt="" class="review-card__avatar" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--avatar')"><div><strong>Minh Anh</strong><span class="stars">★★★★★</span></div></div><p>“Mùi hương thảo mộc rất dễ chịu, gội xong da đầu sạch thoáng mà không hề khô căng.”</p></div>
-        <div class="review-card" data-reveal><div class="review-card__head"><img src="assets/images/avatar-3.jpg" alt="" class="review-card__avatar" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--avatar')"><div><strong>Thu Hà</strong><span class="stars">★★★★★</span></div></div><p>“Đóng gói cẩn thận, giao hàng nhanh, lại còn được tặng túi vải xinh xắn nữa.”</p></div>
+        <div class="review-card" data-reveal><div class="review-card__head"><span class="review-card__avatar-wrap"><img src="assets/images/avatar-1.jpg" alt="" class="review-card__avatar" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--avatar');this.parentElement.setAttribute('data-size','800 × 800px')"></span><div><strong>Trang Trang</strong><span class="stars">★★★★★</span></div></div><p>“Trước đây tóc tôi khá khô, dễ gãy rụng và thường xuyên bị ngứa da đầu. Sau khi dùng Mộc Sa khoảng 2 tuần, tôi thấy sự thay đổi rõ rệt.”</p></div>
+        <div class="review-card" data-reveal><div class="review-card__head"><span class="review-card__avatar-wrap"><img src="assets/images/avatar-2.jpg" alt="" class="review-card__avatar" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--avatar');this.parentElement.setAttribute('data-size','800 × 800px')"></span><div><strong>Minh Anh</strong><span class="stars">★★★★★</span></div></div><p>“Mùi hương thảo mộc rất dễ chịu, gội xong da đầu sạch thoáng mà không hề khô căng.”</p></div>
+        <div class="review-card" data-reveal><div class="review-card__head"><span class="review-card__avatar-wrap"><img src="assets/images/avatar-3.jpg" alt="" class="review-card__avatar" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--avatar');this.parentElement.setAttribute('data-size','800 × 800px')"></span><div><strong>Thu Hà</strong><span class="stars">★★★★★</span></div></div><p>“Đóng gói cẩn thận, giao hàng nhanh, lại còn được tặng túi vải xinh xắn nữa.”</p></div>
       </div>
     </div>
   </section>
@@ -291,9 +291,9 @@
         <button class="btn btn--dark" id="proofViewBtn">Xem phiếu thử nghiệm</button>
       </div>
       <div class="proof__gallery" data-reveal>
-        <div class="proof__thumb proof__thumb--wide"><img src="assets/images/kiem-nghiem-1.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 1" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert')"></div>
-        <div class="proof__thumb"><img src="assets/images/kiem-nghiem-2.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 2" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert')"></div>
-        <div class="proof__thumb"><img src="assets/images/kiem-nghiem-3.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 3" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert')"></div>
+        <div class="proof__thumb proof__thumb--wide"><img src="assets/images/kiem-nghiem-1.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 1" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert');this.parentElement.setAttribute('data-size','1000 × 1400px')"></div>
+        <div class="proof__thumb"><img src="assets/images/kiem-nghiem-2.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 2" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert');this.parentElement.setAttribute('data-size','1000 × 1400px')"></div>
+        <div class="proof__thumb"><img src="assets/images/kiem-nghiem-3.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 3" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert');this.parentElement.setAttribute('data-size','1000 × 1400px')"></div>
       </div>
     </div>
     <div class="container" style="margin-top:40px;">
@@ -306,7 +306,7 @@
   </section>
 
   <!-- ============ FAQ ============ -->
-  <section class="section faq">
+  <section class="section faq section--alt">
     <div class="container">
       <div class="section__head" data-reveal><span class="eyebrow">Giải đáp thắc mắc</span><h2 class="section__title">Câu hỏi thường gặp</h2></div>
       <div class="faq__wrap" data-reveal>
@@ -380,7 +380,7 @@
   <button class="btn btn--primary" data-add-to-cart data-open-checkout>Mua ngay</button>
 </div>
 <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">↑</button>
-<div class="floating-contact"><a href="tel:0325343663" class="floating-contact__btn floating-contact__btn--phone">📞</a><a href="https://zalo.me/0325343663" class="floating-contact__btn floating-contact__btn--zalo" target="_blank" rel="noopener">Zalo</a></div>
+<div class="floating-contact"><a href="tel:0325343663" class="floating-contact__btn floating-contact__btn--phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l3-4.2-6-3-2 2.1c-2-1-4.1-3.1-5.1-5.1l2.1-2L9 4 4.8 5Z"/></svg></a><a href="https://zalo.me/0325343663" class="floating-contact__btn floating-contact__btn--zalo" target="_blank" rel="noopener">Zalo</a></div>
 
 <div class="modal" id="checkoutModal">
   <div class="modal__panel">
@@ -389,7 +389,7 @@
       <h3>Đặt hàng Dầu gội thảo dược Mộc Sa</h3>
       <p class="modal__sub">Điền thông tin để hoàn tất đơn hàng – Thanh toán khi nhận hàng (COD)</p>
       <div class="modal__order-summary">
-        <img src="assets/images/product-1.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm')">
+        <img src="assets/images/product-1.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm');this.parentElement.setAttribute('data-size','1000 × 1000px')">
         <div><strong>Dầu Gội Thảo Dược Mộc Sa 250ml</strong><span>Tặng kèm: Túi vải Mộc Sa</span></div>
         <div class="modal__order-price">196.000₫</div>
       </div>

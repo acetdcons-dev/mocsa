@@ -20,7 +20,7 @@
 <link rel="icon" href="assets/images/logo-icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="about">
@@ -39,7 +39,7 @@
       <a href="lien-he.html" class="nav__link">Liên hệ</a>
     </nav>
     <div class="header__actions">
-      <a href="tel:0325343663" class="hotline"><span class="hotline__icon">📞</span><span class="hotline__text"><small>Hotline đặt hàng</small>0325.343.663</span></a>
+      <a href="tel:0325343663" class="hotline"><span class="hotline__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l3-4.2-6-3-2 2.1c-2-1-4.1-3.1-5.1-5.1l2.1-2L9 4 4.8 5Z"/></svg></span><span class="hotline__text"><small>Hotline đặt hàng</small>0325.343.663</span></a>
       <button class="icon-btn" id="cartBtn" aria-label="Giỏ hàng">
         <svg viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13L5.4 5M7 13l-1.5 6h13M9 21a1 1 0 100-2 1 1 0 000 2zm9 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="icon-btn__badge" id="cartCount">0</span>
@@ -67,7 +67,7 @@
   <section class="section about">
     <div class="container about__grid">
       <div class="about__media" data-reveal>
-        <img src="assets/images/about.png" alt="Câu chuyện thương hiệu Mộc Sa" data-label="Ảnh câu chuyện thương hiệu" onerror="this.parentElement.classList.add('img-fallback--leaf')" loading="lazy">
+        <img src="assets/images/about.png" alt="Câu chuyện thương hiệu Mộc Sa" data-label="Ảnh câu chuyện thương hiệu" onerror="this.parentElement.classList.add('img-fallback--leaf');this.parentElement.setAttribute('data-size','1600 × 900px')" loading="lazy">
         <div class="about__badge"><strong>100%</strong><span>Thảo dược Việt Nam</span></div>
       </div>
       <div class="about__content" data-reveal>
@@ -87,7 +87,7 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top:0;">
+  <section class="section section--alt" style="padding-top:0;">
     <div class="container">
       <div class="section__head" data-reveal>
         <span class="eyebrow">Giá trị cốt lõi</span>
@@ -108,12 +108,12 @@
         <h2 class="section__title section__title--light">15 Thảo Dược Việt trong mỗi chai Mộc Sa</h2>
       </div>
       <div class="ing-grid">
-        <div class="ing-card" data-reveal><span class="ing-card__icon">☕</span><h3>Caffeine</h3><p>Kích thích vi tuần hoàn da đầu, nuôi dưỡng chân tóc khỏe mạnh.</p></div>
-        <div class="ing-card" data-reveal><span class="ing-card__icon">🌹</span><h3>Bụt Giấm (Atiso đỏ)</h3><p>Chống oxy hóa, phục hồi tóc khô xơ, hư tổn.</p></div>
-        <div class="ing-card" data-reveal><span class="ing-card__icon">🌵</span><h3>Xương rồng</h3><p>Giữ ẩm tự nhiên, làm dịu da đầu khô căng rát.</p></div>
-        <div class="ing-card" data-reveal><span class="ing-card__icon">🫚</span><h3>Gừng</h3><p>Kháng khuẩn tự nhiên, hỗ trợ giảm gàu và ngứa da đầu.</p></div>
-        <div class="ing-card" data-reveal><span class="ing-card__icon">🌿</span><h3>Tía tô &amp; Bồ kết</h3><p>Làm sạch dịu nhẹ, kháng viêm, thơm tự nhiên.</p></div>
-        <div class="ing-card" data-reveal><span class="ing-card__icon">🍯</span><h3>Nấm men</h3><p>Cân bằng hệ vi sinh da đầu, hạn chế gàu và bết dầu.</p></div>
+        <div class="ing-card" data-reveal><div class="ing-card__media"><img src="assets/images/ingredient-caffeine.jpg" alt="Caffeine" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--ingredient');this.parentElement.setAttribute('data-size','1200 × 1200px')"></div><div class="ing-card__body"><h3>Caffeine</h3><p>Kích thích vi tuần hoàn da đầu, nuôi dưỡng chân tóc khỏe mạnh.</p></div></div>
+        <div class="ing-card" data-reveal><div class="ing-card__media"><img src="assets/images/ingredient-but-giam.jpg" alt="Bụt Giấm (Atiso đỏ)" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--ingredient');this.parentElement.setAttribute('data-size','1200 × 1200px')"></div><div class="ing-card__body"><h3>Bụt Giấm (Atiso đỏ)</h3><p>Chống oxy hóa, phục hồi tóc khô xơ, hư tổn.</p></div></div>
+        <div class="ing-card" data-reveal><div class="ing-card__media"><img src="assets/images/ingredient-xuong-rong.jpg" alt="Xương rồng" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--ingredient');this.parentElement.setAttribute('data-size','1200 × 1200px')"></div><div class="ing-card__body"><h3>Xương rồng</h3><p>Giữ ẩm tự nhiên, làm dịu da đầu khô căng rát.</p></div></div>
+        <div class="ing-card" data-reveal><div class="ing-card__media"><img src="assets/images/ingredient-gung.jpg" alt="Gừng" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--ingredient');this.parentElement.setAttribute('data-size','1200 × 1200px')"></div><div class="ing-card__body"><h3>Gừng</h3><p>Kháng khuẩn tự nhiên, hỗ trợ giảm gàu và ngứa da đầu.</p></div></div>
+        <div class="ing-card" data-reveal><div class="ing-card__media"><img src="assets/images/ingredient-tia-to-bo-ket.jpg" alt="Tía tô &amp; Bồ kết" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--ingredient');this.parentElement.setAttribute('data-size','1200 × 1200px')"></div><div class="ing-card__body"><h3>Tía tô &amp; Bồ kết</h3><p>Làm sạch dịu nhẹ, kháng viêm, thơm tự nhiên.</p></div></div>
+        <div class="ing-card" data-reveal><div class="ing-card__media"><img src="assets/images/ingredient-nam-men.jpg" alt="Nấm men" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--ingredient');this.parentElement.setAttribute('data-size','1200 × 1200px')"></div><div class="ing-card__body"><h3>Nấm men</h3><p>Cân bằng hệ vi sinh da đầu, hạn chế gàu và bết dầu.</p></div></div>
       </div>
       <div style="text-align:center;margin-top:36px;" data-reveal>
         <a href="san-pham-chi-tiet.html" class="btn btn--outline">Xem đầy đủ 15 thành phần</a>
@@ -155,7 +155,7 @@
 </footer>
 
 <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">↑</button>
-<div class="floating-contact"><a href="tel:0325343663" class="floating-contact__btn floating-contact__btn--phone">📞</a><a href="https://zalo.me/0325343663" class="floating-contact__btn floating-contact__btn--zalo" target="_blank" rel="noopener">Zalo</a></div>
+<div class="floating-contact"><a href="tel:0325343663" class="floating-contact__btn floating-contact__btn--phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l3-4.2-6-3-2 2.1c-2-1-4.1-3.1-5.1-5.1l2.1-2L9 4 4.8 5Z"/></svg></a><a href="https://zalo.me/0325343663" class="floating-contact__btn floating-contact__btn--zalo" target="_blank" rel="noopener">Zalo</a></div>
 <div class="toast" id="toast"></div>
 <div class="lightbox" id="lightbox"><button class="lightbox__close" id="lightboxClose">&times;</button><button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Ảnh trước" hidden>‹</button><img src="" alt="" id="lightboxImg"><button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Ảnh sau" hidden>›</button></div>
 

@@ -28,6 +28,18 @@ moc-sa/
 
 Trang chi tiết sản phẩm (`san-pham-chi-tiet.html`) có mục **Câu hỏi thường gặp (FAQ)** 10 câu dạng accordion, khối **Kết quả thử nghiệm chất lượng** (QUATEST 3) với gallery 3 ảnh xem lightbox mượt (kéo trái/phải), và **Schema Product + FAQPage** cho SEO.
 
+### Giao diện cao cấp (redesign)
+
+- **Bảng màu** đổi hoàn toàn sang tông nâu ấm cao cấp (Primary `#8B5E3C`, Gold Accent `#C59B4D`, nền kem `#FAF7F2`/`#F6F1EA`) – khai báo tại `:root` đầu file `css/style.css`, đổi giá trị ở đây sẽ áp dụng lại toàn site.
+- **Font tiêu đề** đổi sang **Cormorant Garamond** (font thân vẫn là Be Vietnam Pro).
+- **Bo góc** chuẩn hoá 16/20/24px, khoảng cách section tăng lên 140px, đổ bóng làm mềm hơn.
+- **Icon**: toàn bộ icon emoji (🚚🔄🎁🛡️🌿🧪📞...) đã đổi thành SVG outline nét mảnh, đồng bộ phong cách.
+- **Hệ thống Placeholder ảnh**: bất kỳ ảnh nào chưa có sẽ tự hiện khung viền đứt, chữ "IMAGE PLACEHOLDER" + kích thước đề xuất (xem bảng ở mục 2) thay vì icon emoji như trước – giúp biết chính xác cần chuẩn bị ảnh gì, kích thước bao nhiêu.
+- **Nền xen kẽ** (alternating background) giữa các section trang chủ/sản phẩm/về chúng tôi để tạo nhịp điệu thị giác.
+- Card thành phần (ingredient) đổi sang dạng **glass card** (nền mờ kính) với ảnh lớn phía trên, card đánh giá/testimonial nâng cấp đổ bóng mềm + hover nổi nhẹ.
+
+Chưa làm: chuyển đổi ảnh sang WebP và đo Lighthouse thực tế (xem mục "Về SEO & hiệu năng" bên dưới) — vẫn cần công cụ xử lý ảnh/trình duyệt mà môi trường hiện tại không có sẵn.
+
 Menu điều hướng hiện tại: **Trang chủ / Sản phẩm / Kiến thức / Minh chứng chất lượng / Về Mộc Sa / Liên hệ** — cấu trúc theo hướng thương hiệu lâu dài thay vì landing page bán hàng đơn thuần.
 
 ### Về SEO & hiệu năng
@@ -67,6 +79,8 @@ Mở trực tiếp file `index.html` bằng trình duyệt, hoặc để mượt
 | `certificate.jpg` | **Phiếu công bố sản phẩm mỹ phẩm** – khối "Đã công bố sản phẩm mỹ phẩm" ở trang Về chúng tôi & Chi tiết sản phẩm | ⬜ Chưa có – lưu ảnh chụp/scan phiếu công bố vào đúng tên này |
 | `kiem-nghiem-1.jpg`, `kiem-nghiem-2.jpg`, `kiem-nghiem-3.jpg` | **Phiếu kết quả kiểm nghiệm (3 trang)** – khối "Đã kiểm nghiệm chất lượng" (nằm cạnh khối công bố) | ⬜ Chưa có – lưu đúng 3 ảnh theo thứ tự trang 1/2/3, mỗi trang bấm xem riêng được |
 | `blog-1.jpg` → `blog-6.jpg` | Ảnh minh hoạ 6 bài viết ở trang Tin tức (`tin-tuc.html`, và ảnh bìa ở `tin-tuc-chi-tiet.html` dùng `blog-1.jpg`) | ⬜ Chưa có – lưu 6 ảnh, đánh số theo đúng thứ tự bài viết hiển thị trên trang Tin tức |
+| `hero-lifestyle.jpg` | Ảnh lifestyle nền phần Hero trang chủ (cạnh chai sản phẩm) | ⬜ Chưa có – đang hiện khung placeholder "IMAGE PLACEHOLDER · 1920 × 1080px" |
+| `ingredient-caffeine.jpg`, `ingredient-but-giam.jpg`, `ingredient-xuong-rong.jpg`, `ingredient-gung.jpg`, `ingredient-tia-to-bo-ket.jpg`, `ingredient-nam-men.jpg` | Ảnh từng thành phần trong card thảo dược (trang chủ + Về Mộc Sa) | ⬜ Chưa có – đang hiện khung placeholder "1200 × 1200px" mỗi thẻ |
 | `avatar-1.jpg`, `avatar-2.jpg`, `avatar-3.jpg` | Ảnh đại diện khách hàng đánh giá | ⬜ Chưa có – có thể bỏ qua, vẫn hiển thị đẹp bằng icon mặc định |
 | `product-conditioner.jpg`, `product-serum.jpg` | Ảnh sản phẩm "Sắp ra mắt" | ⬜ Chưa có – có thể bỏ qua |
 | `hero-banner.jpg` | Banner chính ở đầu trang chủ (mới, theo mẫu bạn gửi) | ⬜ Tuỳ chọn – hiện đang tự dùng tạm `about.png` (banner gỗ có sẵn); nếu muốn banner riêng không trùng với ảnh ở mục "Về chúng tôi", lưu thêm 1 trong các ảnh banner gỗ khác thành tên này |
