@@ -20,9 +20,10 @@
     <a href="index.html" class="brand"><img src="assets/images/logo.png" alt="Mộc Sa" class="brand__logo" onerror="this.onerror=null;this.src='assets/images/logo.svg'"></a>
     <nav class="nav" id="nav">
       <a href="index.html" class="nav__link">Trang chủ</a>
-      <a href="ve-chung-toi.html" class="nav__link">Về chúng tôi <span class="nav__caret">⌄</span></a>
       <a href="san-pham.html" class="nav__link">Sản phẩm <span class="nav__caret">⌄</span></a>
-      <a href="tin-tuc.html" class="nav__link">Tin tức <span class="nav__caret">⌄</span></a>
+      <a href="tin-tuc.html" class="nav__link">Kiến thức <span class="nav__caret">⌄</span></a>
+      <a href="minh-chung-chat-luong.html" class="nav__link">Minh chứng chất lượng</a>
+      <a href="ve-chung-toi.html" class="nav__link">Về Mộc Sa</a>
       <a href="lien-he.html" class="nav__link">Liên hệ</a>
     </nav>
     <div class="header__actions">
@@ -214,21 +215,36 @@
         <div class="review-card" data-reveal><div class="review-card__head"><img src="assets/images/avatar-2.jpg" alt="" class="review-card__avatar" onerror="this.parentElement.classList.add('img-fallback--avatar')"><div><strong>Minh Anh</strong><span class="stars">★★★★★</span></div></div><p>“Mùi hương thảo mộc rất dễ chịu, gội xong da đầu sạch thoáng mà không hề khô căng.”</p></div>
         <div class="review-card" data-reveal><div class="review-card__head"><img src="assets/images/avatar-3.jpg" alt="" class="review-card__avatar" onerror="this.parentElement.classList.add('img-fallback--avatar')"><div><strong>Thu Hà</strong><span class="stars">★★★★★</span></div></div><p>“Đóng gói cẩn thận, giao hàng nhanh, lại còn được tặng túi vải xinh xắn nữa.”</p></div>
       </div>
-      <div class="cert-grid">
-        <div class="cert-strip" data-reveal>
-          <img src="assets/images/certificate.jpg" alt="Phiếu công bố sản phẩm mỹ phẩm" class="cert-strip__img" onerror="this.parentElement.classList.add('img-fallback--cert')">
-          <div class="cert-strip__text"><strong>Đã công bố sản phẩm mỹ phẩm</strong><p>Số tiếp nhận: 000435/26/CBMP-HCM – Sở Y Tế TP.HCM</p></div>
-          <button class="btn btn--outline cert-strip__btn">Xem giấy chứng nhận</button>
-        </div>
-        <div class="cert-strip" data-reveal>
-          <div class="cert-strip__imgs">
-            <div class="cert-strip__thumb"><img src="assets/images/kiem-nghiem-1.jpg" alt="Phiếu kết quả kiểm nghiệm - trang 1" class="cert-strip__img" onerror="this.parentElement.classList.add('img-fallback--cert-sm')"></div>
-            <div class="cert-strip__thumb"><img src="assets/images/kiem-nghiem-2.jpg" alt="Phiếu kết quả kiểm nghiệm - trang 2" class="cert-strip__img" onerror="this.parentElement.classList.add('img-fallback--cert-sm')"></div>
-            <div class="cert-strip__thumb"><img src="assets/images/kiem-nghiem-3.jpg" alt="Phiếu kết quả kiểm nghiệm - trang 3" class="cert-strip__img" onerror="this.parentElement.classList.add('img-fallback--cert-sm')"></div>
-          </div>
-          <div class="cert-strip__text"><strong>Đã kiểm nghiệm chất lượng</strong><p>Sản phẩm được kiểm nghiệm tại đơn vị độc lập trước khi lưu hành (3 trang kết quả).</p></div>
-          <button class="btn btn--outline cert-strip__btn">Xem giấy kiểm nghiệm</button>
-        </div>
+    </div>
+  </section>
+
+  <!-- ============ QUALITY PROOF ============ -->
+  <section class="section" style="background:var(--cream-2);">
+    <div class="container proof__grid">
+      <div data-reveal>
+        <span class="eyebrow">Minh chứng chất lượng</span>
+        <h2 class="section__title" style="margin-bottom:20px;">Kết Quả Thử Nghiệm Chất Lượng</h2>
+        <p class="proof__desc">Sản phẩm Dầu gội thảo dược Mộc Sa đã được thử nghiệm tại Trung tâm Kỹ thuật Tiêu chuẩn Đo lường Chất lượng 3 (QUATEST 3). Kết quả thử nghiệm cho thấy các chỉ tiêu kim loại nặng và vi sinh đều đáp ứng yêu cầu theo kết quả thử nghiệm.</p>
+        <small class="proof__note">Chi tiết xem trong phiếu kết quả thử nghiệm.</small>
+        <ul class="proof__list">
+          <li><span>✓</span> Không phát hiện Chì (Pb)</li>
+          <li><span>✓</span> Không phát hiện Thủy ngân (Hg)</li>
+          <li><span>✓</span> Không phát hiện Asen (As)</li>
+          <li><span>✓</span> Các chỉ tiêu vi sinh đạt yêu cầu theo kết quả thử nghiệm</li>
+        </ul>
+        <button class="btn btn--dark" id="proofViewBtn">Xem phiếu thử nghiệm</button>
+      </div>
+      <div class="proof__gallery" data-reveal>
+        <div class="proof__thumb proof__thumb--wide"><img src="assets/images/kiem-nghiem-1.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 1" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert')"></div>
+        <div class="proof__thumb"><img src="assets/images/kiem-nghiem-2.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 2" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert')"></div>
+        <div class="proof__thumb"><img src="assets/images/kiem-nghiem-3.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 3" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert')"></div>
+      </div>
+    </div>
+    <div class="container" style="margin-top:40px;">
+      <div class="proof-teaser" data-reveal>
+        <span class="proof-teaser__icon">📄</span>
+        <div class="proof-teaser__text"><strong>Đã công bố sản phẩm mỹ phẩm</strong><p>Số tiếp nhận: 000435/26/CBMP-HCM – Sở Y Tế TP.HCM. Xem đầy đủ hồ sơ tại trang Minh chứng chất lượng.</p></div>
+        <a href="minh-chung-chat-luong.html" class="btn btn--outline">Xem đầy đủ</a>
       </div>
     </div>
   </section>
@@ -240,12 +256,36 @@
       <div class="faq__wrap" data-reveal>
         <div class="accordion">
           <div class="acc-item is-open">
-            <button class="acc-item__head">Dầu gội Mộc Sa có phù hợp với da đầu nhạy cảm, mẹ bầu không? <span>+</span></button>
-            <div class="acc-item__body"><p>Sản phẩm không chứa Silicone, Sulfate và Paraben, làm sạch dịu nhẹ nên phù hợp với hầu hết các loại da đầu, kể cả da đầu nhạy cảm. Nếu bạn đang mang thai/cho con bú hoặc có tiền sử dị ứng da đầu, nên tham khảo ý kiến bác sĩ trước khi dùng sản phẩm mới.</p></div>
+            <button class="acc-item__head">Dầu gội Mộc Sa có phù hợp với da đầu nhạy cảm không? <span>+</span></button>
+            <div class="acc-item__body"><p>Sản phẩm không chứa Silicone, Sulfate và Paraben, làm sạch dịu nhẹ nên phù hợp với hầu hết các loại da đầu, kể cả da đầu nhạy cảm.</p></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-item__head">Phụ nữ sau sinh, đang cho con bú có dùng được không? <span>+</span></button>
+            <div class="acc-item__body"><p>Công thức dịu nhẹ, không hóa chất tẩy mạnh nên phần lớn phụ nữ sau sinh có thể sử dụng. Nếu đang cho con bú hoặc có tiền sử dị ứng da đầu, nên tham khảo ý kiến bác sĩ trước khi dùng sản phẩm mới.</p></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-item__head">Nam giới có dùng được dầu gội Mộc Sa không? <span>+</span></button>
+            <div class="acc-item__body"><p>Có. Sản phẩm phù hợp với mọi giới tính, tập trung vào việc làm sạch da đầu và nuôi dưỡng chân tóc chắc khỏe.</p></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-item__head">Có thể dùng Mộc Sa mỗi ngày không? <span>+</span></button>
+            <div class="acc-item__body"><p>Có thể. Vì làm sạch dịu nhẹ và không chứa Sulfate mạnh, bạn có thể dùng hằng ngày hoặc 2–3 lần/tuần tùy nhu cầu và tình trạng tóc.</p></div>
           </div>
           <div class="acc-item">
             <button class="acc-item__head">Dùng sau bao lâu thì thấy hiệu quả? <span>+</span></button>
             <div class="acc-item__body"><p>Sau khoảng 4 tuần sử dụng đều đặn (2–3 lần/tuần), đa số người dùng cảm nhận tóc mềm tự nhiên hơn, bớt xơ rối, da đầu sạch thoáng và không còn khô rít. Hiệu quả có thể khác nhau tùy cơ địa mỗi người.</p></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-item__head">Mộc Sa có phù hợp với tóc đã nhuộm, uốn, duỗi không? <span>+</span></button>
+            <div class="acc-item__body"><p>Do dịu nhẹ và không chứa Sulfate mạnh, sản phẩm phù hợp dùng cho tóc đã qua hóa chất (nhuộm/uốn/duỗi), hạn chế tình trạng khô xơ. Nên gội bằng nước mát để giữ màu nhuộm lâu hơn.</p></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-item__head">Sản phẩm có chứa Silicone không? <span>+</span></button>
+            <div class="acc-item__body"><p>Không. Dầu gội Mộc Sa hoàn toàn không chứa Silicone – đây cũng là lý do tóc sạch "thật" thay vì được phủ một lớp bóng mượt tạm thời.</p></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-item__head">Dùng Mộc Sa có bị khô tóc không? <span>+</span></button>
+            <div class="acc-item__body"><p>Không. Sản phẩm chứa các dưỡng chất như Olive Oil PEG-8 Esters, Polyquaternium-7 giúp dưỡng ẩm và làm mềm tóc trong khi vẫn làm sạch dịu nhẹ.</p></div>
           </div>
           <div class="acc-item">
             <button class="acc-item__head">Vì sao gội xong tóc không bồng bềnh, óng mượt tức thì như dầu gội thông thường? <span>+</span></button>
@@ -254,10 +294,6 @@
           <div class="acc-item">
             <button class="acc-item__head">Một chai 250ml dùng được bao lâu? <span>+</span></button>
             <div class="acc-item__body"><p>Trung bình một chai 250ml dùng được khoảng 1–1.5 tháng nếu gội 2–3 lần/tuần, tùy độ dài và lượng tóc mỗi người.</p></div>
-          </div>
-          <div class="acc-item">
-            <button class="acc-item__head">Đặt hàng và thanh toán như thế nào? <span>+</span></button>
-            <div class="acc-item__body"><p>Bạn chỉ cần bấm "Mua ngay", điền thông tin nhận hàng và chọn thanh toán khi nhận hàng (COD). Đơn hàng được giao freeship toàn quốc và tặng kèm 1 túi vải Mộc Sa.</p></div>
           </div>
         </div>
       </div>
@@ -276,7 +312,7 @@
 <footer class="footer" id="contact">
   <div class="container footer__grid">
     <div class="footer__col"><img src="assets/images/logo.png" alt="Mộc Sa" class="footer__logo" onerror="this.onerror=null;this.src='assets/images/logo-white.svg'"><p>Dầu gội thảo dược từ thiên nhiên Việt – chăm sóc mái tóc Việt bằng tinh hoa 15 thảo dược quý.</p><div class="footer__social"><a href="https://www.facebook.com/mocsavietnam" target="_blank" rel="noopener" class="footer__social-icon footer__social-icon--fb" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.91h-2.33V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg></a><a href="https://zalo.me/0325343663" target="_blank" rel="noopener" class="footer__social-icon footer__social-icon--zalo" aria-label="Zalo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 2.75 1.44 5.2 3.7 6.83-.12.9-.45 2.05-1.2 3.37 1.68-.34 3.02-1 4.02-1.7A11.6 11.6 0 0 0 12 19.6c5.52 0 10-3.94 10-8.8S17.52 2 12 2Z"/></svg></a><a href="#" class="footer__social-icon footer__social-icon--tiktok" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.1 1.9 3.8 4 4.1v3.1c-1.5 0-2.9-.4-4-1.2v6.4a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v3.2a2.5 2.5 0 1 0 1.8 2.4V3h3Z"/></svg></a></div></div>
-    <div class="footer__col"><h4>Liên kết</h4><a href="index.html">Trang chủ</a><a href="ve-chung-toi.html">Về chúng tôi</a><a href="san-pham.html">Sản phẩm</a><a href="tin-tuc.html">Tin tức</a><a href="lien-he.html">Liên hệ</a></div>
+    <div class="footer__col"><h4>Liên kết</h4><a href="index.html">Trang chủ</a><a href="san-pham.html">Sản phẩm</a><a href="tin-tuc.html">Kiến thức</a><a href="minh-chung-chat-luong.html">Minh chứng chất lượng</a><a href="ve-chung-toi.html">Về Mộc Sa</a><a href="lien-he.html">Liên hệ</a></div>
     <div class="footer__col"><h4>Chính sách</h4><a href="chinh-sach-doi-tra.html">Chính sách đổi trả</a><a href="chinh-sach-van-chuyen.html">Chính sách vận chuyển</a><a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a><a href="dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a></div>
     <div class="footer__col"><h4>Liên hệ</h4><p>📍 123 Đường ABC, Quận 1, TP.HCM</p><p>📞 0325.343.663</p><p>✉️ hello@mocsa.vn</p><p>🕐 8:00 – 21:00 (Cả tuần)</p></div>
   </div>
@@ -320,7 +356,7 @@
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="lightbox" id="lightbox"><button class="lightbox__close" id="lightboxClose">&times;</button><img src="" alt="" id="lightboxImg"></div>
+<div class="lightbox" id="lightbox"><button class="lightbox__close" id="lightboxClose">&times;</button><button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Ảnh trước" hidden>‹</button><img src="" alt="" id="lightboxImg"><button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Ảnh sau" hidden>›</button></div>
 
 <script src="js/main.js"></script>
 </body>

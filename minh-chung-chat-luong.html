@@ -3,20 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thanh Toán – Mộc Sa</title>
+<title>Minh Chứng Chất Lượng – Mộc Sa</title>
+<meta name="description" content="Hồ sơ minh chứng chất lượng Dầu Gội Thảo Dược Mộc Sa: kết quả thử nghiệm tại QUATEST 3 và phiếu công bố sản phẩm mỹ phẩm tại Sở Y Tế TP.HCM.">
 <link rel="icon" href="assets/images/logo-icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<style>
-  .pay-method{display:flex;flex-direction:column;gap:12px;margin-bottom:26px;}
-  .pay-method label{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 16px;font-weight:600;font-size:14.5px;cursor:pointer;}
-  .pay-method label.is-disabled{opacity:.5;cursor:not-allowed;}
-  .pay-method small{display:block;font-weight:400;color:var(--ink-soft);}
-</style>
 </head>
-<body data-page="checkout">
+<body data-page="quality-proof">
 
 <div class="top-bar"><div class="container top-bar__inner"><p class="top-bar__msg"><span>🚚</span> Freeship toàn quốc – Thanh toán khi nhận hàng (COD) – Tặng kèm túi vải Mộc Sa</p></div></div>
 
@@ -51,49 +46,58 @@
 
 <section class="page-hero">
   <div class="container page-hero__inner">
-    <h1>Thanh Toán</h1>
-    <p class="breadcrumb"><a href="index.html">Trang chủ</a><span>/</span><a href="gio-hang.html">Giỏ hàng</a><span>/</span>Thanh toán</p>
+    <h1>Minh Chứng Chất Lượng</h1>
+    <p class="breadcrumb"><a href="index.html">Trang chủ</a><span>/</span>Minh chứng chất lượng</p>
   </div>
 </section>
 
 <main>
-  <section class="section">
-    <div class="container cart-layout">
+  <section class="section" style="padding-bottom:40px;">
+    <div class="container" style="max-width:760px;text-align:center;">
+      <p style="font-size:16px;">Mộc Sa tin rằng niềm tin của khách hàng phải được xây dựng bằng sự minh bạch. Toàn bộ hồ sơ pháp lý và kết quả thử nghiệm chất lượng của Dầu Gội Thảo Dược Mộc Sa được công khai đầy đủ tại đây.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUALITY PROOF (QUATEST) ============ -->
+  <section class="section" style="padding-top:20px;">
+    <div class="container proof__grid">
       <div data-reveal>
-        <h3 style="margin-bottom:20px;">Thông tin giao hàng</h3>
-        <form class="form-card" id="orderForm">
-          <div class="form-grid-2">
-            <div class="form-row"><label>Họ và tên *</label><input type="text" name="name" required placeholder="Nguyễn Văn A"></div>
-            <div class="form-row"><label>Số điện thoại *</label><input type="tel" name="phone" required placeholder="09xxxxxxxx" pattern="[0-9]{9,11}"></div>
-          </div>
-          <div class="form-row"><label>Địa chỉ nhận hàng *</label><input type="text" name="address" required placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành"></div>
-          <div class="form-row"><label>Ghi chú đơn hàng</label><textarea name="note" rows="3" placeholder="Ví dụ: giao giờ hành chính, gọi trước khi giao..."></textarea></div>
-
-          <h3 style="margin:26px 0 16px;">Phương thức thanh toán</h3>
-          <div class="pay-method">
-            <label><input type="radio" name="payment" checked><div>Thanh toán khi nhận hàng (COD)<small>Kiểm tra hàng trước khi thanh toán</small></div></label>
-            <label class="is-disabled"><input type="radio" name="payment" disabled><div>Chuyển khoản ngân hàng<small>Sắp hỗ trợ</small></div></label>
-          </div>
-
-          <button type="submit" class="btn btn--primary btn--lg btn--block">Hoàn tất đặt hàng</button>
-        </form>
+        <span class="eyebrow">Kết quả thử nghiệm</span>
+        <h2 class="section__title" style="margin-bottom:20px;">Kết Quả Thử Nghiệm Chất Lượng</h2>
+        <p class="proof__desc">Sản phẩm Dầu gội thảo dược Mộc Sa đã được thử nghiệm tại Trung tâm Kỹ thuật Tiêu chuẩn Đo lường Chất lượng 3 (QUATEST 3). Kết quả thử nghiệm cho thấy các chỉ tiêu kim loại nặng và vi sinh đều đáp ứng yêu cầu theo kết quả thử nghiệm.</p>
+        <small class="proof__note">Chi tiết xem trong phiếu kết quả thử nghiệm.</small>
+        <ul class="proof__list">
+          <li><span>✓</span> Không phát hiện Chì (Pb)</li>
+          <li><span>✓</span> Không phát hiện Thủy ngân (Hg)</li>
+          <li><span>✓</span> Không phát hiện Asen (As)</li>
+          <li><span>✓</span> Các chỉ tiêu vi sinh đạt yêu cầu theo kết quả thử nghiệm</li>
+        </ul>
+        <button class="btn btn--dark" id="proofViewBtn">Xem phiếu thử nghiệm</button>
       </div>
-
-      <div class="cart-summary" data-reveal>
-        <h3 style="margin-bottom:20px;">Đơn hàng của bạn</h3>
-        <div class="mini-cart__item" style="border:none;padding:0 0 18px;">
-          <img src="assets/images/product-1.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm')">
-          <div class="mini-cart__item-info">
-            <strong>Dầu Gội Thảo Dược Mộc Sa 250ml</strong>
-            <span style="font-size:12px;color:var(--gold-600);">🎁 Tặng kèm túi vải Mộc Sa</span>
-            <div style="font-size:13px;margin-top:4px;">Số lượng: <strong id="orderQty">1</strong></div>
-          </div>
-          <strong id="orderLineTotal">196.000₫</strong>
-        </div>
-        <div class="cart-summary__row"><span>Tạm tính</span><strong id="orderSubTotal">196.000₫</strong></div>
-        <div class="cart-summary__row"><span>Phí vận chuyển</span><strong>Miễn phí</strong></div>
-        <div class="cart-summary__row is-total"><span>Tổng thanh toán</span><strong id="orderTotal">196.000₫</strong></div>
+      <div class="proof__gallery" data-reveal>
+        <div class="proof__thumb proof__thumb--wide"><img src="assets/images/kiem-nghiem-1.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 1" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert')"></div>
+        <div class="proof__thumb"><img src="assets/images/kiem-nghiem-2.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 2" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert')"></div>
+        <div class="proof__thumb"><img src="assets/images/kiem-nghiem-3.jpg" alt="Phiếu kết quả thử nghiệm QUATEST 3 - trang 3" class="proof__img" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--cert')"></div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATE ============ -->
+  <section class="section" style="background:var(--cream-2);">
+    <div class="container">
+      <div class="cert-strip" data-reveal>
+        <img src="assets/images/certificate.jpg" alt="Phiếu công bố sản phẩm mỹ phẩm - Sở Y Tế TP.HCM" class="cert-strip__img" onerror="this.parentElement.classList.add('img-fallback--cert')">
+        <div class="cert-strip__text"><strong>Phiếu công bố sản phẩm mỹ phẩm</strong><p>Số tiếp nhận Phiếu công bố: 000435/26/CBMP-HCM – Sở Y Tế TP. Hồ Chí Minh, hiệu lực 05 năm.</p></div>
+        <button class="btn btn--outline cert-strip__btn">Xem giấy chứng nhận</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container cta-banner__inner" data-reveal>
+      <img src="assets/images/logo-mark-white.svg" alt="" class="cta-banner__mark">
+      <h2>Yên tâm sử dụng – Mộc Sa minh bạch từ thành phần đến chất lượng</h2>
+      <a href="san-pham-chi-tiet.html" class="btn btn--primary btn--lg">Khám phá sản phẩm</a>
     </div>
   </section>
 </main>
@@ -108,7 +112,10 @@
   <div class="footer__bottom"><div class="container footer__bottom-inner"><span>© 2026 Mộc Sa. Đã đăng ký bảo hộ thương hiệu.</span><span>Số CB: 000435/26/CBMP-HCM – Sở Y Tế TP.HCM</span></div></div>
 </footer>
 
+<button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">↑</button>
+<div class="floating-contact"><a href="tel:0325343663" class="floating-contact__btn floating-contact__btn--phone">📞</a><a href="https://zalo.me/0325343663" class="floating-contact__btn floating-contact__btn--zalo" target="_blank" rel="noopener">Zalo</a></div>
 <div class="toast" id="toast"></div>
+<div class="lightbox" id="lightbox"><button class="lightbox__close" id="lightboxClose">&times;</button><button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Ảnh trước" hidden>‹</button><img src="" alt="" id="lightboxImg"><button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Ảnh sau" hidden>›</button></div>
 
 <script src="js/main.js"></script>
 </body>
