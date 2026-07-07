@@ -18,14 +18,25 @@ moc-sa/
 ├── chinh-sach-van-chuyen.html Chính sách vận chuyển
 ├── chinh-sach-bao-mat.html    Chính sách bảo mật
 ├── dieu-khoan-dich-vu.html    Điều khoản dịch vụ
+├── minh-chung-chat-luong.html Minh chứng chất lượng (kết quả thử nghiệm QUATEST 3 + phiếu công bố)
 ├── robots.txt                 Cấu hình cho công cụ tìm kiếm
 ├── sitemap.xml                Sơ đồ trang cho SEO (cần sửa lại domain thật trước khi deploy)
 ├── css/style.css              Toàn bộ giao diện
-├── js/main.js                 Toàn bộ tương tác (giỏ hàng, đếm ngược, form, slider, FAQ accordion...)
+├── js/main.js                 Toàn bộ tương tác (giỏ hàng, đếm ngược, form, slider, FAQ accordion, lightbox gallery...)
 └── assets/images/             Nơi chứa toàn bộ hình ảnh
 ```
 
-Trang chi tiết sản phẩm (`san-pham-chi-tiet.html`) cũng đã có thêm mục **Câu hỏi thường gặp (FAQ)** dạng accordion.
+Trang chi tiết sản phẩm (`san-pham-chi-tiet.html`) có mục **Câu hỏi thường gặp (FAQ)** 10 câu dạng accordion, khối **Kết quả thử nghiệm chất lượng** (QUATEST 3) với gallery 3 ảnh xem lightbox mượt (kéo trái/phải), và **Schema Product + FAQPage** cho SEO.
+
+Menu điều hướng hiện tại: **Trang chủ / Sản phẩm / Kiến thức / Minh chứng chất lượng / Về Mộc Sa / Liên hệ** — cấu trúc theo hướng thương hiệu lâu dài thay vì landing page bán hàng đơn thuần.
+
+### Về SEO & hiệu năng
+
+Đã làm: Open Graph + Twitter Card cho toàn bộ 15 trang, Schema Product/FAQPage (trang sản phẩm) + Schema Organization (trang chủ), `loading="lazy"` cho ảnh dưới màn hình đầu (blog, đánh giá, ảnh phụ), `robots: noindex` cho 3 trang giao dịch (giỏ hàng/thanh toán/thành công).
+
+Chưa làm được (giới hạn công cụ hiện có, không phải bị bỏ sót):
+- **Chuyển ảnh sang WebP** — cần công cụ xử lý ảnh (cwebp/sharp) mà môi trường này không có sẵn. Bạn có thể tự chuyển đổi bằng [squoosh.app](https://squoosh.app) rồi gửi lại, hoặc dùng plugin nén ảnh của hosting khi deploy.
+- **Đo điểm Lighthouse thực tế** — cần trình duyệt để chạy audit, môi trường này không có công cụ đó. Các tối ưu (lazy load, giảm animation, ảnh nén sẵn khi bạn gửi) đều theo đúng khuyến nghị của Lighthouse, nhưng con số cụ thể cần bạn tự đo trên PageSpeed Insights sau khi deploy lên domain thật.
 
 ## 1. Cách xem thử website
 
