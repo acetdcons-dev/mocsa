@@ -69,6 +69,10 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .btn--dark{background:var(--brown-800);color:var(--cream-1);}
 .btn--dark:hover{background:var(--brown-900);transform:translateY(-2px);}
 .btn--ghost{background:transparent;color:var(--brown-900);border-color:var(--brown-900);}
+.btn--text{background:none;padding:2px 0;border:none;color:var(--brown-800);font-weight:700;font-size:14.5px;display:inline-flex;position:relative;}
+.btn--text::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .3s ease;}
+.btn--text:hover::after{transform:scaleX(1);transform-origin:left;}
+.btn--text.btn--onDark{color:var(--gold-400);}
 .btn--ghost:hover{background:var(--brown-900);color:var(--white);}
 .btn--outline{background:transparent;color:var(--gold-600);border-color:var(--gold-500);}
 .btn--outline:hover{background:var(--gold-500);color:var(--white);}
@@ -149,50 +153,30 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .breadcrumb span{color:var(--gold-400);}
 
 /* ============ HERO (home) ============ */
-.hero{position:relative;}
-.hero--premium{padding:90px 0 100px;overflow:hidden;background:var(--cream-1);}
-.hero__bg-gradient{position:absolute;inset:0;background:linear-gradient(135deg,var(--cream-1) 0%,var(--cream-2) 55%,var(--gold-100) 100%);z-index:0;}
-.hero__grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;}
-.hero__text .badge--pill{margin-bottom:24px;}
-.hero__title{font-size:clamp(38px,5.2vw,60px);margin:0 0 22px;color:var(--brown-900);}
-.hero__title em{color:var(--gold-600);font-style:italic;}
-.hero__desc{max-width:480px;font-size:16.5px;margin-bottom:30px;}
-.hero__price{display:flex;align-items:center;gap:14px;margin-bottom:30px;flex-wrap:wrap;}
+.hero{background:var(--cream-1);padding:76px 0;}
+.hero__grid{display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:center;}
+.hero__visual{display:flex;align-items:center;justify-content:center;}
+.hero__product{max-height:460px;width:auto;filter:drop-shadow(0 26px 40px rgba(62,45,32,.16));}
+.hero__text .eyebrow{margin-bottom:18px;}
+.hero__title{font-size:clamp(40px,5.6vw,66px);margin:0 0 24px;color:var(--brown-900);}
+.hero__desc{max-width:460px;font-size:16.5px;margin-bottom:34px;}
+.hero__price{display:flex;align-items:baseline;gap:14px;margin-bottom:32px;flex-wrap:wrap;}
 .hero__price--center{justify-content:center;}
 .price{font-family:var(--ff-head);font-weight:700;}
-.price--old{color:var(--ink-soft);text-decoration:line-through;font-size:18px;font-weight:500;}
-.price--new{color:var(--red-600);font-size:32px;}
+.price--old{color:var(--ink-soft);text-decoration:line-through;font-size:17px;font-weight:500;}
+.price--new{color:var(--brown-800);font-size:34px;}
 .price--onDark.price--old{color:var(--gold-200,#e9d9ab);}
 .price--onDark.price--new{color:var(--gold-400);}
-.hero__cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px;}
-.hero__timer{display:flex;align-items:center;gap:16px;font-weight:700;color:var(--brown-800);flex-wrap:wrap;}
-.countdown{display:flex;gap:8px;}
-.countdown__box{background:var(--brown-900);color:var(--cream-1);border-radius:var(--radius-sm);padding:8px 12px;text-align:center;min-width:52px;}
-.countdown__box span{display:block;font-size:20px;font-weight:800;font-family:var(--ff-head);}
-.countdown__box small{font-size:10px;color:var(--gold-300,#e7c877);text-transform:uppercase;letter-spacing:.06em;}
-
-.hero__visual{position:relative;min-height:460px;display:flex;align-items:flex-end;justify-content:center;}
-.hero__lifestyle{position:absolute;inset:0;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);}
-.hero__lifestyle img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);}
-.hero__product-float{position:relative;z-index:2;width:56%;max-width:280px;margin:0 10% 8% auto;filter:drop-shadow(0 30px 40px rgba(62,45,32,.25));animation:heroFloat 5s ease-in-out infinite;}
-@keyframes heroFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
-.hero__gift-tag{position:absolute;top:6%;right:6%;background:var(--white);box-shadow:var(--shadow-md);border-radius:var(--radius-pill);padding:10px 18px;font-weight:700;font-size:13.5px;z-index:3;}
+.hero__cta{display:flex;align-items:center;gap:30px;flex-wrap:wrap;margin-bottom:24px;}
+.hero__note{font-size:13px;color:var(--ink-soft);}
 
 @media(max-width:900px){
-  .hero__grid{grid-template-columns:1fr;}
-  .hero__visual{order:-1;min-height:320px;}
-  .hero__text{text-align:center;}
+  .hero{padding:56px 0;}
+  .hero__grid{grid-template-columns:1fr;text-align:center;gap:36px;}
+  .hero__product{max-height:300px;margin:0 auto;}
   .hero__desc{margin-left:auto;margin-right:auto;}
-  .hero__price,.hero__cta,.hero__timer{justify-content:center;}
+  .hero__price,.hero__cta{justify-content:center;}
 }
-
-/* ============ TRUST STRIP ============ */
-.trust-strip{background:var(--brown-900);padding:26px 0;}
-.trust-strip__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-.trust-item{display:flex;align-items:center;gap:14px;color:var(--cream-2);}
-.trust-item__icon{width:26px;height:26px;flex-shrink:0;color:var(--gold-400);}
-.trust-item__icon svg{width:100%;height:100%;}
-.trust-item strong{display:block;font-size:14.5px;}
 .trust-item small{color:var(--gold-300,#e7c877);font-size:12.5px;}
 @media(max-width:800px){.trust-strip__grid{grid-template-columns:repeat(2,1fr);}}
 
@@ -218,39 +202,25 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .about__list li span{color:var(--gold-600);font-weight:800;}
 @media(max-width:880px){.about__grid{grid-template-columns:1fr;}.about__media img{height:340px;}}
 
-/* ============ WHY CHOOSE ============ */
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
-.why-card{background:var(--white);border-radius:var(--radius-md);padding:36px 26px;box-shadow:var(--shadow-sm);text-align:center;transition:transform .3s ease, box-shadow .3s ease;}
-.why-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
-.why-card__icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:var(--brown-800);}
-.why-card__icon svg{width:100%;height:100%;}
-.why-card h3{font-size:16.5px;margin-bottom:10px;}
-.why-card p{font-size:13.5px;}
-@media(max-width:880px){.why-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:560px){.why-grid{grid-template-columns:1fr;}}
+/* ============ TRUST / CAM KẾT ============ */
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;}
+.trust-card{background:var(--white);padding:38px 32px;}
+.trust-card h3{font-size:18px;margin-bottom:10px;}
+.trust-card p{font-size:14px;}
+@media(max-width:880px){.trust-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.trust-grid{grid-template-columns:1fr;}}
 
-/* ============ TIMELINE (công dụng) ============ */
-.timeline{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;}
-.timeline__step{display:flex;flex-direction:column;align-items:center;text-align:center;width:130px;gap:12px;}
-.timeline__step-icon{width:60px;height:60px;border-radius:50%;background:var(--brown-900);display:flex;align-items:center;justify-content:center;color:var(--gold-400);}
-.timeline__step-icon svg{width:26px;height:26px;}
-.timeline__step span:last-child{font-weight:700;color:var(--brown-800);font-size:13.8px;}
-.timeline__arrow{color:var(--gold-500);font-size:20px;}
-@media(max-width:760px){
-  .timeline{flex-direction:column;}
-  .timeline__arrow{transform:rotate(90deg);}
-}
+/* ============ INGREDIENTS (typographic) ============ */
+.ingredients__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start;}
+.ingredients__desc{color:var(--gold-100);opacity:.85;margin:20px 0 28px;max-width:380px;}
+.ingredients__list{display:flex;flex-direction:column;}
+.ingredients__list li{padding:22px 0;border-bottom:1px solid rgba(255,255,255,.14);display:flex;flex-direction:column;gap:6px;}
+.ingredients__list li:first-child{padding-top:0;}
+.ingredients__list strong{font-family:var(--ff-head);font-size:22px;font-weight:600;color:var(--cream-1);}
+.ingredients__list span{font-size:14px;color:var(--gold-100);opacity:.8;}
+@media(max-width:880px){.ingredients__grid{grid-template-columns:1fr;gap:30px;}}
 
-/* ============ CAM KẾT ============ */
-.commitment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
-.commitment-item{text-align:center;}
-.commitment-item__icon{width:64px;height:64px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:var(--shadow-sm);color:var(--brown-800);}
-.commitment-item__icon svg{width:28px;height:28px;}
-.commitment-item h3{font-size:18px;margin-bottom:10px;}
-.commitment-item p{font-size:14px;}
-@media(max-width:760px){.commitment-grid{grid-template-columns:1fr;gap:32px;}}
-
-/* ============ INGREDIENTS ============ */
+/* ============ INGREDIENTS (glass card – trang Về Mộc Sa) ============ */
 .ing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
 .ing-card{background:rgba(255,255,255,.08);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-lg);overflow:hidden;text-align:center;transition:transform .35s ease, background .35s ease, box-shadow .35s ease;}
 .ing-card:hover{transform:translateY(-8px);background:rgba(255,255,255,.14);box-shadow:var(--shadow-lg);}
@@ -283,7 +253,9 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .gift-box__img{width:52px;height:52px;object-fit:contain;}
 .gift-box strong{font-size:14.5px;color:var(--brown-900);}
 .gift-box p{font-size:12.5px;margin-top:2px;}
-.product__bullets{display:flex;flex-direction:column;gap:9px;margin-bottom:26px;font-weight:600;color:var(--brown-800);}
+.product__bullets{display:flex;flex-direction:column;gap:11px;margin-bottom:28px;font-weight:600;color:var(--brown-800);}
+.product__bullets li{padding-left:20px;position:relative;}
+.product__bullets li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:1px;background:var(--gold-600);}
 .qty-row{display:flex;align-items:center;gap:18px;margin-bottom:10px;flex-wrap:wrap;}
 .qty-stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:var(--radius-pill);overflow:hidden;}
 .qty-stepper button{width:38px;height:38px;background:var(--cream-2);border:none;font-size:18px;font-weight:700;}
@@ -348,8 +320,9 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .review-card{background:var(--white);border-radius:var(--radius-lg);padding:34px 30px;box-shadow:var(--shadow-sm);border:1px solid var(--line);transition:transform .35s ease, box-shadow .35s ease;}
 .review-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
 .review-card__head{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+.review-card__avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--brown-800);color:var(--cream-1);font-family:var(--ff-head);font-weight:700;font-size:16px;}
 .review-card__avatar-wrap{width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:var(--cream-2);}
-.review-card__avatar{width:100%;height:100%;object-fit:cover;}
+.review-card__avatar-wrap .review-card__avatar{width:100%;height:100%;object-fit:cover;background:none;border-radius:0;}
 .review-card p{font-size:14.8px;}
 @media(max-width:880px){.review-grid{grid-template-columns:1fr;}}
 
@@ -479,48 +452,16 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .proof-teaser__text strong{display:block;color:var(--brown-900);margin-bottom:4px;font-size:16px;}
 .proof-teaser__text p{font-size:13.8px;}
 
-/* ============ IMAGE PLACEHOLDER SYSTEM ============
-   Ảnh thật chưa có → khung viền đứt thanh lịch, ghi rõ kích thước
-   đề xuất để chuẩn bị asset sau này. Đặt data-size="rộng × cao px"
-   trên phần tử mang class img-fallback--xxx (thường qua onerror). */
-[class*="img-fallback--"]{
-  position:relative;
-  background-color:var(--cream-2);
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C8A27A' stroke-width='1.3'%3E%3Crect x='3' y='3' width='18' height='18' rx='3'/%3E%3Ccircle cx='9' cy='9' r='1.5'/%3E%3Cpath d='M21 15l-5-5-9 9'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;
-  background-position:center 42%;
-  background-size:38px 38px;
-  border:2px dashed var(--brown-600);
-  border-radius:var(--radius-lg);
-  display:flex;
-  min-height:200px;
+/* ============ ẢNH CHƯA CÓ → ĐỂ TRỐNG NHẸ NHÀNG ============
+   Không dùng khung viền đứt/chữ nhắc nhở nữa (gây rối mắt) — ảnh
+   thiếu sẽ chỉ là một khoảng nền mềm, im lặng, không phá bố cục. */
+[class*="img-fallback--"],.img-empty{
+  background:var(--cream-2);
+  border-radius:inherit;
+  min-height:180px;
 }
 [class*="img-fallback--"] img{display:none;}
-[class*="img-fallback--"]::before{
-  content:"IMAGE PLACEHOLDER";
-  position:absolute;left:10px;right:10px;bottom:38px;
-  text-align:center;font-size:11px;font-weight:800;letter-spacing:.1em;
-  color:var(--brown-700);
-}
-[class*="img-fallback--"]::after{
-  content:attr(data-size);
-  position:absolute;left:10px;right:10px;bottom:20px;
-  text-align:center;font-size:11px;color:var(--ink-soft);
-}
-
-/* Khung nhỏ (avatar, thumbnail phụ) – chỉ icon, không đủ chỗ cho chữ */
-.img-fallback--bottle-sm,.img-fallback--cert-sm,.img-fallback--avatar{
-  background-size:20px 20px;border-width:1.5px;min-height:0;
-}
-.img-fallback--bottle-sm::before,.img-fallback--bottle-sm::after,
-.img-fallback--cert-sm::before,.img-fallback--cert-sm::after,
-.img-fallback--avatar::before,.img-fallback--avatar::after{content:none;}
-.img-fallback--avatar{border-radius:50%;}
-
-/* Dark-section variant (ingredient cards sit on brown gradient bg) */
-.img-fallback--ingredient{background-color:rgba(255,255,255,.06);border-color:rgba(255,255,255,.35);}
-.img-fallback--ingredient::before{color:var(--gold-100);}
-.img-fallback--ingredient::after{color:var(--gold-100);opacity:.75;}
+.img-fallback--ingredient{background:rgba(255,255,255,.06);}
 
 /* ============ MISC PAGE HELPERS ============ */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
@@ -555,6 +496,15 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .blog-card__link{font-weight:700;color:var(--brown-900);font-size:13.5px;}
 @media(max-width:880px){.blog-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
+
+.blog-list{max-width:820px;margin:0 auto;}
+.blog-list li{border-bottom:1px solid var(--line);}
+.blog-list a{display:flex;align-items:center;gap:20px;padding:26px 4px;transition:padding-left .3s ease;}
+.blog-list a:hover{padding-left:12px;}
+.blog-list__meta{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-600);width:130px;flex-shrink:0;}
+.blog-list h3{flex:1;font-size:19px;font-weight:600;}
+.blog-list__arrow{color:var(--gold-600);font-size:18px;flex-shrink:0;}
+@media(max-width:600px){.blog-list__meta{width:auto;}.blog-list a{flex-wrap:wrap;gap:6px 20px;}.blog-list h3{width:100%;order:3;}}
 
 .article{max-width:760px;margin:0 auto;}
 .article__meta{display:flex;gap:14px;color:var(--ink-soft);font-size:13px;margin-bottom:24px;flex-wrap:wrap;}

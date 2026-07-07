@@ -48,8 +48,8 @@
     <a href="index.html" class="brand"><img src="assets/images/logo.png" alt="Mộc Sa" class="brand__logo" onerror="this.onerror=null;this.src='assets/images/logo.svg'"></a>
     <nav class="nav" id="nav">
       <a href="index.html" class="nav__link">Trang chủ</a>
-      <a href="san-pham.html" class="nav__link">Sản phẩm <span class="nav__caret">⌄</span></a>
-      <a href="tin-tuc.html" class="nav__link">Kiến thức <span class="nav__caret">⌄</span></a>
+      <a href="san-pham.html" class="nav__link">Sản phẩm</a>
+      <a href="tin-tuc.html" class="nav__link">Kiến thức</a>
       <a href="minh-chung-chat-luong.html" class="nav__link">Minh chứng chất lượng</a>
       <a href="ve-chung-toi.html" class="nav__link">Về Mộc Sa</a>
       <a href="lien-he.html" class="nav__link">Liên hệ</a>
@@ -78,48 +78,25 @@
 
 <main>
   <!-- ============ HERO ============ -->
-  <section class="hero hero--premium">
-    <div class="hero__bg-gradient" aria-hidden="true"></div>
+  <section class="hero">
     <div class="container hero__grid">
+      <div class="hero__visual" data-reveal>
+        <img src="assets/images/product-bottle.png" alt="Dầu gội thảo dược Mộc Sa 250ml" class="hero__product" onerror="this.parentElement.classList.add('img-empty')">
+      </div>
       <div class="hero__text" data-reveal>
-        <span class="badge badge--pill">15 Thảo Dược Việt · Không Silicone · Không Sulfate</span>
-        <h1 class="hero__title">Dầu Gội Thảo Dược<br><em>Từ Thiên Nhiên Việt</em></h1>
-        <p class="hero__desc">Kết hợp Caffeine, Bụt Giấm, Xương rồng, Gừng &amp; Bồ kết – làm sạch dịu nhẹ, hỗ trợ giảm gàu, giúp tóc chắc khỏe và ngăn ngừa gãy rụng. Đã thử nghiệm tại QUATEST 3.</p>
+        <span class="eyebrow">Dầu gội thảo dược Mộc Sa</span>
+        <h1 class="hero__title">Mộc mạc từ<br>thiên nhiên Việt</h1>
+        <p class="hero__desc">15 thảo dược Việt, không Silicone, không Sulfate, không Paraben. Làm sạch dịu nhẹ, hỗ trợ giảm gãy rụng và nuôi dưỡng tóc chắc khỏe từ gốc. Đã thử nghiệm tại QUATEST 3.</p>
         <div class="hero__price">
-          <span class="price price--old">245.000₫</span>
           <span class="price price--new">196.000₫</span>
-          <span class="badge badge--sale">-20%</span>
+          <span class="price price--old">245.000₫</span>
         </div>
         <div class="hero__cta">
-          <button class="btn btn--primary btn--lg" data-add-to-cart data-open-checkout>Mua ngay – Giao COD</button>
-          <a href="san-pham-chi-tiet.html" class="btn btn--ghost btn--lg">Xem chi tiết sản phẩm</a>
+          <button class="btn btn--primary btn--lg" data-add-to-cart data-open-checkout>Mua ngay</button>
+          <a href="san-pham-chi-tiet.html" class="btn btn--text">Xem chi tiết sản phẩm →</a>
         </div>
-        <div class="hero__timer">
-          <span>Ưu đãi kết thúc sau</span>
-          <div class="countdown" id="countdown">
-            <div class="countdown__box"><span id="cd-h">00</span><small>Giờ</small></div>
-            <div class="countdown__box"><span id="cd-m">00</span><small>Phút</small></div>
-            <div class="countdown__box"><span id="cd-s">00</span><small>Giây</small></div>
-          </div>
-        </div>
+        <p class="hero__note">Freeship toàn quốc · Thanh toán khi nhận hàng · Tặng túi vải Mộc Sa</p>
       </div>
-      <div class="hero__visual" data-reveal>
-        <div class="hero__lifestyle">
-          <img src="assets/images/hero-lifestyle.jpg" alt="Trải nghiệm chăm sóc tóc cùng Mộc Sa" onerror="this.parentElement.classList.add('img-fallback--lifestyle');this.parentElement.setAttribute('data-size','1920 × 1080px')">
-        </div>
-        <img src="assets/images/product-bottle.png" alt="Dầu gội thảo dược Mộc Sa 250ml" class="hero__product-float" onerror="this.parentElement.classList.add('img-fallback--bottle');this.parentElement.setAttribute('data-size','1000 × 1000px')">
-        <div class="hero__gift-tag">🎁 Tặng kèm túi vải Mộc Sa</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TRUST STRIP ============ -->
-  <section class="trust-strip">
-    <div class="container trust-strip__grid">
-      <div class="trust-item"><span class="trust-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3z"/><path d="M14 10h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></span><div><strong>Ship COD</strong><small>Nhận hàng thanh toán</small></div></div>
-      <div class="trust-item"><span class="trust-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.7L20 8"/><path d="M20 4v4h-4"/><path d="M20 12a8 8 0 0 1-13.7 5.7L4 16"/><path d="M4 20v-4h4"/></svg></span><div><strong>Miễn phí đổi trả</strong><small>Trong vòng 7 ngày</small></div></div>
-      <div class="trust-item"><span class="trust-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="4"/><path d="M5 13h14v8H5z"/><path d="M12 9v12"/><path d="M12 9c-1-3-3-4.5-4.5-4.5S5 6 6.5 7.5 10 9 12 9Z"/><path d="M12 9c1-3 3-4.5 4.5-4.5S19 6 17.5 7.5 14 9 12 9Z"/></svg></span><div><strong>Ưu đãi hấp dẫn</strong><small>Tặng túi vải Mộc Sa</small></div></div>
-      <div class="trust-item"><span class="trust-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></span><div><strong>Đã kiểm định Sở Y Tế</strong><small>An toàn, chính hãng 100%</small></div></div>
     </div>
   </section>
 
@@ -127,138 +104,85 @@
   <section class="section about">
     <div class="container about__grid">
       <div class="about__media" data-reveal>
-        <img src="assets/images/about.png" alt="Về thương hiệu Mộc Sa" data-label="Ảnh câu chuyện thương hiệu" onerror="this.parentElement.classList.add('img-fallback--leaf');this.parentElement.setAttribute('data-size','1600 × 900px')" loading="lazy">
-        <div class="about__badge"><strong>100%</strong><span>Thảo dược Việt Nam</span></div>
+        <img src="assets/images/about.png" alt="Về thương hiệu Mộc Sa" loading="lazy" onerror="this.parentElement.classList.add('img-empty')">
       </div>
       <div class="about__content" data-reveal>
-        <span class="eyebrow">Về chúng tôi</span>
-        <h2 class="section__title">Mộc Sa – Mộc mạc từ cây cỏ,<br>chăm sóc trọn vẹn mái tóc Việt</h2>
-        <p>Mộc Sa ra đời từ mong muốn đưa những dược liệu quý của núi rừng Việt Nam vào một công thức gội đầu dịu nhẹ, an toàn cho mọi loại da đầu. Mỗi chai dầu gội là sự kết hợp giữa <strong>15 loại thảo dược Việt</strong> và công nghệ lên men sinh học hiện đại.</p>
-        <ul class="about__list">
-          <li><span>✔</span> Không Silicone – Không Sulfate – Không Paraben</li>
-          <li><span>✔</span> Đã công bố mỹ phẩm tại Sở Y Tế TP.HCM</li>
-        </ul>
-        <a href="ve-chung-toi.html" class="btn btn--dark">Tìm hiểu thêm về Mộc Sa</a>
+        <span class="eyebrow">Câu chuyện Mộc Sa</span>
+        <h2 class="section__title">Mộc mạc từ cây cỏ,<br>chăm sóc trọn vẹn mái tóc Việt</h2>
+        <p>Mộc Sa ra đời từ mong muốn đưa những dược liệu quý của núi rừng Việt Nam vào một công thức gội đầu dịu nhẹ, an toàn cho mọi loại da đầu. Mỗi chai dầu gội là sự kết hợp giữa 15 loại thảo dược Việt và công nghệ chăm sóc tóc hiện đại.</p>
+        <a href="ve-chung-toi.html" class="btn btn--text">Tìm hiểu thêm về Mộc Sa →</a>
       </div>
     </div>
   </section>
 
-  <!-- ============ WHY CHOOSE MỘC SA ============ -->
-  <section class="section section--alt" style="padding-bottom:0;">
-    <div class="container">
-      <div class="section__head" data-reveal>
-        <span class="eyebrow">Vì sao chọn Mộc Sa</span>
-        <h2 class="section__title">Lựa chọn an tâm cho mái tóc Việt</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-card" data-reveal><span class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c8 0 14-6 14-14V5h-2C9 5 3 11 3 19v2Z"/><path d="M5 21c2-6 6-10 12-12"/></svg></span><h3>Thành phần thảo dược</h3><p>15 thảo dược Việt kết hợp công nghệ chăm sóc tóc hiện đại.</p></div>
-        <div class="why-card" data-reveal><span class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6.5L4.8 18a2 2 0 0 0 1.7 3h11a2 2 0 0 0 1.7-3L14 9.5V3"/><path d="M7.5 15h9"/></svg></span><h3>Đã thử nghiệm tại QUATEST 3</h3><p>Kiểm tra kim loại nặng &amp; vi sinh trước khi đến tay khách hàng.</p></div>
-        <div class="why-card" data-reveal><span class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="8.2"/><path d="M6.5 6.5l11 11"/></svg></span><h3>Không Silicone</h3><p>Làm sạch tóc thật, không tạo lớp phủ bóng mượt giả tạm thời.</p></div>
-        <div class="why-card" data-reveal><span class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="8.2"/><path d="M6.5 6.5l11 11"/></svg></span><h3>Không Sulfate</h3><p>Dịu nhẹ với da đầu nhạy cảm, không làm mất lớp dầu tự nhiên.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ INGREDIENTS ============ -->
+  <!-- ============ INGREDIENTS (typographic) ============ -->
   <section class="section ingredients">
-    <div class="container">
-      <div class="section__head" data-reveal>
+    <div class="container ingredients__grid">
+      <div class="ingredients__intro" data-reveal>
         <span class="eyebrow eyebrow--light">Tinh túy thảo dược</span>
-        <h2 class="section__title section__title--light">15 Thảo Dược Việt, nuôi dưỡng tóc khỏe từ gốc</h2>
+        <h2 class="section__title section__title--light">15 thảo dược Việt,<br>nuôi dưỡng tóc khỏe từ gốc</h2>
+        <p class="ingredients__desc">Mỗi thành phần được chọn lọc vì một vai trò riêng — không có gì thừa, không có gì là hóa chất tẩy mạnh.</p>
+        <a href="san-pham-chi-tiet.html" class="btn btn--text btn--onDark">Xem đầy đủ 15 thành phần →</a>
       </div>
-      <div class="ing-grid">
-        <div class="ing-card" data-reveal>
-          <div class="ing-card__media"><img src="assets/images/ingredient-caffeine.jpg" alt="Caffeine" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--ingredient');this.parentElement.setAttribute('data-size','1200 × 1200px')"></div>
-          <div class="ing-card__body"><h3>Caffeine</h3><p>Kích thích vi tuần hoàn da đầu, nuôi dưỡng chân tóc khỏe mạnh, giảm rụng do da đầu yếu.</p></div>
-        </div>
-        <div class="ing-card" data-reveal>
-          <div class="ing-card__media"><img src="assets/images/ingredient-but-giam.jpg" alt="Bụt Giấm (Atiso đỏ)" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--ingredient');this.parentElement.setAttribute('data-size','1200 × 1200px')"></div>
-          <div class="ing-card__body"><h3>Bụt Giấm (Atiso đỏ)</h3><p>Giàu chất chống oxy hóa, phục hồi tóc khô xơ hư tổn, giúp tóc bóng mượt hơn.</p></div>
-        </div>
-        <div class="ing-card" data-reveal>
-          <div class="ing-card__media"><img src="assets/images/ingredient-xuong-rong.jpg" alt="Xương Rồng" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--ingredient');this.parentElement.setAttribute('data-size','1200 × 1200px')"></div>
-          <div class="ing-card__body"><h3>Xương Rồng</h3><p>Giữ ẩm tự nhiên, làm dịu da đầu khô căng rát, cho tóc mềm mượt.</p></div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:36px;" data-reveal>
-        <a href="san-pham-chi-tiet.html" class="btn btn--outline">Xem đầy đủ thành phần</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CÔNG DỤNG TIMELINE ============ -->
-  <section class="section" style="padding-top:0;">
-    <div class="container">
-      <div class="section__head" data-reveal>
-        <span class="eyebrow">Hành trình phục hồi</span>
-        <h2 class="section__title">Công dụng theo từng bước</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline__step" data-reveal><span class="timeline__step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></span><span>Giảm gãy rụng</span></div>
-        <span class="timeline__arrow" aria-hidden="true">→</span>
-        <div class="timeline__step" data-reveal><span class="timeline__step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 7 6 11.5A6 6 0 0 1 6 14.5C6 10 12 3 12 3Z"/></svg></span><span>Làm sạch da đầu</span></div>
-        <span class="timeline__arrow" aria-hidden="true">→</span>
-        <div class="timeline__step" data-reveal><span class="timeline__step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></svg></span><span>Hỗ trợ giảm gàu</span></div>
-        <span class="timeline__arrow" aria-hidden="true">→</span>
-        <div class="timeline__step" data-reveal><span class="timeline__step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-4-3-6-7-6 0 4 3 6 7 6Z"/><path d="M12 11c0-3.5 2.5-5.5 6-5.5 0 3.5-2.5 5.5-6 5.5Z"/></svg></span><span>Nuôi dưỡng chân tóc</span></div>
-        <span class="timeline__arrow" aria-hidden="true">→</span>
-        <div class="timeline__step" data-reveal><span class="timeline__step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c3 0 3-3 6-3s3 3 6 3 3-3 6-3M4 14c3 0 3-3 6-3s3 3 6 3 3-3 6-3"/></svg></span><span>Tóc mềm mượt</span></div>
-      </div>
+      <ul class="ingredients__list" data-reveal>
+        <li><strong>Caffeine</strong><span>Kích thích vi tuần hoàn da đầu, nuôi dưỡng chân tóc khỏe mạnh.</span></li>
+        <li><strong>Bụt Giấm (Atiso đỏ)</strong><span>Giàu chất chống oxy hóa, phục hồi tóc khô xơ, hư tổn.</span></li>
+        <li><strong>Xương Rồng</strong><span>Giữ ẩm tự nhiên, làm dịu da đầu khô căng rát.</span></li>
+        <li><strong>Gừng &amp; Bồ kết</strong><span>Kháng khuẩn tự nhiên, làm sạch dịu nhẹ, thơm tự nhiên.</span></li>
+      </ul>
     </div>
   </section>
 
   <!-- ============ FEATURED PRODUCT ============ -->
-  <section class="section product section--alt">
+  <section class="section product">
     <div class="container product__grid">
       <div class="product__gallery" data-reveal>
         <div class="product__main">
-          <span class="badge badge--sale product__badge">-20%</span>
-          <img src="assets/images/product-1.png" alt="Dầu gội thảo dược Mộc Sa" data-label="Ảnh chính sản phẩm" onerror="this.parentElement.classList.add('img-fallback--bottle');this.parentElement.setAttribute('data-size','1000 × 1000px')">
+          <img src="assets/images/product-1.png" alt="Dầu gội thảo dược Mộc Sa" onerror="this.parentElement.classList.add('img-empty')">
         </div>
       </div>
       <div class="product__info" data-reveal>
         <span class="eyebrow">Sản phẩm duy nhất – Mộc Sa</span>
         <h2 class="product__title">Dầu Gội Thảo Dược Mộc Sa 250ml</h2>
-        <div class="product__rating"><span class="stars">★★★★★</span><span>4.9/5 (1.284 đánh giá)</span><span class="dot">•</span><span>Đã bán 8.500+</span></div>
+        <div class="product__rating"><span class="stars">★★★★★</span><span>4.9/5 · 1.284 đánh giá</span></div>
         <div class="product__price">
-          <span class="price price--old">245.000₫</span>
           <span class="price price--new">196.000₫</span>
-          <span class="badge badge--sale">Tiết kiệm 49.000₫</span>
-        </div>
-        <div class="gift-box">
-          <img src="assets/images/tote-bag.png" alt="Túi vải Mộc Sa" class="gift-box__img" onerror="this.onerror=null;this.src='assets/images/tote-bag.svg'">
-          <div><strong>Quà tặng kèm: Túi vải Mộc Sa</strong><p>Áp dụng cho mọi đơn hàng, số lượng quà tặng có hạn.</p></div>
+          <span class="price price--old">245.000₫</span>
         </div>
         <ul class="product__bullets">
-          <li>✔ Giúp ngăn ngừa gãy rụng tóc</li>
-          <li>✔ Hỗ trợ giảm gàu trên da đầu</li>
-          <li>✔ Giúp tóc suôn mượt, bồng bềnh</li>
+          <li>Giúp ngăn ngừa gãy rụng tóc</li>
+          <li>Hỗ trợ giảm gàu trên da đầu</li>
+          <li>Giúp tóc suôn mượt, bồng bềnh</li>
+          <li>Tặng kèm túi vải Mộc Sa</li>
         </ul>
         <div class="product__actions">
-          <button class="btn btn--primary btn--lg btn--block" data-add-to-cart data-open-checkout>🛒 Mua ngay – Nhận COD tận nơi</button>
-          <a href="san-pham-chi-tiet.html" class="btn btn--outline btn--lg btn--block">Xem chi tiết sản phẩm</a>
+          <button class="btn btn--primary btn--lg" data-add-to-cart data-open-checkout>Mua ngay – Nhận COD tận nơi</button>
+          <a href="san-pham-chi-tiet.html" class="btn btn--text">Xem chi tiết sản phẩm →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ CAM KẾT ============ -->
-  <section class="section">
+  <!-- ============ TRUST / COMMITMENT ============ -->
+  <section class="section trust section--alt">
     <div class="container">
       <div class="section__head" data-reveal>
         <span class="eyebrow">Cam kết của Mộc Sa</span>
-        <h2 class="section__title">Ba điều Mộc Sa luôn giữ vững</h2>
+        <h2 class="section__title">Vì sao chọn Mộc Sa</h2>
       </div>
-      <div class="commitment-grid">
-        <div class="commitment-item" data-reveal><span class="commitment-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.5-4.5"/></svg></span><h3>Minh bạch</h3><p>Công khai đầy đủ thành phần, kết quả thử nghiệm và hồ sơ công bố sản phẩm.</p></div>
-        <div class="commitment-item" data-reveal><span class="commitment-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>An toàn</h3><p>Không Silicone, không Sulfate, không Paraben – dịu nhẹ cho mọi loại da đầu.</p></div>
-        <div class="commitment-item" data-reveal><span class="commitment-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c8 0 14-6 14-14V5h-2C9 5 3 11 3 19v2Z"/><path d="M5 21c2-6 6-10 12-12"/></svg></span><h3>Chất lượng</h3><p>Nguyên liệu thảo dược Việt chọn lọc, kiểm định nghiêm ngặt trước khi lưu hành.</p></div>
+      <div class="trust-grid">
+        <div class="trust-card" data-reveal><h3>Minh bạch</h3><p>Công khai đầy đủ thành phần, kết quả thử nghiệm QUATEST 3 và hồ sơ công bố sản phẩm.</p></div>
+        <div class="trust-card" data-reveal><h3>An toàn</h3><p>Không Silicone, không Sulfate, không Paraben – dịu nhẹ cho mọi loại da đầu.</p></div>
+        <div class="trust-card" data-reveal><h3>Chất lượng</h3><p>Nguyên liệu thảo dược Việt chọn lọc, kiểm định nghiêm ngặt trước khi lưu hành.</p></div>
+        <div class="trust-card" data-reveal><h3>Freeship COD</h3><p>Giao hàng toàn quốc, thanh toán khi nhận hàng, kiểm tra trước khi trả tiền.</p></div>
+        <div class="trust-card" data-reveal><h3>Đổi trả 7 ngày</h3><p>Hỗ trợ đổi trả miễn phí trong 7 ngày nếu sản phẩm gặp lỗi từ nhà sản xuất.</p></div>
+        <div class="trust-card" data-reveal><h3>Quà tặng kèm</h3><p>Tặng túi vải Mộc Sa cho mọi đơn hàng, số lượng có hạn.</p></div>
       </div>
     </div>
   </section>
 
   <!-- ============ REVIEWS TEASER ============ -->
-  <section class="section reviews section--alt">
+  <section class="section reviews">
     <div class="container">
       <div class="section__head" data-reveal>
         <span class="eyebrow">Khách hàng nói gì</span>
@@ -266,15 +190,15 @@
       </div>
       <div class="review-grid">
         <div class="review-card" data-reveal>
-          <div class="review-card__head"><span class="review-card__avatar-wrap"><img src="assets/images/avatar-1.jpg" alt="" class="review-card__avatar" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--avatar');this.parentElement.setAttribute('data-size','800 × 800px')"></span><div><strong>Trang Trang</strong><span class="stars">★★★★★</span></div></div>
+          <div class="review-card__head"><span class="review-card__avatar">TT</span><div><strong>Trang Trang</strong><span class="stars">★★★★★</span></div></div>
           <p>“Trước đây tóc tôi khá khô, dễ gãy rụng. Sau 2 tuần dùng Mộc Sa, tóc mềm mượt hơn hẳn, da đầu không còn ngứa nữa.”</p>
         </div>
         <div class="review-card" data-reveal>
-          <div class="review-card__head"><span class="review-card__avatar-wrap"><img src="assets/images/avatar-2.jpg" alt="" class="review-card__avatar" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--avatar');this.parentElement.setAttribute('data-size','800 × 800px')"></span><div><strong>Minh Anh</strong><span class="stars">★★★★★</span></div></div>
+          <div class="review-card__head"><span class="review-card__avatar">MA</span><div><strong>Minh Anh</strong><span class="stars">★★★★★</span></div></div>
           <p>“Mùi hương thảo mộc dễ chịu, da đầu sạch thoáng mà không khô căng. Yên tâm vì không có silicone.”</p>
         </div>
         <div class="review-card" data-reveal>
-          <div class="review-card__head"><span class="review-card__avatar-wrap"><img src="assets/images/avatar-3.jpg" alt="" class="review-card__avatar" loading="lazy" onerror="this.parentElement.classList.add('img-fallback--avatar');this.parentElement.setAttribute('data-size','800 × 800px')"></span><div><strong>Thu Hà</strong><span class="stars">★★★★★</span></div></div>
+          <div class="review-card__head"><span class="review-card__avatar">TH</span><div><strong>Thu Hà</strong><span class="stars">★★★★★</span></div></div>
           <p>“Giao hàng nhanh, tặng kèm túi vải xinh xắn. Sản phẩm dùng rất ưng, tóc bồng bềnh hẳn ra.”</p>
         </div>
       </div>
@@ -282,43 +206,19 @@
   </section>
 
   <!-- ============ BLOG TEASER ============ -->
-  <section class="section" style="padding-top:0;">
+  <section class="section section--alt" style="padding-top:0;">
     <div class="container">
       <div class="section__head" data-reveal>
         <span class="eyebrow">Góc chia sẻ</span>
         <h2 class="section__title">Tin tức &amp; kiến thức chăm sóc tóc</h2>
       </div>
-      <div class="blog-grid">
-        <article class="blog-card" data-reveal>
-          <div class="blog-card__img"><img src="assets/images/blog-1.jpg" alt="" onerror="this.parentElement.classList.add('img-fallback--blog');this.parentElement.setAttribute('data-size','1200 × 800px')" loading="lazy"></div>
-          <div class="blog-card__body">
-            <span class="blog-card__meta">CHĂM SÓC TÓC</span>
-            <h3>5 nguyên nhân khiến tóc gãy rụng bạn chưa biết</h3>
-            <p>Tìm hiểu những nguyên nhân phổ biến gây rụng tóc và cách khắc phục hiệu quả tại nhà.</p>
-            <a href="tin-tuc-chi-tiet.html" class="blog-card__link">Đọc tiếp →</a>
-          </div>
-        </article>
-        <article class="blog-card" data-reveal>
-          <div class="blog-card__img"><img src="assets/images/blog-2.jpg" alt="" onerror="this.parentElement.classList.add('img-fallback--blog');this.parentElement.setAttribute('data-size','1200 × 800px')" loading="lazy"></div>
-          <div class="blog-card__body">
-            <span class="blog-card__meta">THẢO DƯỢC</span>
-            <h3>Vì sao nên chọn dầu gội thảo dược thay vì hóa chất?</h3>
-            <p>So sánh lợi ích của thảo dược thiên nhiên so với các loại dầu gội chứa hóa chất tẩy mạnh.</p>
-            <a href="tin-tuc-chi-tiet.html" class="blog-card__link">Đọc tiếp →</a>
-          </div>
-        </article>
-        <article class="blog-card" data-reveal>
-          <div class="blog-card__img"><img src="assets/images/blog-3.jpg" alt="" onerror="this.parentElement.classList.add('img-fallback--blog');this.parentElement.setAttribute('data-size','1200 × 800px')" loading="lazy"></div>
-          <div class="blog-card__body">
-            <span class="blog-card__meta">HƯỚNG DẪN</span>
-            <h3>Hướng dẫn gội đầu đúng cách để giảm rụng tóc</h3>
-            <p>Các bước gội đầu chuẩn khoa học giúp tối ưu hiệu quả dưỡng tóc mỗi ngày.</p>
-            <a href="tin-tuc-chi-tiet.html" class="blog-card__link">Đọc tiếp →</a>
-          </div>
-        </article>
-      </div>
-      <div style="text-align:center;margin-top:40px;" data-reveal>
-        <a href="tin-tuc.html" class="btn btn--ghost">Xem tất cả bài viết</a>
+      <ul class="blog-list" data-reveal>
+        <li><a href="tin-tuc-chi-tiet.html"><span class="blog-list__meta">Chăm sóc tóc</span><h3>5 nguyên nhân khiến tóc gãy rụng bạn chưa biết</h3><span class="blog-list__arrow">→</span></a></li>
+        <li><a href="tin-tuc-chi-tiet.html"><span class="blog-list__meta">Thảo dược</span><h3>Vì sao nên chọn dầu gội thảo dược thay vì hóa chất?</h3><span class="blog-list__arrow">→</span></a></li>
+        <li><a href="tin-tuc-chi-tiet.html"><span class="blog-list__meta">Hướng dẫn</span><h3>Hướng dẫn gội đầu đúng cách để giảm rụng tóc</h3><span class="blog-list__arrow">→</span></a></li>
+      </ul>
+      <div style="text-align:center;margin-top:20px;" data-reveal>
+        <a href="tin-tuc.html" class="btn btn--text">Xem tất cả bài viết →</a>
       </div>
     </div>
   </section>
@@ -326,11 +226,10 @@
   <!-- ============ CTA BANNER ============ -->
   <section class="cta-banner">
     <div class="container cta-banner__inner" data-reveal>
-      <img src="assets/images/logo.png" alt="Mộc Sa" class="cta-banner__mark" onerror="this.onerror=null;this.src='assets/images/logo-mark-white.svg'">
       <h2>Sở hữu mái tóc chắc khỏe, suôn mượt<br>ngay hôm nay cùng Mộc Sa</h2>
       <div class="hero__price hero__price--center">
-        <span class="price price--old price--onDark">245.000₫</span>
         <span class="price price--new price--onDark">196.000₫</span>
+        <span class="price price--old price--onDark">245.000₫</span>
       </div>
       <button class="btn btn--primary btn--lg" data-add-to-cart data-open-checkout>Đặt mua ngay – Tặng túi vải Mộc Sa</button>
     </div>
