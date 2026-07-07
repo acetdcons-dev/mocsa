@@ -10,7 +10,7 @@
     name: "Dầu Gội Thảo Dược Mộc Sa 250ml",
     price: 196000,
     oldPrice: 245000,
-    image: "assets/images/product-1.png",
+    image: "assets/images/product-bottle.png",
     gift: "Túi vải Mộc Sa"
   };
   var CART_KEY = "mocsa_cart_qty";

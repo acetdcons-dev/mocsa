@@ -27,8 +27,8 @@
   --radius-md:20px;
   --radius-lg:24px;
   --radius-pill:999px;
-  --section-gap:140px;
-  --ff-head:'Cormorant Garamond', serif;
+  --section-gap:130px;
+  --ff-head:'Be Vietnam Pro', sans-serif;
   --ff-body:'Be Vietnam Pro', sans-serif;
   --header-h:132px;
 }
@@ -47,7 +47,7 @@ img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 ul{list-style:none;margin:0;padding:0;}
 button{font-family:inherit;cursor:pointer;}
-h1,h2,h3,h4{font-family:var(--ff-head);font-weight:600;color:var(--brown-900);margin:0;line-height:1.28;letter-spacing:.01em;}
+h1,h2,h3,h4{font-family:var(--ff-head);font-weight:700;color:var(--brown-900);margin:0;line-height:1.22;letter-spacing:-.01em;}
 p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .container{width:100%;max-width:1220px;margin:0 auto;padding:0 24px;}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
@@ -158,7 +158,7 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .hero__visual{display:flex;align-items:center;justify-content:center;}
 .hero__product{max-height:460px;width:auto;filter:drop-shadow(0 26px 40px rgba(62,45,32,.16));}
 .hero__text .eyebrow{margin-bottom:18px;}
-.hero__title{font-size:clamp(40px,5.6vw,66px);margin:0 0 24px;color:var(--brown-900);}
+.hero__title{font-size:clamp(38px,5.4vw,62px);margin:0 0 24px;color:var(--brown-900);font-weight:800;letter-spacing:-.03em;line-height:1.08;}
 .hero__desc{max-width:460px;font-size:16.5px;margin-bottom:34px;}
 .hero__price{display:flex;align-items:baseline;gap:14px;margin-bottom:32px;flex-wrap:wrap;}
 .hero__price--center{justify-content:center;}
@@ -185,7 +185,7 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .section--tight{padding:64px 0;}
 .section--alt{background:var(--cream-2);}
 .section__head{text-align:center;max-width:720px;margin:0 auto 58px;}
-.section__title{font-size:clamp(26px,3.4vw,38px);}
+.section__title{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.02em;line-height:1.15;}
 .section__title--light{color:var(--cream-1);}
 .section.ingredients{background:linear-gradient(160deg,var(--brown-800),var(--brown-900));}
 

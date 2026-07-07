@@ -28,17 +28,19 @@ moc-sa/
 
 Trang chi tiết sản phẩm (`san-pham-chi-tiet.html`) có mục **Câu hỏi thường gặp (FAQ)** 10 câu dạng accordion, khối **Kết quả thử nghiệm chất lượng** (QUATEST 3) với gallery 3 ảnh xem lightbox mượt (kéo trái/phải), và **Schema Product + FAQPage** cho SEO.
 
-### Giao diện cao cấp (redesign)
+### Giao diện cao cấp (redesign — bản mới nhất)
 
-- **Bảng màu** đổi hoàn toàn sang tông nâu ấm cao cấp (Primary `#8B5E3C`, Gold Accent `#C59B4D`, nền kem `#FAF7F2`/`#F6F1EA`) – khai báo tại `:root` đầu file `css/style.css`, đổi giá trị ở đây sẽ áp dụng lại toàn site.
-- **Font tiêu đề** đổi sang **Cormorant Garamond** (font thân vẫn là Be Vietnam Pro).
-- **Bo góc** chuẩn hoá 16/20/24px, khoảng cách section tăng lên 140px, đổ bóng làm mềm hơn.
-- **Icon**: toàn bộ icon emoji (🚚🔄🎁🛡️🌿🧪📞...) đã đổi thành SVG outline nét mảnh, đồng bộ phong cách.
-- **Hệ thống Placeholder ảnh**: bất kỳ ảnh nào chưa có sẽ tự hiện khung viền đứt, chữ "IMAGE PLACEHOLDER" + kích thước đề xuất (xem bảng ở mục 2) thay vì icon emoji như trước – giúp biết chính xác cần chuẩn bị ảnh gì, kích thước bao nhiêu.
-- **Nền xen kẽ** (alternating background) giữa các section trang chủ/sản phẩm/về chúng tôi để tạo nhịp điệu thị giác.
-- Card thành phần (ingredient) đổi sang dạng **glass card** (nền mờ kính) với ảnh lớn phía trên, card đánh giá/testimonial nâng cấp đổ bóng mềm + hover nổi nhẹ.
+Sau khi tham khảo các trang dầu gội/mỹ phẩm thật trên thị trường (Aesop, Kevin Murphy, Cocoon Việt Nam), đã điều chỉnh lại theo hướng **tối giản thật sự** thay vì thêm hiệu ứng:
 
-Chưa làm: chuyển đổi ảnh sang WebP và đo Lighthouse thực tế (xem mục "Về SEO & hiệu năng" bên dưới) — vẫn cần công cụ xử lý ảnh/trình duyệt mà môi trường hiện tại không có sẵn.
+- **Font**: bỏ font serif mảnh (Cormorant Garamond) vì tiếng Việt nhiều dấu render không đẹp — chuyển hẳn sang **Be Vietnam Pro** (đậm, letter-spacing âm nhẹ ở tiêu đề lớn) cho cả tiêu đề lẫn nội dung, giống cách các trang chăm sóc tóc cao cấp thật đang làm (sans-serif hiện đại, tiêu đề to đậm).
+- **Bảng màu**: nâu ấm cao cấp (Primary `#8B5E3C`, Gold Accent `#C59B4D`, nền kem `#FAF7F2`/`#F6F1EA`) khai báo tại `:root` đầu `css/style.css`.
+- **Ảnh**: đã rà lại toàn bộ ảnh thật — ảnh nào có chữ quảng cáo/banner dán đè lên (kiểu ảnh đăng Facebook/Shopee) đã ngừng dùng ở các vị trí nổi bật (Hero, ảnh sản phẩm chính, gallery), chỉ giữ lại **1 ảnh chai nền trong suốt** (`product-bottle.png`, sạch nhất) dùng thống nhất xuyên suốt site, và ảnh hộp+chai thật (`product-box.png`) cho gallery. Ảnh flatlay có banner chữ (`product-1.jpg`, `product-2.jpg`) và ảnh hướng dẫn 4 bước (`product-usage.jpg`) tạm ngừng dùng.
+- **Hệ thống ảnh còn thiếu**: không còn khung viền đứt + chữ "IMAGE PLACEHOLDER" nữa — chỗ nào chưa có ảnh phù hợp sẽ chỉ là khoảng nền kem nhẹ, im lặng, không phá bố cục.
+- Trang chủ được viết lại gọn hơn: bớt số section, danh sách thành phần dạng chữ (không cần ảnh), avatar đánh giá dạng chữ cái viết tắt, blog dạng list văn bản.
+
+Các trang còn lại (Về Mộc Sa, Sản phẩm, Tin tức...) đã thừa hưởng font/màu/nút mới nhưng **chưa được rút gọn cấu trúc** như trang chủ — sẽ làm tiếp nếu cần.
+
+Chưa làm: chuyển đổi ảnh sang WebP và đo Lighthouse thực tế — vẫn cần công cụ xử lý ảnh/trình duyệt mà môi trường hiện tại không có sẵn.
 
 Menu điều hướng hiện tại: **Trang chủ / Sản phẩm / Kiến thức / Minh chứng chất lượng / Về Mộc Sa / Liên hệ** — cấu trúc theo hướng thương hiệu lâu dài thay vì landing page bán hàng đơn thuần.
 
