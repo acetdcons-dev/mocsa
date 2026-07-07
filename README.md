@@ -58,6 +58,7 @@ Mở trực tiếp file `index.html` bằng trình duyệt, hoặc để mượt
 | `blog-1.jpg` → `blog-6.jpg` | Ảnh minh hoạ 6 bài viết ở trang Tin tức (`tin-tuc.html`, và ảnh bìa ở `tin-tuc-chi-tiet.html` dùng `blog-1.jpg`) | ⬜ Chưa có – lưu 6 ảnh, đánh số theo đúng thứ tự bài viết hiển thị trên trang Tin tức |
 | `avatar-1.jpg`, `avatar-2.jpg`, `avatar-3.jpg` | Ảnh đại diện khách hàng đánh giá | ⬜ Chưa có – có thể bỏ qua, vẫn hiển thị đẹp bằng icon mặc định |
 | `product-conditioner.jpg`, `product-serum.jpg` | Ảnh sản phẩm "Sắp ra mắt" | ⬜ Chưa có – có thể bỏ qua |
+| `hero-banner.jpg` | Banner chính ở đầu trang chủ (mới, theo mẫu bạn gửi) | ⬜ Tuỳ chọn – hiện đang tự dùng tạm `about.png` (banner gỗ có sẵn); nếu muốn banner riêng không trùng với ảnh ở mục "Về chúng tôi", lưu thêm 1 trong các ảnh banner gỗ khác thành tên này |
 
 **Logo, túi vải, hoa trang trí dạng vector** (`logo.svg`, `logo-white.svg`, `logo-mark.svg`, `logo-mark-white.svg`, `logo-icon.svg`, `tote-bag.svg`, `flower.svg`) vẫn giữ làm **bản dự phòng** — web tự quay lại dùng các file này nếu ảnh thật (`logo.png`, `tote-bag.png`) bị thiếu, nên không bao giờ vỡ hình.
 

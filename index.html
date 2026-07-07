@@ -26,9 +26,9 @@
     <a href="index.html" class="brand"><img src="assets/images/logo.png" alt="Mộc Sa" class="brand__logo" onerror="this.onerror=null;this.src='assets/images/logo.svg'"></a>
     <nav class="nav" id="nav">
       <a href="index.html" class="nav__link">Trang chủ</a>
-      <a href="ve-chung-toi.html" class="nav__link">Về chúng tôi</a>
-      <a href="san-pham.html" class="nav__link">Sản phẩm</a>
-      <a href="tin-tuc.html" class="nav__link">Tin tức</a>
+      <a href="ve-chung-toi.html" class="nav__link">Về chúng tôi <span class="nav__caret">⌄</span></a>
+      <a href="san-pham.html" class="nav__link">Sản phẩm <span class="nav__caret">⌄</span></a>
+      <a href="tin-tuc.html" class="nav__link">Tin tức <span class="nav__caret">⌄</span></a>
       <a href="lien-he.html" class="nav__link">Liên hệ</a>
     </nav>
     <div class="header__actions">
@@ -54,42 +54,33 @@
 <div class="overlay" id="overlay"></div>
 
 <main>
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="hero__bg"></div>
-    <div class="hero__wood"></div>
-    <div class="container hero__inner">
-      <div class="hero__content" data-reveal>
-        <img src="assets/images/logo-mark.svg" alt="" class="hero__mark">
-        <span class="badge badge--pill">15 Thảo Dược Việt • Không Silicone • Không Sulfate • Không Paraben</span>
-        <h1 class="hero__title">Dầu Gội Thảo Dược<br><em>từ thiên nhiên Việt</em></h1>
-        <p class="hero__desc">Kết hợp Caffeine, Bụt Giấm, Xương rồng, Gừng &amp; Bồ kết – làm sạch dịu nhẹ, hỗ trợ giảm gàu, giúp tóc chắc khỏe và ngăn ngừa gãy rụng.</p>
-        <div class="hero__price">
-          <span class="price price--old">245.000₫</span>
-          <span class="price price--new">196.000₫</span>
-          <span class="badge badge--sale">-20%</span>
-        </div>
-        <div class="hero__cta">
-          <button class="btn btn--primary btn--lg" data-add-to-cart data-open-checkout>Mua ngay – Giao COD</button>
-          <a href="san-pham-chi-tiet.html" class="btn btn--ghost btn--lg">Xem chi tiết sản phẩm</a>
-        </div>
-        <div class="hero__timer">
-          <span>Ưu đãi kết thúc sau</span>
-          <div class="countdown" id="countdown">
-            <div class="countdown__box"><span id="cd-h">00</span><small>Giờ</small></div>
-            <div class="countdown__box"><span id="cd-m">00</span><small>Phút</small></div>
-            <div class="countdown__box"><span id="cd-s">00</span><small>Giây</small></div>
-          </div>
-        </div>
+  <!-- ============ HERO (banner) ============ -->
+  <section class="hero hero--banner">
+    <h1 class="sr-only">Dầu Gội Thảo Dược Mộc Sa – Từ Thiên Nhiên Việt</h1>
+    <div class="hero__banner-wrap" data-reveal>
+      <img src="assets/images/hero-banner.jpg" alt="Dầu gội thảo dược Mộc Sa từ thiên nhiên Việt" class="hero__banner-img" onerror="this.onerror=null;this.src='assets/images/about.png'">
+      <div class="hero__gift-tag">🎁 Tặng kèm túi vải Mộc Sa</div>
+      <div class="hero__dots" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span><span></span></div>
+    </div>
+    <div class="container hero__cta-row" data-reveal>
+      <div class="hero__price">
+        <span class="price price--old">245.000₫</span>
+        <span class="price price--new">196.000₫</span>
+        <span class="badge badge--sale">-20%</span>
       </div>
-      <div class="hero__media" data-reveal>
-        <div class="hero__gift-tag">🎁 Tặng kèm túi vải Mộc Sa</div>
-        <img src="assets/images/product-bottle.png" alt="Dầu gội thảo dược Mộc Sa 250ml" class="hero__product" data-label="Ảnh sản phẩm Mộc Sa" onerror="this.parentElement.classList.add('img-fallback--bottle')">
-        <img src="assets/images/flower.svg" alt="" class="hero__flower hero__flower--1">
-        <img src="assets/images/flower.svg" alt="" class="hero__flower hero__flower--2">
+      <div class="hero__cta">
+        <button class="btn btn--primary btn--lg" data-add-to-cart data-open-checkout>Mua ngay – Giao COD</button>
+        <a href="san-pham-chi-tiet.html" class="btn btn--ghost btn--lg">Xem chi tiết sản phẩm</a>
+      </div>
+      <div class="hero__timer">
+        <span>Ưu đãi kết thúc sau</span>
+        <div class="countdown" id="countdown">
+          <div class="countdown__box"><span id="cd-h">00</span><small>Giờ</small></div>
+          <div class="countdown__box"><span id="cd-m">00</span><small>Phút</small></div>
+          <div class="countdown__box"><span id="cd-s">00</span><small>Giây</small></div>
+        </div>
       </div>
     </div>
-    <div class="hero__scroll" aria-hidden="true"><span></span></div>
   </section>
 
   <!-- ============ TRUST STRIP ============ -->
