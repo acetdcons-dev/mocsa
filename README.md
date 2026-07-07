@@ -54,7 +54,7 @@ Mở trực tiếp file `index.html` bằng trình duyệt, hoặc để mượt
 | `about.png` | Ảnh mục "Về chúng tôi" | ✅ Đã có |
 | `before-after.png` | Ảnh so sánh trước/sau (chi tiết sản phẩm) | ✅ Đã có |
 | `certificate.jpg` | **Phiếu công bố sản phẩm mỹ phẩm** – khối "Đã công bố sản phẩm mỹ phẩm" ở trang Về chúng tôi & Chi tiết sản phẩm | ⬜ Chưa có – lưu ảnh chụp/scan phiếu công bố vào đúng tên này |
-| `kiem-nghiem.jpg` | **Phiếu kết quả kiểm nghiệm** – khối "Đã kiểm nghiệm chất lượng" (mới thêm, nằm cạnh khối công bố) | ⬜ Chưa có – lưu ảnh chụp/scan phiếu kiểm nghiệm vào đúng tên này |
+| `kiem-nghiem-1.jpg`, `kiem-nghiem-2.jpg`, `kiem-nghiem-3.jpg` | **Phiếu kết quả kiểm nghiệm (3 trang)** – khối "Đã kiểm nghiệm chất lượng" (nằm cạnh khối công bố) | ⬜ Chưa có – lưu đúng 3 ảnh theo thứ tự trang 1/2/3, mỗi trang bấm xem riêng được |
 | `blog-1.jpg` → `blog-6.jpg` | Ảnh minh hoạ 6 bài viết ở trang Tin tức (`tin-tuc.html`, và ảnh bìa ở `tin-tuc-chi-tiet.html` dùng `blog-1.jpg`) | ⬜ Chưa có – lưu 6 ảnh, đánh số theo đúng thứ tự bài viết hiển thị trên trang Tin tức |
 | `avatar-1.jpg`, `avatar-2.jpg`, `avatar-3.jpg` | Ảnh đại diện khách hàng đánh giá | ⬜ Chưa có – có thể bỏ qua, vẫn hiển thị đẹp bằng icon mặc định |
 | `product-conditioner.jpg`, `product-serum.jpg` | Ảnh sản phẩm "Sắp ra mắt" | ⬜ Chưa có – có thể bỏ qua |
