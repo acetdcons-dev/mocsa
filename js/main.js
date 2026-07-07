@@ -343,10 +343,15 @@
     var closeBtn = document.getElementById("lightboxClose");
     if (closeBtn) closeBtn.addEventListener("click", function () { lb.classList.remove("is-open"); });
     if (lb) lb.addEventListener("click", function (e) { if (e.target === lb) lb.classList.remove("is-open"); });
-    var certImg = document.getElementById("certImg");
-    var certBtn = document.getElementById("certViewBtn");
-    if (certImg) certImg.addEventListener("click", function () { openLightbox(certImg.src, certImg.alt); });
-    if (certBtn) certBtn.addEventListener("click", function () { openLightbox(certImg.src, certImg.alt); });
+    document.querySelectorAll(".cert-strip__img").forEach(function (img) {
+      img.addEventListener("click", function () { openLightbox(img.src, img.alt); });
+    });
+    document.querySelectorAll(".cert-strip__btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var img = btn.closest(".cert-strip").querySelector(".cert-strip__img");
+        if (img) openLightbox(img.src, img.alt);
+      });
+    });
   }
 
   /* ---------- BEFORE / AFTER SLIDER ---------- */

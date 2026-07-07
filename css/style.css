@@ -308,6 +308,8 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .review-card p{font-size:14.5px;}
 @media(max-width:880px){.review-grid{grid-template-columns:1fr;}}
 
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:760px){.cert-grid{grid-template-columns:1fr;}}
 .cert-strip{display:flex;align-items:center;gap:24px;background:var(--white);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-sm);flex-wrap:wrap;}
 .cert-strip__img{width:90px;height:120px;object-fit:cover;border-radius:var(--radius-sm);border:1px solid var(--line);cursor:pointer;}
 .cert-strip__text{flex:1;min-width:220px;}
