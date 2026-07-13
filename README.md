@@ -77,11 +77,10 @@ Mở trực tiếp file `index.html` bằng trình duyệt, hoặc để mượt
 |---|---|---|
 | `logo.png` | Logo ở header (mọi trang) | ✅ Đã có |
 | `tote-bag.png` | Ảnh túi vải quà tặng (trang chủ, chi tiết sản phẩm) | ✅ Đã có |
-| `product-1.png` | Ảnh chính sản phẩm (trang chủ, danh sách, chi tiết, giỏ hàng, popup) | ✅ Đã có |
-| `product-2.png` | Ảnh phụ trong gallery chi tiết sản phẩm | ✅ Đã có |
-| `product-box.png` | Ảnh hộp + chai | ✅ Đã có |
-| `product-usage.png` | (Không còn dùng — 4 bước hướng dẫn nay hiển thị bằng chữ ở trang chi tiết sản phẩm) | — |
-| `product-bottle.png` | Ảnh lớn ở Hero trang chủ | ✅ Đã có |
+| `product-usage.png` | Ảnh infographic 4 bước hướng dẫn sử dụng, hiển thị đầu tab "Hướng dẫn sử dụng" ở `san-pham-chi-tiet.html` | ✅ Đã có |
+| `product-bottle.png` | Ảnh mặc định cho og:image/twitter:image (chia sẻ mạng xã hội) trên các trang chưa có ảnh riêng, thẻ sản phẩm ở `san-pham.html` &amp; `ve-chung-toi.html` | ✅ Đã có |
+| `product-gallery-1.jpg` → `product-gallery-9.jpg` | **Gallery 9 ảnh** ở trang chi tiết Dầu Gội Mộc Sa `san-pham-chi-tiet.html` (ảnh chính + 9 thumbnail bấm chuyển) — đã thay hẳn cho `product-bottle.png`/`product-box.png`/`product-2.png` cũ dùng ở gallery này, không dùng lại 2 ảnh cũ nữa. Gợi ý nội dung từng ảnh: `-1` chai chính diện nền trơn · `-2` chai + hộp đặt cạnh nhau · `-3` cận cảnh nhãn chai · `-4` mặt sau hộp/bảng thành phần · `-5` chai nghiêng thấy vòi bơm &amp; kết cấu dầu gội · `-6` flatlay cùng nguyên liệu thảo dược thật · `-7` ảnh lifestyle trên kệ gỗ/phòng tắm · `-8` ảnh tay cầm chai đang dùng · `-9` ảnh full bộ (hộp + chai + túi vải quà tặng) | ⬜ Chưa có – khuyến nghị **1000 × 1000px** mỗi ảnh, nền trắng/kem đồng bộ, đúng đuôi `.jpg` |
+| `hero-banner.jpg` | Ảnh nền hero-banner trang chủ (đặt dưới lớp overlay tối để chữ trắng dễ đọc) | ✅ Đã có – khuyến nghị **1920 × 800px**, ảnh càng tối/ít chi tiết vụn càng dễ đọc chữ đè lên |
 | `about.png` | Ảnh mục "Về chúng tôi" | ✅ Đã có |
 | `before-after.png` | Ảnh so sánh trước/sau (chi tiết sản phẩm) | ✅ Đã có |
 | `certificate.jpg` | **Phiếu công bố sản phẩm mỹ phẩm** – khối "Đã công bố sản phẩm mỹ phẩm" ở trang Về chúng tôi & Chi tiết sản phẩm | ⬜ Chưa có – lưu ảnh chụp/scan phiếu công bố vào đúng tên này |
