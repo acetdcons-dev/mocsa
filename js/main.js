@@ -4,102 +4,185 @@
 (function () {
   "use strict";
 
-  /* ---------- SẢN PHẨM DUY NHẤT ---------- */
-  var PRODUCT = {
-    id: "dau-goi-thao-duoc-moc-sa",
-    name: "Dầu Gội Thảo Dược Mộc Sa 250ml",
-    price: 196000,
-    oldPrice: 245000,
-    image: "assets/images/product-bottle.png",
-    gift: "Túi vải Mộc Sa"
+  /* ---------- DANH MỤC SẢN PHẨM ---------- */
+  var PRODUCTS = {
+    "moc-sa-dau-goi": {
+      id: "moc-sa-dau-goi",
+      name: "Dầu Gội Thảo Dược Mộc Sa 250ml",
+      price: 196000,
+      oldPrice: 245000,
+      image: "assets/images/product-bottle.png",
+      gift: "Túi vải Mộc Sa"
+    },
+    "fonscare-dung-dich-ve-sinh": {
+      id: "fonscare-dung-dich-ve-sinh",
+      name: "Dung Dịch Vệ Sinh Fons Care 100ml",
+      price: 70000,
+      oldPrice: null,
+      image: "assets/images/fonscare-dung-dich-ve-sinh.jpg",
+      gift: null
+    },
+    "fonscare-baby": {
+      id: "fonscare-baby",
+      name: "Sữa Tắm Gội Thảo Dược Fons Care Baby 300ml",
+      price: 135000,
+      oldPrice: null,
+      image: "assets/images/fonscare-baby.jpg",
+      gift: null
+    }
   };
-  var CART_KEY = "mocsa_cart_qty";
+  var DEFAULT_PRODUCT_ID = "moc-sa-dau-goi";
+  var CART_KEY = "mocsa_cart";
   var DEADLINE_KEY = "mocsa_deadline";
 
   function formatVND(n) {
     return n.toLocaleString("vi-VN") + "₫";
   }
 
-  /* ---------- CART (localStorage) ---------- */
-  function getCartQty() {
-    var v = parseInt(localStorage.getItem(CART_KEY), 10);
-    return isNaN(v) || v < 0 ? 0 : v;
+  /* ---------- CART (localStorage – map productId -> qty) ---------- */
+  function getCart() {
+    try {
+      var raw = JSON.parse(localStorage.getItem(CART_KEY) || "{}");
+      return (raw && typeof raw === "object") ? raw : {};
+    } catch (e) {
+      return {};
+    }
   }
-  function setCartQty(qty) {
-    qty = Math.max(0, Math.min(99, qty));
-    localStorage.setItem(CART_KEY, String(qty));
+  function saveCart(cart) {
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
     updateCartBadges();
     renderMiniCart();
     if (document.body.dataset.page === "cart") renderCartPage();
   }
-  function addToCart(amount) {
-    setCartQty(getCartQty() + (amount || 1));
+  function getCartQty(productId) {
+    var v = getCart()[productId];
+    return (typeof v === "number" && v > 0) ? v : 0;
+  }
+  function getCartTotalQty() {
+    var cart = getCart();
+    var total = 0;
+    Object.keys(cart).forEach(function (id) { total += cart[id] || 0; });
+    return total;
+  }
+  function setItemQty(productId, qty) {
+    var cart = getCart();
+    qty = Math.max(0, Math.min(99, qty));
+    if (qty <= 0) delete cart[productId];
+    else cart[productId] = qty;
+    saveCart(cart);
+  }
+  function addToCart(productId, amount) {
+    setItemQty(productId, getCartQty(productId) + (amount || 1));
+  }
+  function removeFromCart(productId) {
+    setItemQty(productId, 0);
+  }
+  function clearCart() {
+    saveCart({});
   }
   function updateCartBadges() {
-    var qty = getCartQty();
+    var total = getCartTotalQty();
     document.querySelectorAll("#cartCount").forEach(function (el) {
-      el.textContent = qty;
+      el.textContent = total;
     });
+  }
+  function cartEntries() {
+    var cart = getCart();
+    return Object.keys(cart)
+      .filter(function (id) { return cart[id] > 0 && PRODUCTS[id]; })
+      .map(function (id) { return { id: id, qty: cart[id], product: PRODUCTS[id] }; });
   }
 
   function renderMiniCart() {
     var body = document.getElementById("miniCartBody");
     var foot = document.getElementById("miniCartFoot");
     if (!body) return;
-    var qty = getCartQty();
-    if (qty <= 0) {
+    var entries = cartEntries();
+    if (!entries.length) {
       body.innerHTML = '<p class="mini-cart__empty">Chưa có sản phẩm nào trong giỏ.</p>';
       if (foot) foot.hidden = true;
       return;
     }
-    body.innerHTML =
-      '<div class="mini-cart__item">' +
-      '<img src="' + PRODUCT.image + '" alt="" onerror="this.parentElement.classList.add(\'img-fallback--bottle-sm\')">' +
-      '<div class="mini-cart__item-info">' +
-      "<strong>" + PRODUCT.name + "</strong>" +
-      '<div class="mini-cart__item-price">' + formatVND(PRODUCT.price) + "</div>" +
-      '<div class="mini-cart__qty">' +
-      '<button type="button" data-mini-minus>−</button>' +
-      '<span>' + qty + '</span>' +
-      '<button type="button" data-mini-plus>+</button>' +
-      "</div>" +
-      "</div>" +
-      '<button class="mini-cart__remove" data-mini-remove>Xóa</button>' +
-      "</div>";
+    var total = 0;
+    body.innerHTML = entries.map(function (entry) {
+      var p = entry.product;
+      var lineTotal = p.price * entry.qty;
+      total += lineTotal;
+      return '<div class="mini-cart__item" data-id="' + entry.id + '">' +
+        '<img src="' + p.image + '" alt="" onerror="this.parentElement.classList.add(\'img-fallback--bottle-sm\')">' +
+        '<div class="mini-cart__item-info">' +
+        "<strong>" + p.name + "</strong>" +
+        '<div class="mini-cart__item-price">' + formatVND(p.price) + "</div>" +
+        '<div class="mini-cart__qty">' +
+        '<button type="button" data-mini-minus>−</button>' +
+        "<span>" + entry.qty + "</span>" +
+        '<button type="button" data-mini-plus>+</button>' +
+        "</div>" +
+        "</div>" +
+        '<button class="mini-cart__remove" data-mini-remove>Xóa</button>' +
+        "</div>";
+    }).join("");
     if (foot) {
       foot.hidden = false;
       var totalEl = document.getElementById("miniCartTotal");
-      if (totalEl) totalEl.textContent = formatVND(PRODUCT.price * qty);
+      if (totalEl) totalEl.textContent = formatVND(total);
     }
-    var minus = body.querySelector("[data-mini-minus]");
-    var plus = body.querySelector("[data-mini-plus]");
-    var remove = body.querySelector("[data-mini-remove]");
-    if (minus) minus.addEventListener("click", function () { setCartQty(getCartQty() - 1); });
-    if (plus) plus.addEventListener("click", function () { setCartQty(getCartQty() + 1); });
-    if (remove) remove.addEventListener("click", function () { setCartQty(0); });
+    body.querySelectorAll(".mini-cart__item").forEach(function (item) {
+      var id = item.dataset.id;
+      var minus = item.querySelector("[data-mini-minus]");
+      var plus = item.querySelector("[data-mini-plus]");
+      var remove = item.querySelector("[data-mini-remove]");
+      if (minus) minus.addEventListener("click", function () { setItemQty(id, getCartQty(id) - 1); });
+      if (plus) plus.addEventListener("click", function () { setItemQty(id, getCartQty(id) + 1); });
+      if (remove) remove.addEventListener("click", function () { removeFromCart(id); });
+    });
   }
 
   function renderCartPage() {
     var wrap = document.getElementById("cartPageWrap");
     if (!wrap) return;
-    var qty = getCartQty();
+    var entries = cartEntries();
     var empty = document.getElementById("cartEmpty");
     var filled = document.getElementById("cartFilled");
-    if (qty <= 0) {
+    if (!entries.length) {
       if (empty) empty.hidden = false;
       if (filled) filled.hidden = true;
       return;
     }
     if (empty) empty.hidden = true;
     if (filled) filled.hidden = false;
-    var qtyInput = document.getElementById("cartPageQty");
-    if (qtyInput) qtyInput.value = qty;
-    var lineTotal = document.getElementById("cartLineTotal");
-    if (lineTotal) lineTotal.textContent = formatVND(PRODUCT.price * qty);
-    var subTotal = document.getElementById("cartSubTotal");
-    if (subTotal) subTotal.textContent = formatVND(PRODUCT.price * qty);
-    var grandTotal = document.getElementById("cartGrandTotal");
-    if (grandTotal) grandTotal.textContent = formatVND(PRODUCT.price * qty);
+
+    var tbody = document.getElementById("cartTableBody");
+    var subTotal = 0;
+    if (tbody) {
+      tbody.innerHTML = entries.map(function (entry) {
+        var p = entry.product;
+        var lineTotal = p.price * entry.qty;
+        subTotal += lineTotal;
+        return '<tr data-id="' + entry.id + '">' +
+          '<td><div class="cart-table__product"><img src="' + p.image + '" alt="" onerror="this.parentElement.classList.add(\'img-fallback--bottle-sm\')">' +
+          "<div><strong>" + p.name + "</strong>" +
+          (p.gift ? '<br><small style="color:var(--gold-600);">🎁 Tặng kèm ' + p.gift + "</small>" : "") +
+          "</div></div></td>" +
+          "<td>" + formatVND(p.price) + "</td>" +
+          '<td><div class="qty-stepper"><button type="button" class="cart-row-minus">−</button><input type="text" value="' + entry.qty + '" readonly><button type="button" class="cart-row-plus">+</button></div></td>' +
+          "<td><strong>" + formatVND(lineTotal) + "</strong></td>" +
+          '<td><button class="mini-cart__remove cart-row-remove">Xóa</button></td>' +
+          "</tr>";
+      }).join("");
+      tbody.querySelectorAll("tr").forEach(function (row) {
+        var id = row.dataset.id;
+        row.querySelector(".cart-row-minus").addEventListener("click", function () { setItemQty(id, getCartQty(id) - 1); });
+        row.querySelector(".cart-row-plus").addEventListener("click", function () { setItemQty(id, getCartQty(id) + 1); });
+        row.querySelector(".cart-row-remove").addEventListener("click", function () { removeFromCart(id); });
+      });
+    } else {
+      subTotal = entries.reduce(function (sum, entry) { return sum + entry.product.price * entry.qty; }, 0);
+    }
+    var subTotalEl = document.getElementById("cartSubTotal");
+    if (subTotalEl) subTotalEl.textContent = formatVND(subTotal);
+    var grandTotalEl = document.getElementById("cartGrandTotal");
+    if (grandTotalEl) grandTotalEl.textContent = formatVND(subTotal);
   }
 
   /* ---------- TOAST ---------- */
@@ -191,13 +274,14 @@
   function initAddToCart() {
     document.querySelectorAll("[data-add-to-cart]").forEach(function (btn) {
       btn.addEventListener("click", function () {
+        var productId = btn.dataset.productId || DEFAULT_PRODUCT_ID;
         var qtyInput = document.getElementById("qtyValue");
         var qty = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
         if (btn.hasAttribute("data-open-checkout")) {
-          openCheckoutModal(qty);
+          openCheckoutModal(productId, qty);
           return;
         }
-        addToCart(qty);
+        addToCart(productId, qty);
         showToast("Đã thêm " + qty + " sản phẩm vào giỏ hàng");
         openMiniCart();
       });
@@ -219,14 +303,8 @@
     });
   }
 
-  /* ---------- CART PAGE STEPPER ---------- */
+  /* ---------- CART PAGE ---------- */
   function initCartPageControls() {
-    var minus = document.getElementById("cartMinus");
-    var plus = document.getElementById("cartPlus");
-    var removeBtn = document.getElementById("cartRemove");
-    if (minus) minus.addEventListener("click", function () { setCartQty(getCartQty() - 1); });
-    if (plus) plus.addEventListener("click", function () { setCartQty(getCartQty() + 1); });
-    if (removeBtn) removeBtn.addEventListener("click", function () { setCartQty(0); });
     renderCartPage();
   }
 
@@ -453,11 +531,23 @@
   }
 
   /* ---------- CHECKOUT MODAL (mua nhanh) ---------- */
-  function openCheckoutModal(qty) {
+  var checkoutProductId = DEFAULT_PRODUCT_ID;
+  function openCheckoutModal(productId, qty) {
     var modal = document.getElementById("checkoutModal");
     if (!modal) {
       window.location.href = "thanh-toan.html";
       return;
+    }
+    checkoutProductId = (productId && PRODUCTS[productId]) ? productId : DEFAULT_PRODUCT_ID;
+    var p = PRODUCTS[checkoutProductId];
+    var summary = document.getElementById("checkoutSummary");
+    if (summary && p) {
+      summary.innerHTML =
+        '<img src="' + p.image + '" alt="" onerror="this.parentElement.classList.add(\'img-fallback--bottle-sm\')">' +
+        "<div><strong>" + p.name + "</strong>" +
+        (p.gift ? "<span>Tặng kèm: " + p.gift + "</span>" : "") +
+        "</div>" +
+        '<div class="modal__order-price" id="checkoutUnitPrice">' + formatVND(p.price) + "</div>";
     }
     var qtyInput = document.getElementById("checkoutQty");
     if (qtyInput) qtyInput.value = qty || 1;
@@ -473,9 +563,10 @@
   function updateCheckoutTotal() {
     var qtyInput = document.getElementById("checkoutQty");
     var totalEl = document.getElementById("checkoutTotal");
-    if (!qtyInput || !totalEl) return;
+    var p = PRODUCTS[checkoutProductId];
+    if (!qtyInput || !totalEl || !p) return;
     var qty = parseInt(qtyInput.value, 10) || 1;
-    totalEl.textContent = formatVND(PRODUCT.price * qty);
+    totalEl.textContent = formatVND(p.price * qty);
   }
   function initCheckoutModal() {
     var modal = document.getElementById("checkoutModal");
@@ -494,7 +585,6 @@
         e.preventDefault();
         document.getElementById("checkoutBody").hidden = true;
         document.getElementById("checkoutSuccess").hidden = false;
-        setCartQty(0);
         form.reset();
       });
     }
@@ -517,21 +607,40 @@
   function initCheckoutPage() {
     var form = document.getElementById("orderForm");
     if (!form) return;
-    var qty = Math.max(1, getCartQty() || 1);
-    var qtyEl = document.getElementById("orderQty");
-    var lineTotalEl = document.getElementById("orderLineTotal");
+    var entries = cartEntries();
+    var summaryBody = document.getElementById("orderSummaryBody");
+    var subTotal = entries.reduce(function (sum, entry) { return sum + entry.product.price * entry.qty; }, 0);
+
+    if (summaryBody) {
+      if (!entries.length) {
+        summaryBody.innerHTML = '<p style="color:var(--ink-soft);font-size:14px;">Giỏ hàng đang trống. <a href="san-pham.html" style="text-decoration:underline;color:var(--brown-800);">Chọn sản phẩm</a></p>';
+      } else {
+        summaryBody.innerHTML = entries.map(function (entry) {
+          var p = entry.product;
+          var lineTotal = p.price * entry.qty;
+          return '<div class="mini-cart__item" style="border:none;padding:0 0 18px;">' +
+            '<img src="' + p.image + '" alt="" onerror="this.parentElement.classList.add(\'img-fallback--bottle-sm\')">' +
+            '<div class="mini-cart__item-info"><strong>' + p.name + "</strong>" +
+            (p.gift ? '<span style="font-size:12px;color:var(--gold-600);">🎁 Tặng kèm ' + p.gift + "</span>" : "") +
+            '<div style="font-size:13px;margin-top:4px;">Số lượng: <strong>' + entry.qty + "</strong></div></div>" +
+            "<strong>" + formatVND(lineTotal) + "</strong></div>";
+        }).join("");
+      }
+    }
     var subTotalEl = document.getElementById("orderSubTotal");
+    if (subTotalEl) subTotalEl.textContent = formatVND(subTotal);
     var totalEl = document.getElementById("orderTotal");
-    if (qtyEl) qtyEl.textContent = qty;
-    if (lineTotalEl) lineTotalEl.textContent = formatVND(PRODUCT.price * qty);
-    if (subTotalEl) subTotalEl.textContent = formatVND(PRODUCT.price * qty);
-    if (totalEl) totalEl.textContent = formatVND(PRODUCT.price * qty);
+    if (totalEl) totalEl.textContent = formatVND(subTotal);
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      if (!cartEntries().length) {
+        showToast("Giỏ hàng của bạn đang trống");
+        return;
+      }
       var code = "MS" + Date.now().toString().slice(-8);
       sessionStorage.setItem("mocsa_last_order", code);
-      setCartQty(0);
+      clearCart();
       window.location.href = "dat-hang-thanh-cong.html";
     });
   }

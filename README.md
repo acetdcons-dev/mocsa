@@ -7,7 +7,9 @@ moc-sa/
 ├── index.html                 Trang chủ
 ├── ve-chung-toi.html          Về chúng tôi
 ├── san-pham.html              Danh sách sản phẩm
-├── san-pham-chi-tiet.html     Chi tiết sản phẩm (mô tả, thành phần, hướng dẫn dùng, đánh giá)
+├── san-pham-chi-tiet.html     Chi tiết Dầu Gội Thảo Dược Mộc Sa (mô tả, thành phần, hướng dẫn dùng, đánh giá)
+├── fonscare-dung-dich-ve-sinh.html  Chi tiết Dung Dịch Vệ Sinh Fons Care
+├── fonscare-baby.html         Chi tiết Sữa Tắm Gội Thảo Dược Fons Care Baby
 ├── tin-tuc.html                Danh sách tin tức / kiến thức
 ├── tin-tuc-chi-tiet.html      Bài viết chi tiết (mẫu)
 ├── lien-he.html                Liên hệ (form + bản đồ)
@@ -80,6 +82,8 @@ Mở trực tiếp file `index.html` bằng trình duyệt, hoặc để mượt
 | `before-after.png` | Ảnh so sánh trước/sau (chi tiết sản phẩm) | ✅ Đã có |
 | `certificate.jpg` | **Phiếu công bố sản phẩm mỹ phẩm** – khối "Đã công bố sản phẩm mỹ phẩm" ở trang Về chúng tôi & Chi tiết sản phẩm | ⬜ Chưa có – lưu ảnh chụp/scan phiếu công bố vào đúng tên này |
 | `kiem-nghiem-1.jpg`, `kiem-nghiem-2.jpg`, `kiem-nghiem-3.jpg` | **Phiếu kết quả kiểm nghiệm (3 trang)** – khối "Đã kiểm nghiệm chất lượng" (nằm cạnh khối công bố) | ⬜ Chưa có – lưu đúng 3 ảnh theo thứ tự trang 1/2/3, mỗi trang bấm xem riêng được |
+| `fonscare-dung-dich-ve-sinh.jpg` | Ảnh chai Dung dịch vệ sinh Fons Care – trang `fonscare-dung-dich-ve-sinh.html` + card ở `san-pham.html` | ⬜ Chưa có – khuyến nghị **1000 × 1000px**, nền trắng/kem giống các ảnh sản phẩm hiện có |
+| `fonscare-baby.jpg` | Ảnh chai Sữa tắm gội Fons Care Baby – trang `fonscare-baby.html` + card ở `san-pham.html` | ⬜ Chưa có – khuyến nghị **1000 × 1000px**, nền trắng/kem giống các ảnh sản phẩm hiện có |
 | `blog-1.jpg` → `blog-6.jpg` | Ảnh minh hoạ 6 bài viết ở trang Tin tức (`tin-tuc.html`, và ảnh bìa ở `tin-tuc-chi-tiet.html` dùng `blog-1.jpg`) | ⬜ Chưa có – lưu 6 ảnh, đánh số theo đúng thứ tự bài viết hiển thị trên trang Tin tức |
 | `hero-lifestyle.jpg` | Ảnh lifestyle nền phần Hero trang chủ (cạnh chai sản phẩm) | ⬜ Chưa có – đang hiện khung placeholder "IMAGE PLACEHOLDER · 1920 × 1080px" |
 | `ingredient-caffeine.jpg`, `ingredient-but-giam.jpg`, `ingredient-xuong-rong.jpg`, `ingredient-gung.jpg`, `ingredient-tia-to-bo-ket.jpg`, `ingredient-nam-men.jpg` | Ảnh từng thành phần trong card thảo dược (trang chủ + Về Mộc Sa) | ⬜ Chưa có – đang hiện khung placeholder "1200 × 1200px" mỗi thẻ |
@@ -97,11 +101,12 @@ Hotline/Zalo hiện tại: `0325.343.663` (đã cập nhật khắp 14 trang). F
 
 ## 4. Giỏ hàng & đặt hàng hoạt động thế nào
 
-Vì chỉ bán **1 sản phẩm duy nhất**, giỏ hàng lưu số lượng trong `localStorage` của trình duyệt (không cần backend):
+Từ khi có 3 sản phẩm (Dầu gội Mộc Sa, Dung dịch vệ sinh Fons Care, Sữa tắm gội Fons Care Baby), giỏ hàng lưu một **map productId → số lượng** dưới key `mocsa_cart` trong `localStorage` (không cần backend). Danh mục sản phẩm (tên/giá/ảnh) khai báo tại biến `PRODUCTS` đầu file `js/main.js` — thêm sản phẩm mới chỉ cần thêm 1 entry vào đó rồi gắn `data-product-id="..."` vào nút mua trên trang sản phẩm tương ứng.
 
-- "Thêm vào giỏ hàng" → cộng số lượng, mở giỏ hàng mini.
-- "Mua ngay" → mở khung đặt hàng nhanh (COD) hoặc chuyển tới `thanh-toan.html`.
-- Trang `thanh-toan.html` sau khi bấm "Hoàn tất đặt hàng" sẽ chuyển tới `dat-hang-thanh-cong.html` kèm mã đơn hàng.
+- "Thêm vào giỏ hàng" → cộng số lượng đúng sản phẩm đó, mở giỏ hàng mini.
+- "Mua ngay" → mở khung đặt hàng nhanh cho riêng sản phẩm đó (COD), hoặc chuyển tới `thanh-toan.html` để thanh toán cả giỏ hàng nhiều sản phẩm.
+- Trang `gio-hang.html` và `thanh-toan.html` hiển thị đầy đủ từng dòng sản phẩm trong giỏ, tự tính tạm tính/tổng cộng.
+- Trang `thanh-toan.html` sau khi bấm "Hoàn tất đặt hàng" sẽ chuyển tới `dat-hang-thanh-cong.html` kèm mã đơn hàng, đồng thời xoá sạch giỏ hàng.
 
 **Lưu ý quan trọng:** đây là phần đặt hàng phía trình duyệt (demo/tĩnh), đơn hàng **chưa được gửi đi đâu cả**. Để nhận đơn thật, bạn cần nối `#orderForm` (trong `thanh-toan.html`) và `#checkoutForm` (khung mua nhanh) tới một dịch vụ nhận đơn thật, ví dụ:
 - Google Sheets (qua Google Apps Script / SheetDB),

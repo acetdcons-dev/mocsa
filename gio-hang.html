@@ -79,32 +79,16 @@
         <div>
           <table class="cart-table">
             <thead><tr><th>Sản phẩm</th><th>Đơn giá</th><th>Số lượng</th><th>Thành tiền</th><th></th></tr></thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="cart-table__product">
-                    <img src="assets/images/product-bottle.png" alt="" onerror="this.parentElement.classList.add('img-fallback--bottle-sm');this.parentElement.setAttribute('data-size','1000 × 1000px')">
-                    <div><strong>Dầu Gội Thảo Dược Mộc Sa 250ml</strong><br><small style="color:var(--gold-600);">🎁 Tặng kèm túi vải Mộc Sa</small></div>
-                  </div>
-                </td>
-                <td>196.000₫</td>
-                <td>
-                  <div class="qty-stepper"><button type="button" id="cartMinus">−</button><input type="text" id="cartPageQty" value="1" readonly><button type="button" id="cartPlus">+</button></div>
-                </td>
-                <td><strong id="cartLineTotal">196.000₫</strong></td>
-                <td><button class="mini-cart__remove" id="cartRemove">Xóa</button></td>
-              </tr>
-            </tbody>
+            <tbody id="cartTableBody"></tbody>
           </table>
           <a href="san-pham.html" class="btn btn--ghost" style="margin-top:24px;">← Tiếp tục mua sắm</a>
         </div>
 
         <div class="cart-summary">
           <h3 style="margin-bottom:20px;">Tóm tắt đơn hàng</h3>
-          <div class="cart-summary__row"><span>Tạm tính</span><strong id="cartSubTotal">196.000₫</strong></div>
+          <div class="cart-summary__row"><span>Tạm tính</span><strong id="cartSubTotal">0₫</strong></div>
           <div class="cart-summary__row"><span>Phí vận chuyển</span><strong>Miễn phí</strong></div>
-          <div class="cart-summary__row"><span>Quà tặng</span><strong>Túi vải Mộc Sa</strong></div>
-          <div class="cart-summary__row is-total"><span>Tổng cộng</span><strong id="cartGrandTotal">196.000₫</strong></div>
+          <div class="cart-summary__row is-total"><span>Tổng cộng</span><strong id="cartGrandTotal">0₫</strong></div>
           <a href="thanh-toan.html" class="btn btn--primary btn--lg btn--block" style="margin-top:20px;">Tiến hành thanh toán</a>
         </div>
       </div>
