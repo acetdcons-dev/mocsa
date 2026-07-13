@@ -275,6 +275,7 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .ing-card p{color:var(--gold-100);font-size:14px;opacity:.85;}
 @media(max-width:880px){.ing-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:560px){.ing-grid{grid-template-columns:1fr;}}
+.ing-grid--2col{grid-template-columns:repeat(2,1fr);}
 
 /* ============ PRODUCT ============ */
 .product__grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
