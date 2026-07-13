@@ -190,7 +190,7 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 
 /* ============ PERKS BAR (home) ============ */
 .perks-bar{background:var(--white);border-bottom:1px solid var(--line);}
-.perks-bar__inner{display:grid;grid-template-columns:repeat(4,1fr);}
+.perks-bar__inner{display:grid;grid-template-columns:repeat(3,1fr);}
 .perks-bar__item{display:flex;align-items:center;gap:14px;padding:22px 18px;border-right:1px solid var(--line);}
 .perks-bar__item:last-child{border-right:none;}
 .perks-bar__icon{font-size:26px;line-height:1;flex-shrink:0;}
