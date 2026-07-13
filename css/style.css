@@ -438,6 +438,11 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .footer__social-icon--tiktok{background:#000;}
 .footer__bottom{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;}
 .footer__bottom-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12.5px;opacity:.7;}
+.footer__legal{border-top:1px solid rgba(255,255,255,.1);padding:22px 0;}
+.footer__legal-inner{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+.footer__legal-logo{height:40px;width:auto;background:var(--white);padding:6px 10px;border-radius:var(--radius-sm);flex-shrink:0;}
+.footer__legal-text{font-size:12.5px;line-height:1.7;color:var(--gold-100);opacity:.8;max-width:900px;}
+.footer__legal-text strong{color:var(--cream-1);opacity:1;font-weight:700;}
 @media(max-width:880px){.footer__grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:560px){.footer__grid{grid-template-columns:1fr;}}
 

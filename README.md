@@ -76,6 +76,7 @@ Mở trực tiếp file `index.html` bằng trình duyệt, hoặc để mượt
 | Tên file cần lưu | Dùng ở đâu | Trạng thái |
 |---|---|---|
 | `logo.png` | Logo ở header (mọi trang) | ✅ Đã có |
+| `logo-happypharm.png` | Logo công ty Happy Pharm ở khối "Chịu trách nhiệm sản xuất & phân phối" cuối footer (mọi trang) | ⬜ Chưa có – lưu logo bạn gửi vào đúng tên này, nền trong suốt hoặc trắng đều được, cao khoảng 200px là đủ nét |
 | `tote-bag.png` | Ảnh túi vải quà tặng (trang chủ, chi tiết sản phẩm) | ✅ Đã có |
 | `product-usage.png` | Ảnh infographic 4 bước hướng dẫn sử dụng, hiển thị đầu tab "Hướng dẫn sử dụng" ở `san-pham-chi-tiet.html` | ✅ Đã có |
 | `product-bottle.png` | Ảnh mặc định cho og:image/twitter:image (chia sẻ mạng xã hội) trên các trang chưa có ảnh riêng, thẻ sản phẩm ở `san-pham.html` &amp; `ve-chung-toi.html` | ✅ Đã có |
