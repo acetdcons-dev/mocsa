@@ -213,6 +213,9 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .more-products__body .price{margin-bottom:14px;display:inline-block;}
 .more-products__foot{text-align:center;}
 @media(max-width:560px){.more-products{grid-template-columns:1fr;}}
+.more-products--3col{grid-template-columns:repeat(3,1fr);}
+@media(max-width:880px){.more-products--3col{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.more-products--3col{grid-template-columns:1fr;}}
 
 /* ============ TRUST / CAM KẾT ============ */
 .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;}
