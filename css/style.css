@@ -164,7 +164,7 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .hero-banner{position:relative;overflow:hidden;min-height:520px;display:flex;align-items:stretch;background:linear-gradient(120deg,#241811,#3E2D20 45%,#5c4128 85%);}
 .hero-banner__slides{position:relative;flex:1;}
 .hero-banner__slide{position:absolute;inset:0;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;opacity:0;visibility:hidden;transition:opacity .6s ease;}
-.hero-banner__slide.is-active{position:relative;opacity:1;visibility:visible;}
+.hero-banner__slide.is-active{opacity:1;visibility:visible;z-index:1;}
 .hero-banner__slide--photo{display:block;background:url('../assets/images/hero-banner.jpg') center/cover no-repeat;}
 .hero-banner__photo-link{position:absolute;inset:0;z-index:2;}
 .hero-banner__inner{position:relative;z-index:2;padding:70px 0 70px 24px;}
