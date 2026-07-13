@@ -245,6 +245,22 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 @media(max-width:880px){.more-products--3col{grid-template-columns:1fr 1fr;}}
 @media(max-width:560px){.more-products--3col{grid-template-columns:1fr;}}
 
+/* ---- shop-category: tiêu đề + banner + thẻ viền (kiểu danh mục shop) ---- */
+.shop-category__title{text-align:center;color:var(--brown-800);font-size:clamp(22px,2.6vw,28px);margin-bottom:20px;}
+.shop-category__banner{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(120deg,var(--gold-100),var(--cream-2) 55%,var(--gold-100));padding:22px 28px;min-height:104px;display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;box-shadow:var(--shadow-sm);}
+.shop-category__brand{position:absolute;top:14px;left:22px;display:flex;align-items:center;gap:7px;}
+.shop-category__brand img{height:20px;width:auto;}
+.shop-category__brand span{font-family:var(--ff-head);font-weight:800;font-size:13px;color:var(--brown-800);}
+.shop-category__tag{position:absolute;top:12px;left:50%;transform:translateX(-50%);background:var(--brown-800);color:var(--cream-1);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:6px 16px;border-radius:var(--radius-pill);white-space:nowrap;}
+.shop-category__side{font-family:var(--ff-head);font-weight:800;font-size:15px;color:var(--brown-900);text-transform:uppercase;letter-spacing:.02em;z-index:1;}
+@media(max-width:560px){.shop-category__side{font-size:12px;}.shop-category__brand{position:static;justify-content:center;margin-bottom:6px;}.shop-category__banner{flex-wrap:wrap;padding-top:40px;}}
+
+.more-products__card--boxed{border:1px solid var(--gold-300,#dfc48a);box-shadow:none;}
+.more-products__card--boxed:hover{box-shadow:var(--shadow-sm);}
+.more-products__store-badge{position:absolute;top:8px;left:8px;display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:var(--radius-pill);padding:3px 9px 3px 3px;font-size:9.5px;font-weight:800;color:var(--brown-800);letter-spacing:.01em;z-index:1;}
+.more-products__store-badge img{width:14px;height:14px;object-fit:contain;padding:0;}
+.more-products__discount{position:absolute;bottom:8px;right:8px;background:var(--brown-800);color:var(--cream-1);font-size:11px;font-weight:800;padding:3px 8px;border-radius:var(--radius-pill);z-index:1;}
+
 /* ============ TRUST / CAM KẾT ============ */
 .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;}
 .trust-card{background:var(--white);padding:38px 32px;}
