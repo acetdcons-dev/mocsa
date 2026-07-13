@@ -99,7 +99,7 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .header.is-scrolled{box-shadow:var(--shadow-sm);}
 .header .container{max-width:1400px;}
 .header__inner{display:flex;align-items:center;justify-content:space-between;height:96px;gap:32px;}
-.brand__logo{height:68px;width:auto;}
+.brand__logo{height:80px;width:auto;}
 .nav{display:flex;gap:36px;}
 .nav__link{font-weight:800;font-size:17px;color:var(--brown-800);position:relative;padding:6px 0;}
 .nav__link::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold-500);transition:width .25s ease;}
