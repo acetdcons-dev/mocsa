@@ -77,26 +77,63 @@
 <div class="overlay" id="overlay"></div>
 
 <main>
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="container hero__grid">
-      <div class="hero__visual" data-reveal>
-        <img src="assets/images/product-bottle.png" alt="Dầu gội thảo dược Mộc Sa 250ml" class="hero__product" onerror="this.parentElement.classList.add('img-empty')">
-      </div>
-      <div class="hero__text" data-reveal>
-        <span class="eyebrow">Dầu gội thảo dược Mộc Sa</span>
-        <h1 class="hero__title">Mộc mạc từ<br>thiên nhiên Việt</h1>
-        <p class="hero__desc">15 thảo dược Việt, không Silicone, không Sulfate, không Paraben. Làm sạch dịu nhẹ, hỗ trợ giảm gãy rụng và nuôi dưỡng tóc chắc khỏe từ gốc. Đã thử nghiệm tại QUATEST 3.</p>
-        <div class="hero__price">
-          <span class="price price--new">196.000₫</span>
-          <span class="price price--old">245.000₫</span>
+  <!-- ============ HERO BANNER ============ -->
+  <section class="hero-banner" id="heroBanner">
+    <div class="hero-banner__slides">
+      <div class="hero-banner__slide is-active" data-slide="0">
+        <div class="container hero-banner__inner">
+          <div class="hero-banner__brand">
+            <img src="assets/images/logo-mark.svg" alt="" class="hero-banner__mark" onerror="this.style.display='none'">
+            <span class="hero-banner__wordmark">Mộc Sa</span>
+          </div>
+          <span class="hero-banner__tag">Dầu gội thảo dược</span>
+          <h1 class="hero-banner__title">từ thiên nhiên Việt</h1>
+          <button class="btn btn--primary btn--lg" data-add-to-cart data-open-checkout>Mua ngay – 196.000₫</button>
         </div>
-        <div class="hero__cta">
-          <button class="btn btn--primary btn--lg" data-add-to-cart data-open-checkout>Mua ngay</button>
-          <a href="san-pham-chi-tiet.html" class="btn btn--text">Xem chi tiết sản phẩm →</a>
-        </div>
-        <p class="hero__note">Freeship toàn quốc · Thanh toán khi nhận hàng · Tặng túi vải Mộc Sa</p>
+        <img src="assets/images/product-bottle.png" alt="Dầu gội thảo dược Mộc Sa 250ml" class="hero-banner__product" onerror="this.style.display='none'">
+        <img src="assets/images/flower.svg" alt="" class="hero-banner__flower" aria-hidden="true" onerror="this.style.display='none'">
       </div>
+      <div class="hero-banner__slide" data-slide="1">
+        <div class="container hero-banner__inner">
+          <div class="hero-banner__brand">
+            <img src="assets/images/logo-mark.svg" alt="" class="hero-banner__mark" onerror="this.style.display='none'">
+            <span class="hero-banner__wordmark">Fons Care</span>
+          </div>
+          <span class="hero-banner__tag">Dung dịch vệ sinh</span>
+          <h1 class="hero-banner__title">dịu nhẹ mỗi ngày</h1>
+          <a href="fonscare-dung-dich-ve-sinh.html" class="btn btn--primary btn--lg">Khám phá – 70.000₫</a>
+        </div>
+        <img src="assets/images/fonscare-dung-dich-ve-sinh.jpg" alt="Dung dịch vệ sinh Fons Care 100ml" class="hero-banner__product" onerror="this.style.display='none'">
+        <img src="assets/images/flower.svg" alt="" class="hero-banner__flower" aria-hidden="true" onerror="this.style.display='none'">
+      </div>
+      <div class="hero-banner__slide" data-slide="2">
+        <div class="container hero-banner__inner">
+          <div class="hero-banner__brand">
+            <img src="assets/images/logo-mark.svg" alt="" class="hero-banner__mark" onerror="this.style.display='none'">
+            <span class="hero-banner__wordmark">Fons Care Baby</span>
+          </div>
+          <span class="hero-banner__tag">Tắm gội thảo dược</span>
+          <h1 class="hero-banner__title">cho làn da bé yêu</h1>
+          <a href="fonscare-baby.html" class="btn btn--primary btn--lg">Khám phá – 135.000₫</a>
+        </div>
+        <img src="assets/images/fonscare-baby.jpg" alt="Sữa tắm gội thảo dược Fons Care Baby 300ml" class="hero-banner__product" onerror="this.style.display='none'">
+        <img src="assets/images/flower.svg" alt="" class="hero-banner__flower" aria-hidden="true" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="hero-banner__dots" id="heroBannerDots">
+      <button class="is-active" data-slide-to="0" aria-label="Slide 1"></button>
+      <button data-slide-to="1" aria-label="Slide 2"></button>
+      <button data-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- ============ PERKS BAR ============ -->
+  <section class="perks-bar">
+    <div class="container perks-bar__inner">
+      <div class="perks-bar__item"><span class="perks-bar__icon">🚚</span><div><strong>Ship COD</strong><span>Nhận hàng thanh toán</span></div></div>
+      <div class="perks-bar__item"><span class="perks-bar__icon">↩️</span><div><strong>Miễn phí đổi trả</strong><span>Trong vòng 7 ngày</span></div></div>
+      <div class="perks-bar__item"><span class="perks-bar__icon">🎁</span><div><strong>Nhiều ưu đãi hấp dẫn</strong><span>Tặng kèm túi vải Mộc Sa</span></div></div>
+      <div class="perks-bar__item"><span class="perks-bar__icon">💰</span><div><strong>Ưu đãi thành viên</strong><span>Mua càng nhiều, giá càng tốt</span></div></div>
     </div>
   </section>
 
