@@ -76,6 +76,8 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .btn--ghost:hover{background:var(--brown-900);color:var(--white);}
 .btn--outline{background:transparent;color:var(--gold-600);border-color:var(--gold-500);}
 .btn--outline:hover{background:var(--gold-500);color:var(--white);}
+.btn:disabled{opacity:.55;cursor:not-allowed;}
+.btn:disabled:hover{transform:none;background:transparent;color:var(--gold-600);box-shadow:none;}
 .btn--lg{padding:17px 34px;font-size:16px;}
 .btn--sm{padding:9px 18px;font-size:13px;}
 .btn--block{width:100%;}
