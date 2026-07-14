@@ -86,7 +86,7 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .badge{display:inline-flex;align-items:center;padding:6px 14px;border-radius:var(--radius-pill);font-size:12.5px;font-weight:700;letter-spacing:.02em;}
 .badge--pill{background:var(--white);color:var(--brown-800);box-shadow:var(--shadow-sm);}
 .badge--sale{background:var(--red-600);color:var(--white);}
-.eyebrow{display:inline-block;color:var(--gold-600);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;margin-bottom:10px;}
+.eyebrow{display:inline-block;color:var(--gold-600);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:15px;margin-bottom:10px;}
 .eyebrow--light{color:var(--gold-400);}
 
 /* ============ TOP BAR ============ */
