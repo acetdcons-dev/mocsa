@@ -92,7 +92,7 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 /* ============ TOP BAR ============ */
 .top-bar{background:linear-gradient(135deg,var(--brown-700),var(--brown-800));color:#fff;font-size:13.5px;}
 .top-bar__inner{display:flex;justify-content:center;align-items:center;height:38px;}
-.top-bar__msg{margin:0;display:flex;gap:8px;align-items:center;font-weight:700;text-align:center;}
+.top-bar__msg{margin:0;display:flex;gap:8px;align-items:center;font-weight:700;text-align:center;color:#fff;}
 
 /* ============ HEADER ============ */
 .header{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--line);transition:box-shadow .3s ease;}
