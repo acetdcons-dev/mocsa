@@ -250,13 +250,10 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 
 /* ---- shop-category: tiêu đề + banner + thẻ viền (kiểu danh mục shop) ---- */
 .shop-category__title{text-align:center;color:var(--brown-800);font-size:clamp(22px,2.6vw,28px);margin-bottom:20px;}
-.shop-category__banner{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(120deg,var(--gold-100),var(--cream-2) 55%,var(--gold-100));padding:22px 28px;min-height:104px;display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;box-shadow:var(--shadow-sm);}
-.shop-category__brand{position:absolute;top:14px;left:22px;display:flex;align-items:center;gap:7px;}
-.shop-category__brand img{height:20px;width:auto;}
-.shop-category__brand span{font-family:var(--ff-head);font-weight:800;font-size:13px;color:var(--brown-800);}
-.shop-category__tag{position:absolute;top:12px;left:50%;transform:translateX(-50%);background:var(--brown-800);color:var(--cream-1);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:6px 16px;border-radius:var(--radius-pill);white-space:nowrap;}
-.shop-category__side{font-family:var(--ff-head);font-weight:800;font-size:15px;color:var(--brown-900);text-transform:uppercase;letter-spacing:.02em;z-index:1;}
-@media(max-width:560px){.shop-category__side{font-size:12px;}.shop-category__brand{position:static;justify-content:center;margin-bottom:6px;}.shop-category__banner{flex-wrap:wrap;padding-top:40px;}}
+.shop-category__banner{border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(120deg,var(--brown-900),var(--brown-800) 50%,var(--brown-900));padding:30px 24px;display:flex;align-items:center;justify-content:center;gap:56px;flex-wrap:wrap;margin-bottom:28px;box-shadow:var(--shadow-md);}
+.shop-category__feature{display:flex;align-items:center;gap:12px;font-family:var(--ff-head);font-weight:800;font-size:20px;color:var(--cream-1);letter-spacing:.01em;}
+.shop-category__feature span{font-size:28px;line-height:1;}
+@media(max-width:560px){.shop-category__banner{gap:24px;padding:24px 18px;}.shop-category__feature{font-size:16px;gap:9px;}.shop-category__feature span{font-size:22px;}}
 
 .more-products__card--boxed{border:1px solid var(--gold-300,#dfc48a);box-shadow:none;}
 .more-products__card--boxed:hover{box-shadow:var(--shadow-sm);}
