@@ -90,7 +90,7 @@ p{margin:0;line-height:1.7;color:var(--ink-soft);}
 .eyebrow--light{color:var(--gold-400);}
 
 /* ============ TOP BAR ============ */
-.top-bar{background:linear-gradient(135deg,var(--brown-700),var(--brown-800));color:var(--white);font-size:13.5px;}
+.top-bar{background:linear-gradient(135deg,var(--brown-700),var(--brown-800));color:#000;font-size:13.5px;}
 .top-bar__inner{display:flex;justify-content:center;align-items:center;height:38px;}
 .top-bar__msg{margin:0;display:flex;gap:8px;align-items:center;font-weight:700;text-align:center;}
 
